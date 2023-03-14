@@ -12,27 +12,30 @@
   <body>
 <header class="header">
   <div class="container header__inner">
-    <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
-    <div class="header__lang">
-      <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
-          <svg class="custom-select__arrow" width="8" height="8">
-            <use xlink:href="sprite.svg#arrow-down_sprite"></use>
-          </svg></span>
-        <nav class="custom-select__content custom-select__content--secondary" id="lang-switcher" aria-hidden="true">
-          <ul class="lang-switcher"> 
-            <li class="lang-switcher__item">En </li>
-            <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">Ru</a></li>
-            <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">De</a></li>
-          </ul>
-        </nav>
-      </button>
+    <div class="header__left">
+      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+      <div class="header__lang custom-select-wrapper">
+        <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
+            <svg class="custom-select__arrow" width="8" height="8">
+              <use xlink:href="sprite.svg#arrow-down_sprite"></use>
+            </svg></span>
+          <nav class="custom-select__content custom-select__content--secondary" id="lang-switcher" aria-hidden="true">
+            <ul class="lang-switcher"> 
+              <li class="lang-switcher__item">En </li>
+              <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">Ru</a></li>
+              <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">De</a></li>
+            </ul>
+          </nav>
+        </button>
+      </div>
     </div>
     <div class="header__button-group"> 
-      <button class="btn btn--secondary" type="button">Submit a tool</button>
-      <button class="btn btn--primary" type="button">Subscribe to newsletter</button>
+      <button class="header__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
+      <button class="header__btn btn btn--primary" type="button" data-modal="subscribe">Subscribe to newsletter</button>
     </div>
   </div>
 </header>
+<div class="background-blur"></div>
     <main class="main">
 <section class="section container"> 
   <div class="hero">
@@ -42,139 +45,290 @@
     </div>
     <form class="hero__search search" action=""> 
       <input class="search__input" type="text" placeholder="Search, try ‘Design’ / ‘Video’ / ‘SEO’ etc.">
-      <fieldset class="hero__categories categories" role="list">
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/1.svg" alt=""></div><span class="categories__name">All</span>
+      <fieldset class="hero__categories categories custom-select-wrapper">
+        <button class="categories__btn hidden-desktop btn btn--primary" data-select="categories" type="button">Choose category
+          <svg width="8px" height="8px">
+            <use xlink:href="sprite.svg#arrow-right-cat_sprite"> </use>
+          </svg>
+        </button>
+        <div class="categories__mobile categories-mobile hidden-desktop modal" data-select-el="categories" aria-hidden="true">
+          <div class="categories-mobile__heading">
+            <h2 class="categories-mobile__title">Categories</h2>
+            <button class="categories-mobile__close js-close-select" aria-label="close categories list" type="button">
+              <svg width="20" height="20">
+                <use xlink:href="sprite.svg#close_sprite"> </use>
+              </svg>
+            </button>
           </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/2.svg" alt=""></div><span class="categories__name">Design</span>
+          <div class="categories__list" role="list">
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/1.svg" alt=""></div><span class="categories__name">All</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/2.svg" alt=""></div><span class="categories__name">Design</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/3.svg" alt=""></div><span class="categories__name">Code</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/4.svg" alt=""></div><span class="categories__name">Video</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/5.svg" alt=""></div><span class="categories__name">Music</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/6.svg" alt=""></div><span class="categories__name">Writing</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/7.svg" alt=""></div><span class="categories__name">Crypto</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/8.svg" alt=""></div><span class="categories__name">Finance</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/9.svg" alt=""></div><span class="categories__name">Gaming</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/10.svg" alt=""></div><span class="categories__name">Chatbots</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/11.svg" alt=""></div><span class="categories__name">Speech</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/12.svg" alt=""></div><span class="categories__name">Translation</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/13.svg" alt=""></div><span class="categories__name">Productivity</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/14.svg" alt=""></div><span class="categories__name">HR</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/15.svg" alt=""></div><span class="categories__name">Healthcare</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/16.svg" alt=""></div><span class="categories__name">Security</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/17.svg" alt=""></div><span class="categories__name">Robotics</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/18.svg" alt=""></div><span class="categories__name">Energy</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/19.svg" alt=""></div><span class="categories__name">Education</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/20.svg" alt=""></div><span class="categories__name">Marketing</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/21.svg" alt=""></div><span class="categories__name">Travel</span>
+              </div>
+            </label>
+            <label class="categories__label" role="listitem">
+              <input class="visually-hidden categories__checkbox" type="checkbox">
+              <div class="categories__item"> 
+                <div class="categories__icon"> <img src="assets/images/categories/22.svg" alt=""></div><span class="categories__name">Retail</span>
+              </div>
+            </label>
           </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/3.svg" alt=""></div><span class="categories__name">Code</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/4.svg" alt=""></div><span class="categories__name">Video</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/5.svg" alt=""></div><span class="categories__name">Music</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/6.svg" alt=""></div><span class="categories__name">Writing</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/7.svg" alt=""></div><span class="categories__name">Crypto</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/8.svg" alt=""></div><span class="categories__name">Finance</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/9.svg" alt=""></div><span class="categories__name">Gaming</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/10.svg" alt=""></div><span class="categories__name">Chatbots</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/11.svg" alt=""></div><span class="categories__name">Speech</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/12.svg" alt=""></div><span class="categories__name">Translation</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/13.svg" alt=""></div><span class="categories__name">Productivity</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/14.svg" alt=""></div><span class="categories__name">HR</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/15.svg" alt=""></div><span class="categories__name">Healthcare</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/16.svg" alt=""></div><span class="categories__name">Security</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/17.svg" alt=""></div><span class="categories__name">Robotics</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/18.svg" alt=""></div><span class="categories__name">Energy</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/19.svg" alt=""></div><span class="categories__name">Education</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/20.svg" alt=""></div><span class="categories__name">Marketing</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/21.svg" alt=""></div><span class="categories__name">Travel</span>
-          </div>
-        </label>
-        <label class="categories__label" role="listitem">
-          <input class="visually-hidden categories__checkbox" type="checkbox">
-          <div class="categories__item"> 
-            <div class="categories__icon"> <img src="assets/images/categories/22.svg" alt=""></div><span class="categories__name">Retail</span>
-          </div>
-        </label>
+        </div>
+        <div class="categories__list hidden-mobile" role="list">
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/1.svg" alt=""></div><span class="categories__name">All</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/2.svg" alt=""></div><span class="categories__name">Design</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/3.svg" alt=""></div><span class="categories__name">Code</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/4.svg" alt=""></div><span class="categories__name">Video</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/5.svg" alt=""></div><span class="categories__name">Music</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/6.svg" alt=""></div><span class="categories__name">Writing</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/7.svg" alt=""></div><span class="categories__name">Crypto</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/8.svg" alt=""></div><span class="categories__name">Finance</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/9.svg" alt=""></div><span class="categories__name">Gaming</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/10.svg" alt=""></div><span class="categories__name">Chatbots</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/11.svg" alt=""></div><span class="categories__name">Speech</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/12.svg" alt=""></div><span class="categories__name">Translation</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/13.svg" alt=""></div><span class="categories__name">Productivity</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/14.svg" alt=""></div><span class="categories__name">HR</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/15.svg" alt=""></div><span class="categories__name">Healthcare</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/16.svg" alt=""></div><span class="categories__name">Security</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/17.svg" alt=""></div><span class="categories__name">Robotics</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/18.svg" alt=""></div><span class="categories__name">Energy</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/19.svg" alt=""></div><span class="categories__name">Education</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/20.svg" alt=""></div><span class="categories__name">Marketing</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/21.svg" alt=""></div><span class="categories__name">Travel</span>
+            </div>
+          </label>
+          <label class="categories__label" role="listitem">
+            <input class="visually-hidden categories__checkbox" type="checkbox">
+            <div class="categories__item"> 
+              <div class="categories__icon"> <img src="assets/images/categories/22.svg" alt=""></div><span class="categories__name">Retail</span>
+            </div>
+          </label>
+        </div>
       </fieldset>
     </form>
   </div>
@@ -189,11 +343,19 @@
       <h3 class="cards__count">Showing 120 of 923 Tools</h3>
       <div class="cards__filter">
         <div class="custom-select-wrapper">
-          <button class="custom-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="grid-filter-1"><span class="custom-select__placeholder">Choose plan
+          <button class="custom-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="grid-filter-1"><span class="custom-select__placeholder"><span>Choose plan</span>
               <svg class="custom-select__arrow" width="8" height="8">
                 <use xlink:href="sprite.svg#arrow-down_sprite"> </use>
               </svg></span></button>
           <div class="custom-select__content" id="grid-filter-1" aria-hidden="true"> 
+            <div class="custom-select__heading hidden-desktop"> 
+              <h3 class="custom-select__title">Choose plan</h3>
+              <button class="custom-select__close js-close-select" type="butom">
+                <svg width="20" height="20">
+                  <use xlink:href="sprite.svg#close_sprite"> </use>
+                </svg>
+              </button>
+            </div>
             <ul class="checkbox-list">
               <li class="checkbox-list__item">
                 <label class="checkbox-list__label">
@@ -229,40 +391,48 @@
           </div>
         </div>
         <div class="custom-select-wrapper">
-          <button class="custom-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="grid-filter-2"><span class="custom-select__placeholder">Sort by default
+          <button class="custom-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="grid-filter-2"><span class="custom-select__placeholder"><span>Sort by default</span>
               <svg class="custom-select__arrow" width="8" height="8">
                 <use xlink:href="sprite.svg#arrow-down_sprite"> </use>
               </svg></span></button>
           <div class="custom-select__content" id="grid-filter-2" aria-hidden="true"> 
+            <div class="custom-select__heading hidden-desktop"> 
+              <h3 class="custom-select__title"> Sort</h3>
+              <button class="custom-select__close js-close-select" type="butom">
+                <svg width="20" height="20">
+                  <use xlink:href="sprite.svg#close_sprite"> </use>
+                </svg>
+              </button>
+            </div>
             <ul class="checkbox-list">
               <li class="checkbox-list__item">
                 <label class="checkbox-list__label">
-                  <input class="checkbox-list__input" type="radio" name="sort-radio"><span class="checkbox-list__text">New</span>
+                  <input class="checkbox-list__input" type="radio" name="sort-radio" value="0 Sort by name (A-Z)"><span class="checkbox-list__text">0 Sort by name (A-Z)</span>
                 </label>
               </li>
               <li class="checkbox-list__item">
                 <label class="checkbox-list__label">
-                  <input class="checkbox-list__input" type="radio" name="sort-radio"><span class="checkbox-list__text">New</span>
+                  <input class="checkbox-list__input" type="radio" name="sort-radio" value="1 Sort by name (A-Z)"><span class="checkbox-list__text">1 Sort by name (A-Z)</span>
                 </label>
               </li>
               <li class="checkbox-list__item">
                 <label class="checkbox-list__label">
-                  <input class="checkbox-list__input" type="radio" name="sort-radio"><span class="checkbox-list__text">New</span>
+                  <input class="checkbox-list__input" type="radio" name="sort-radio" value="2 Sort by name (A-Z)"><span class="checkbox-list__text">2 Sort by name (A-Z)</span>
                 </label>
               </li>
               <li class="checkbox-list__item">
                 <label class="checkbox-list__label">
-                  <input class="checkbox-list__input" type="radio" name="sort-radio"><span class="checkbox-list__text">New</span>
+                  <input class="checkbox-list__input" type="radio" name="sort-radio" value="3 Sort by name (A-Z)"><span class="checkbox-list__text">3 Sort by name (A-Z)</span>
                 </label>
               </li>
               <li class="checkbox-list__item">
                 <label class="checkbox-list__label">
-                  <input class="checkbox-list__input" type="radio" name="sort-radio"><span class="checkbox-list__text">New</span>
+                  <input class="checkbox-list__input" type="radio" name="sort-radio" value="4 Sort by name (A-Z)"><span class="checkbox-list__text">4 Sort by name (A-Z)</span>
                 </label>
               </li>
               <li class="checkbox-list__item">
                 <label class="checkbox-list__label">
-                  <input class="checkbox-list__input" type="radio" name="sort-radio"><span class="checkbox-list__text">New</span>
+                  <input class="checkbox-list__input" type="radio" name="sort-radio" value="5 Sort by name (A-Z)"><span class="checkbox-list__text">5 Sort by name (A-Z)</span>
                 </label>
               </li>
             </ul>
@@ -519,5 +689,125 @@
     <div class="footer__made-in">Project by<a href=""> Einzelwerk</a></div>
   </div>
 </footer>
+<div class="modal modal-submit" data-modal-el="submit-tool" aria-hidden="true">
+  <div class="modal-submit__inner">
+    <div class="modal-submit__header">
+      <div class="modal-submit__text">
+        <div class="modal-submit__heading"> 
+          <h2 class="modal-submit__title">Submit a tool</h2>
+          <div class="modal-submit__tooltip tooltip">
+            <svg class="tooltip__icon" width="20" height="20">
+              <use xlink:href="sprite.svg#tooltip_sprite"></use>
+            </svg>
+            <div class="tooltip__content"> 
+              <h3 class="tooltip__title">Before submitting:</h3>
+              <div class="tooltip__desc"> 
+                <p>We appreciate your interest in sharing your favorite AI tools with us. Before submitting your tool, please ensure that it hasn't been already listed on our site. Our team reviews each submission manually to ensure its quality and relevance to our audience.</p>
+                <p>Please note that we do not accept affiliate links or newsletter submissions. Also, if you are submitting a tool aggregator similar to wAild world, it will only be considered if you have a reciprocal listing of tool aggregators that includes wAild world.</p>
+                <p>Lastly, we strictly prohibit the use of bots or any other fraudulent methods to upvote submissions. We monitor all activity closely and any attempts to cheat the system will result in immediate disqualification.</p>
+                <p>Thank you for your cooperation in maintaining the integrity of our service.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="modal-submit__desc">Contribute to the AI-tool community. Share a missing tool with us!</p>
+      </div>
+      <button class="modal-submit__close js-modal-close"> 
+        <svg width="20" height="20">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </button>
+    </div>
+    <form class="modal-submit__form main-form"> 
+      <fieldset class="main-form__fieldset">
+        <legend class="main-form__legend">Tool Information</legend>
+        <div class="main-form__grid"> 
+          <div class="main-form__item"> 
+            <label class="main-form__label">
+              <input class="main-form__input" type="text" placeholder="Tool name">
+            </label>
+          </div>
+          <div class="main-form__item"> 
+            <label class="main-form__label">
+              <input class="main-form__input" type="text" placeholder="Tool URL">
+            </label>
+          </div>
+          <div class="main-form__item"> 
+            <label class="main-form__label">
+              <textarea class="main-form__input main-form__textarea" type="text" placeholder="Tool description"></textarea>
+            </label>
+          </div>
+          <div class="main-form__item"> 
+            <select class="main-form__input">
+              <option value="1">Value</option>
+              <option value="1">Value 2</option>
+              <option value="1">Value 3</option>
+            </select>
+          </div>
+          <div class="main-form__item"> 
+            <select class="main-form__input">
+              <option value="1">Value</option>
+              <option value="1">Value 2</option>
+              <option value="1">Value 3</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="main-form__fieldset">
+        <legend class="main-form__legend">Personal Information</legend>
+        <div class="main-form__grid"> 
+          <div class="main-form__item"> 
+            <label class="main-form__label">
+              <input class="main-form__input" type="text" placeholder="Your name">
+            </label>
+          </div>
+          <div class="main-form__item"> 
+            <label class="main-form__label">
+              <input class="main-form__input" type="text" placeholder="TYour email">
+            </label>
+          </div>
+          <div class="main-form__item"> 
+            <label class="main-form__label">
+              <textarea class="main-form__input main-form__textarea" type="text" placeholder="Any other details you would like to share?Link to explainer video / Affiliate Program Details / etc."></textarea>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <button class="main-form__submit btn btn--primary" type="submit">Submit
+        <svg class="btn__arrow" width="14" height="10">
+          <use xlink:href="sprite.svg#arrow-link_sprite"> </use>
+        </svg>
+      </button>
+      <p class="main-form__acceptance">By clicking on the 'Submit' button, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a></p>
+    </form>
+  </div>
+</div>
+<div class="modal modal-subscribe" data-modal-el="subscribe" aria-hidden="true">
+  <div class="modal-subscribe__inner"> 
+    <button class="modal-subscribe__close js-modal-close">
+      <svg width="20" height="20">
+        <use xlink:href="sprite.svg#close_sprite"> </use>
+      </svg>
+    </button>
+    <div class="modal-subscribe__content"> 
+      <picture class="modal-subscribe__image"> <img src="assets/images/sub.svg" alt=""></picture>
+      <h2 class="modal-subscribe__title">Subscribe to our newsletter</h2>
+      <p class="modal-subscribe__desc">Stay in the loop! Subscribe now for exclusive updates and offers. We promise not to spam you.</p>
+      <form class="subscribe-form modal-subscribe__form" action=""> 
+        <div class="subscribe-form__item"> 
+          <label class="subscribe-form__label">
+            <input class="subscribe-form__input" type="text" placeholder="Enter your e-mail">
+          </label>
+        </div>
+        <button class="subscribe-form__submit btn btn--primary" type="submit">Subscribe
+          <svg class="btn__arrow" width="14" height="10">
+            <use xlink:href="sprite.svg#arrow-link_sprite"> </use>
+          </svg>
+        </button>
+      </form>
+      <p class="subscribe-form__acceptance">By clicking on the 'Submit' button, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a></p>
+    </div>
+  </div>
+</div>
   </body>
 </html>
