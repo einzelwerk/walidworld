@@ -1,0 +1,23 @@
+header.header
+  .container.header__inner
+    .header__left
+      .header__logo.logo 
+        a.logo__link(href="") 
+          img.logo__src(src=require('@/images/logo.svg'), alt="")
+      .header__lang.custom-select-wrapper
+        button.custom-select.custom-select--secondary.lang-select(type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher")
+          span.custom-select__placeholder En
+            svg.custom-select__arrow(width="8" height="8")
+              use(xlink:href="sprite.svg#arrow-down_sprite")
+          nav.custom-select__content.custom-select__content--secondary(id="lang-switcher" aria-hidden="true")
+            ul.lang-switcher 
+              li.lang-switcher__item En 
+              li.lang-switcher__item
+                a.lang-switcher__link(href="/en" hreflang="en" lang="en") Ru
+              li.lang-switcher__item
+                a.lang-switcher__link(href="/en" hreflang="en" lang="en") De
+
+    .header__button-group 
+      button.header__btn.btn.btn--secondary(type="button" data-modal="submit-tool") Submit a tool
+      button.header__btn.btn.btn--primary(type="button" data-modal="subscribe") Subscribe to newsletter
+.background-blur

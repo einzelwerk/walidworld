@@ -1,0 +1,62 @@
+@use '../utils/vars' as *;
+@use '../utils/mixins' as *;
+
+.header {
+  &__inner {
+    @include media(md) {
+      flex-direction: column;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-divider);
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__left {
+    @include media(md) {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__button-group {
+    @include media(sm) {
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  &__logo {
+    flex: none;
+  }
+
+  &__btn {
+    @include media(sm) {
+      flex: 1;
+      padding: 12px 14px;
+      font-size: rem(14px);
+      text-align: center;
+    }
+
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  &__lang {
+    margin-left: 16px;
+  }
+}

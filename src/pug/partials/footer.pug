@@ -1,0 +1,101 @@
+footer.footer 
+  .footer__inner.container 
+    span.footer__copyright 2023. © All rights reserved.
+    nav.footer-nav
+      ul.footer-nav__list 
+        li.footer-nav__item 
+          a.footer-nav__link(href="") Terms of Service
+        li.footer-nav__item 
+          a.footer-nav__link(href="") Privacy Policy
+    .footer__made-in Project by
+      a(href="")  Einzelwerk
+.modal-wrapper(data-modal-el="submit-tool" aria-hidden="true")
+  .modal.modal-submit
+    .modal-submit__inner
+      .modal-submit__header
+        .modal-submit__text
+          .modal-submit__heading 
+            h2.modal-submit__title Submit a tool
+            .modal-submit__tooltip.tooltip
+              svg.tooltip__icon(width="20" height="20")
+                use(xlink:href="sprite.svg#tooltip_sprite")
+              .tooltip__content 
+                h3.tooltip__title Before submitting:
+                .tooltip__desc 
+                  p We appreciate your interest in sharing your favorite AI tools with us. Before submitting your tool, please ensure that it hasn't been already listed on our site. Our team reviews each submission manually to ensure its quality and relevance to our audience.
+                  p Please note that we do not accept affiliate links or newsletter submissions. Also, if you are submitting a tool aggregator similar to wAild world, it will only be considered if you have a reciprocal listing of tool aggregators that includes wAild world.
+                  p Lastly, we strictly prohibit the use of bots or any other fraudulent methods to upvote submissions. We monitor all activity closely and any attempts to cheat the system will result in immediate disqualification.
+                  p Thank you for your cooperation in maintaining the integrity of our service.
+          p.modal-submit__desc Contribute to the AI-tool community. Share a missing tool with us!
+        button.modal-submit__close.js-modal-close 
+          svg(width="20" height="20")
+            use(xlink:href="sprite.svg#close_sprite") 
+      form.modal-submit__form.main-form 
+        fieldset.main-form__fieldset
+          legend.main-form__legend Tool Information
+          .main-form__grid 
+            .main-form__item 
+              label.main-form__label
+                input.main-form__input(type="text" placeholder="Tool name")
+            .main-form__item 
+              label.main-form__label
+                input.main-form__input(type="text" placeholder="Tool URL")
+            .main-form__item 
+              label.main-form__label
+                textarea.main-form__input.main-form__textarea(type="text" placeholder="Tool description")
+            .main-form__item 
+              select.main-form__input.main-form__input--select
+                option(value="1") Value
+                option(value="1") Value 2
+                option(value="1") Value 3
+            .main-form__item 
+              select.main-form__input.main-form__input--select
+                option(value="1") Value
+                option(value="1") Value 2
+                option(value="1") Value 3
+        fieldset.main-form__fieldset
+          legend.main-form__legend Personal Information
+          .main-form__grid 
+            .main-form__item 
+              label.main-form__label
+                input.main-form__input(type="text" placeholder="Your name")
+            .main-form__item 
+              label.main-form__label
+                input.main-form__input(type="text" placeholder="TYour email")
+            .main-form__item 
+              label.main-form__label
+                textarea.main-form__input.main-form__textarea(type="text" placeholder="Any other details you would like to share?Link to explainer video / Affiliate Program Details / etc.")
+        button.main-form__submit.btn.btn--primary(type="submit") Submit
+          svg.btn__arrow(width="14" height="10")
+            use(xlink:href="sprite.svg#arrow-link_sprite") 
+        p.main-form__acceptance By clicking on the 'Submit' button, you agree to our 
+          a(href="") Terms and Service
+          |  and 
+          a(href="") Privacy Policy
+.modal-wrapper(data-modal-el="subscribe" aria-hidden="true")
+  .modal.modal-subscribe
+    .modal-subscribe__inner 
+      button.modal-subscribe__close.js-modal-close
+        svg(width="20" height="20")
+          use(xlink:href="sprite.svg#close_sprite") 
+      .modal-subscribe__content 
+        picture.modal-subscribe__image 
+          img(src=require('@/images/sub.svg'), alt="")
+        h2.modal-subscribe__title Subscribe to our newsletter
+        p.modal-subscribe__desc Stay in the loop! Subscribe now for exclusive updates and offers. We promise not to spam you.
+        form.subscribe-form.modal-subscribe__form(action="") 
+          .subscribe-form__item 
+            label.subscribe-form__label
+              input.subscribe-form__input(type="text" placeholder="Enter your e-mail")
+          button.subscribe-form__submit.btn.btn--primary(type="submit") Subscribe
+            svg.btn__arrow(width="14" height="10")
+              use(xlink:href="sprite.svg#arrow-link_sprite") 
+        p.subscribe-form__acceptance By clicking on the 'Submit' button, you agree to our 
+          a(href="") Terms and Service
+          |  and 
+          a(href="") Privacy Policy
+
+
+
+
+

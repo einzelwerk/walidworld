@@ -1,0 +1,32 @@
+.lang-select {
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background: var(--tags-color);
+  }
+
+  .custom-select__arrow {
+    margin-left: 6px;
+  }
+}
+
+.lang-switcher {
+  &__item {
+    padding: 4px 8px;
+    color: var(--placeholder);
+    border-bottom: 1px solid var(--border-divider);
+
+    &:hover {
+      background: var(--tags-color);
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__link {
+    color: var(--black);
+  }
+}

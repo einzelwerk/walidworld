@@ -1,0 +1,36 @@
+@use '../utils/mixins' as *;
+
+.btn {
+  cursor: pointer;
+
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  font-size: rem(14px);
+
+  border-radius: 8px;
+
+  transition: background 0.5s;
+
+  &--primary {
+    color: var(--white);
+    background: var(--accent-purple);
+
+    &:hover {
+      background: #7e32e0;
+    }
+  }
+
+  &--secondary {
+    border: 1px solid var(--border-divider);
+
+    &:hover {
+      background: var(--tags-color);
+    }
+  }
+
+  &__arrow {
+    margin-left: 12px;
+  }
+}

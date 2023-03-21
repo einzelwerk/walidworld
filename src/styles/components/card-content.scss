@@ -1,0 +1,158 @@
+@use '../utils/mixins' as *;
+
+.card-content {
+  @include media(md) {
+    padding-top: 16px;
+    padding-bottom: 48px;
+  }
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--border-divider);
+
+  &__inner {
+    @include media(md) {
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
+
+    display: flex;
+    gap: 60px;
+  }
+
+  &__heading {
+    @include media(md) {
+      margin-bottom: 24px;
+    }
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  &__back {
+    @include media(md) {
+      margin-right: 16px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+
+    border: 1px solid var(--border-divider);
+    border-radius: 50%;
+
+    transition: background 0.5s;
+
+    &:hover {
+      background: var(--tags-color);
+    }
+  }
+
+  &__text {
+    flex:1;
+  }
+
+  &__title {
+    @include media(md) {
+      font-size: rem(26px);
+    }
+
+    font-size: rem(30px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  &__description-title {
+    margin-bottom: 16px;
+    font-size: rem(24px);
+    font-weight: 600;
+  }
+
+  &__description-content {
+    margin-bottom: 32px;
+    line-height: 150%;
+    color: var(--text);
+  }
+
+  &__link {
+    @include media(md) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    margin-top: 32px;
+    padding: 13px 24px;
+  }
+
+  &__image {
+    overflow: hidden;
+    flex:1;
+
+    width: 100%;
+    max-width: 560px;
+
+    border-radius: 12px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.card-tags {
+  @include media(md) {
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  display: flex;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &__heading {
+    @include media(md) {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+
+    margin-right: 12px;
+    font-weight: 600;
+    line-height: 150%;
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  &__item {
+    --item-background: var(--tags-color);
+
+    padding: 4px 10px;
+
+    font-size: rem(14px);
+    font-weight: 500;
+
+    background: var(--item-background);
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,36 @@
+@use '../utils/mixins' as *;
+
+.single-page {
+  margin-top: 40px;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+
+    border: 1px solid var(--border-divider);
+    border-radius: 50%;
+
+    &:hover {
+      background: var(--tags-color);
+    }
+  }
+
+  &__title {
+    font-size: rem(30px);
+    font-weight: 600;
+    line-height: 133%;
+    letter-spacing: -0.01em;
+  }
+}

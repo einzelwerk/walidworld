@@ -1,0 +1,41 @@
+-
+  var cats = [
+    'All', 'Design' , 'Code' , 'Video' , 'Music', 'Writing', 'Crypto', 'Finance',
+    'Gaming', 'Chatbots', 'Speech', 'Translation', 'Productivity', 'HR', 'Healthcare',
+    'Security', 'Robotics', 'Energy', 'Education', 'Marketing', 'Travel', 'Retail' 
+  ]
+
+section.section.container 
+  .hero
+    .hero__text
+      h1.hero__title Curated AI-tools catalog
+      p.hero__desc Discover the best AI-tools for your needs with our carefully curated catalog of the latest and most powerful artificial intelligence software.
+    form.hero__search.search(action="") 
+      input(type="text" class="search__input" placeholder="Search, try ‘Design’ / ‘Video’ / ‘SEO’ etc.")
+      fieldset.hero__categories.categories.custom-select-wrapper
+        button.categories__btn.hidden-desktop.btn.btn--primary(data-select="categories" type="button") Choose category
+          svg(width="8px" height="8px")
+            use(xlink:href="sprite.svg#arrow-right-cat_sprite") 
+        .categories__mobile.categories-mobile.hidden-desktop.modal(data-select-el="categories" aria-hidden="true")
+          .categories-mobile__heading
+            h2.categories-mobile__title Categories
+            button.categories-mobile__close.js-close-select(aria-label="close categories list" type="button")
+              svg(width="20" height="20")
+                use(xlink:href="sprite.svg#close_sprite") 
+          .categories__list(role="list")
+            each val, index in cats 
+              label.categories__label(role="listitem")
+                input(type="checkbox" class="visually-hidden categories__checkbox")
+                .categories__item 
+                  .categories__icon 
+                    img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
+                  span.categories__name= val
+        .categories__list.hidden-mobile(role="list")
+          each val, index in cats 
+            label.categories__label(role="listitem")
+              input(type="checkbox" class="visually-hidden categories__checkbox")
+              .categories__item 
+                .categories__icon 
+                  img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
+                span.categories__name= val
+

@@ -1,0 +1,31 @@
+@use './mixins' as *;
+
+:root {
+  --container: 1920px;
+  --gap: 30px;
+  --gap-y: 100px;
+
+  @each $breakpoint, $val in $breakpoints {
+    @if $val > 1200px {
+      $val: 1200px;
+    }
+    @include media($breakpoint) {
+      --container: #{$val};
+    }
+  }
+  @include media(md) {
+    --gap: 16px;
+  }
+}
+
+:root {
+  --accent-purple: #933fff;
+  --accent-yellow: #f5e769;
+  --accent-green: #e6fe51;
+  --white: #fff;
+  --black: #101010;
+  --text: #858585;
+  --placeholder: #aaa;
+  --border-divider: #dcdcdc;
+  --tags-color: #ebebeb;
+}

@@ -1,0 +1,107 @@
+
+extends ../layouts/main
+
+block content
+  section.section
+    .container.promo-section 
+      .promo-section__item
+      .promo-section__item
+    .card-content
+      .card-content__inner.container
+        .card-content__text 
+          .card-content__heading 
+            a.card-content__back(href="") 
+              svg(width="8" height="8")
+                use(xlink:href="sprite.svg#arrow-left_sprite") 
+            h1.card-content__title Descript AI Tool
+          .card-content__description 
+            h2.card-content__description-title Description
+            .card-content__description-content 
+              p Descript is an audio/video editor that includes transcription, a screen recorder, publishing, and AI tools like ultra-realistic voice cloning with Overdub, free voice models, privacy first features, ability to make mid-sentence changes to real recordings, creating multiple voices, sharing with trusted collaborators, and a high quality stock voice library. It also provides 44.1KHz broadcast quality speech synthesizer and a live Overdubing.
+            .card-tags 
+              h3.card-tags__heading Price Model:
+              ul.card-tags__list
+                li.card-tags__item Paid
+                li.card-tags__item(style="--item-background:#F5E769") This tool offers a free trial!          
+            .card-tags 
+              h3.card-tags__heading Tags:
+              ul.card-tags__list
+                li.card-tags__item Speech
+                li.card-tags__item Design
+                li.card-tags__item Marketing
+                li.card-tags__item Code
+            a.card-content__link.btn.btn--primary(href="" target="_blank") Explore the tool
+              svg.btn__arrow(width="14" height="10")
+                use(xlink:href="sprite.svg#arrow-link_sprite") 
+        picture.card-content__image
+          img(src=require('@/images/card-i.jpg'), alt="")
+      .coming-soon.container
+        .coming-soon__inner
+          picture.coming-soon__background 
+            img(src=require('@/images/coming-soon.svg'), alt="")
+          .coming-soon__content
+            .coming-soon__loader 
+              span 
+              span 
+              span 
+            h3.coming-soon__title We’re preparing something.
+            p.coming-soon__desc More information for tools coming soon
+            button.coming-soon__btn.btn.btn--secondary Subscribe to newsletter
+  section.section.section--top.container
+    h2.section-heading Explore Similar AI Tools:
+    .cards 
+      .cards__grid 
+        a.card-item(href="#")
+          .card-item__image-wrapper
+            picture.card-item__image
+              img(src=require('@/images/tools/1.jpg'), alt="")
+          .card-item__info 
+            h2.card-item__name Fetch.ai
+              svg(width="15" height="10")
+                use(xlink:href="sprite.svg#arrow-right_sprite") 
+            .card-item__desc Platform for building DAOs using AI algorithms
+        a.card-item(href="#")
+          .card-item__image-wrapper
+            picture.card-item__image
+              img(src=require('@/images/tools/2.jpg'), alt="")
+          .card-item__info 
+            h2.card-item__name SingularityNET
+              svg(width="15" height="10")
+                use(xlink:href="sprite.svg#arrow-right_sprite") 
+            .card-item__desc Decentralized AI marketplace for developers
+        a.card-item(href="#")
+          .card-item__image-wrapper
+            picture.card-item__image
+              img(src=require('@/images/tools/2.jpg'), alt="")
+          .card-item__info 
+            h2.card-item__name SingularityNET
+              svg(width="15" height="10")
+                use(xlink:href="sprite.svg#arrow-right_sprite") 
+            .card-item__desc Decentralized AI marketplace for developers
+        a.card-item(href="#")
+          .card-item__image-wrapper
+            picture.card-item__image
+              img(src=require('@/images/tools/2.jpg'), alt="")
+          .card-item__info 
+            h2.card-item__name SingularityNET
+              svg(width="15" height="10")
+                use(xlink:href="sprite.svg#arrow-right_sprite") 
+            .card-item__desc Decentralized AI marketplace for developers
+        a.card-item(href="#")
+          .card-item__image-wrapper
+            picture.card-item__image
+              img(src=require('@/images/tools/2.jpg'), alt="")
+          .card-item__info 
+            h2.card-item__name SingularityNET
+              svg(width="15" height="10")
+                use(xlink:href="sprite.svg#arrow-right_sprite") 
+            .card-item__desc Decentralized AI marketplace for developers
+        a.card-item(href="#")
+          .card-item__image-wrapper
+            picture.card-item__image
+              img(src=require('@/images/tools/2.jpg'), alt="")
+          .card-item__info 
+            h2.card-item__name SingularityNET
+              svg(width="15" height="10")
+                use(xlink:href="sprite.svg#arrow-right_sprite") 
+            .card-item__desc Decentralized AI marketplace for developers
