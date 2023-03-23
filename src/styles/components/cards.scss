@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 44px;
   }
 
   &__count {
@@ -52,7 +52,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
+    gap: 44px 24px;
     width: 100%;
   }
 
