@@ -11,7 +11,7 @@
   <script defer src="assets/js/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
   <body>
 <header class="header">
-  <div class="container header__inner">
+  <div class="header__inner">
     <div class="header__left">
       <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
       <div class="header__lang custom-select-wrapper">
@@ -29,6 +29,16 @@
         </button>
       </div>
     </div>
+    <nav class="header__nav nav">
+      <ul class="nav__list"> 
+        <li class="nav__item nav__item--current"><a class="nav__link" href=""><span class="nav__link-text">Tools</span><span class="nav__hover-text" aria-hidden="true">Tools</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">About</span><span class="nav__hover-text" aria-hidden="true">About</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Jobs</span><span class="nav__hover-text" aria-hidden="true">Jobs</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Blog</span><span class="nav__hover-text" aria-hidden="true">Blog</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Contacts</span><span class="nav__hover-text" aria-hidden="true">Contacts</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Community</span><span class="nav__hover-text" aria-hidden="true">Community</span></a></li>
+      </ul>
+    </nav>
     <div class="header__button-group"> 
       <button class="header__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
       <button class="header__btn btn btn--primary" type="button" data-modal="subscribe">Subscribe to newsletter</button>

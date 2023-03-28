@@ -11,7 +11,7 @@
   <script defer src="assets/js/main.js"></script><link href="assets/css/main.css" rel="stylesheet"></head>
   <body>
 <header class="header">
-  <div class="container header__inner">
+  <div class="header__inner">
     <div class="header__left">
       <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
       <div class="header__lang custom-select-wrapper">
@@ -29,6 +29,16 @@
         </button>
       </div>
     </div>
+    <nav class="header__nav nav">
+      <ul class="nav__list"> 
+        <li class="nav__item nav__item--current"><a class="nav__link" href=""><span class="nav__link-text">Tools</span><span class="nav__hover-text" aria-hidden="true">Tools</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">About</span><span class="nav__hover-text" aria-hidden="true">About</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Jobs</span><span class="nav__hover-text" aria-hidden="true">Jobs</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Blog</span><span class="nav__hover-text" aria-hidden="true">Blog</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Contacts</span><span class="nav__hover-text" aria-hidden="true">Contacts</span></a></li>
+        <li class="nav__item"> <a class="nav__link" href=""><span class="nav__link-text">Community</span><span class="nav__hover-text" aria-hidden="true">Community</span></a></li>
+      </ul>
+    </nav>
     <div class="header__button-group"> 
       <button class="header__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
       <button class="header__btn btn btn--primary" type="button" data-modal="subscribe">Subscribe to newsletter</button>
@@ -41,6 +51,10 @@
   <div class="hero">
     <div class="hero__text">
       <h1 class="hero__title">Curated AI-tools catalog</h1>
+      <div class="hero__coming-soon hero-coming-soon"> 
+        <div class="hero-coming-soon__text">+ Community</div>
+        <div class="hero-coming-soon__btn">Coming Soon</div>
+      </div>
       <p class="hero__desc">Discover the best AI-tools for your needs with our carefully curated catalog of the latest and most powerful artificial intelligence software.</p>
     </div>
     <form class="hero__search search" action=""> 
@@ -60,273 +74,141 @@
               </svg>
             </button>
           </div>
-          <div class="categories__list" role="list">
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/1.svg" alt=""></div><span class="categories__name">All</span>
-              </div>
+          <div class="categories__list">
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/1.svg" alt=""></span><span class="categories__name">All</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/2.svg" alt=""></div><span class="categories__name">Design</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/2.svg" alt=""></span><span class="categories__name">Design</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/3.svg" alt=""></div><span class="categories__name">Code</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/3.svg" alt=""></span><span class="categories__name">Code</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/4.svg" alt=""></div><span class="categories__name">Video</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/4.svg" alt=""></span><span class="categories__name">Video</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/5.svg" alt=""></div><span class="categories__name">Music</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/5.svg" alt=""></span><span class="categories__name">Music</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/6.svg" alt=""></div><span class="categories__name">Writing</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/6.svg" alt=""></span><span class="categories__name">Writing</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/7.svg" alt=""></div><span class="categories__name">Crypto</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/7.svg" alt=""></span><span class="categories__name">Crypto</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/8.svg" alt=""></div><span class="categories__name">Finance</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/8.svg" alt=""></span><span class="categories__name">Finance</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/9.svg" alt=""></div><span class="categories__name">Gaming</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/9.svg" alt=""></span><span class="categories__name">Gaming</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/10.svg" alt=""></div><span class="categories__name">Chatbots</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/10.svg" alt=""></span><span class="categories__name">Chatbots</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/11.svg" alt=""></div><span class="categories__name">Speech</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/11.svg" alt=""></span><span class="categories__name">Speech</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/12.svg" alt=""></div><span class="categories__name">Translation</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/12.svg" alt=""></span><span class="categories__name">Translation</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/13.svg" alt=""></div><span class="categories__name">Productivity</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/13.svg" alt=""></span><span class="categories__name">Productivity</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/14.svg" alt=""></div><span class="categories__name">HR</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/14.svg" alt=""></span><span class="categories__name">HR</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/15.svg" alt=""></div><span class="categories__name">Healthcare</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/15.svg" alt=""></span><span class="categories__name">Healthcare</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/16.svg" alt=""></div><span class="categories__name">Security</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/16.svg" alt=""></span><span class="categories__name">Security</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/17.svg" alt=""></div><span class="categories__name">Robotics</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/17.svg" alt=""></span><span class="categories__name">Robotics</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/18.svg" alt=""></div><span class="categories__name">Energy</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/18.svg" alt=""></span><span class="categories__name">Energy</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/19.svg" alt=""></div><span class="categories__name">Education</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/19.svg" alt=""></span><span class="categories__name">Education</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/20.svg" alt=""></div><span class="categories__name">Marketing</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/20.svg" alt=""></span><span class="categories__name">Marketing</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/21.svg" alt=""></div><span class="categories__name">Travel</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/21.svg" alt=""></span><span class="categories__name">Travel</span></span>
             </label>
-            <label class="categories__label" role="listitem">
-              <input class="visually-hidden categories__checkbox" type="checkbox">
-              <div class="categories__item"> 
-                <div class="categories__icon"> <img src="assets/images/categories/22.svg" alt=""></div><span class="categories__name">Retail</span>
-              </div>
+            <label class="categories__label">
+              <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/22.svg" alt=""></span><span class="categories__name">Retail</span></span>
             </label>
           </div>
         </div>
-        <div class="categories__list hidden-mobile" role="list">
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/1.svg" alt=""></div><span class="categories__name">All</span>
-            </div>
+        <div class="categories__list hidden-mobile">
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/1.svg" alt=""></span><span class="categories__name">All</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/2.svg" alt=""></div><span class="categories__name">Design</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/2.svg" alt=""></span><span class="categories__name">Design</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/3.svg" alt=""></div><span class="categories__name">Code</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/3.svg" alt=""></span><span class="categories__name">Code</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/4.svg" alt=""></div><span class="categories__name">Video</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/4.svg" alt=""></span><span class="categories__name">Video</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/5.svg" alt=""></div><span class="categories__name">Music</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/5.svg" alt=""></span><span class="categories__name">Music</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/6.svg" alt=""></div><span class="categories__name">Writing</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/6.svg" alt=""></span><span class="categories__name">Writing</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/7.svg" alt=""></div><span class="categories__name">Crypto</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/7.svg" alt=""></span><span class="categories__name">Crypto</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/8.svg" alt=""></div><span class="categories__name">Finance</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/8.svg" alt=""></span><span class="categories__name">Finance</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/9.svg" alt=""></div><span class="categories__name">Gaming</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/9.svg" alt=""></span><span class="categories__name">Gaming</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/10.svg" alt=""></div><span class="categories__name">Chatbots</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/10.svg" alt=""></span><span class="categories__name">Chatbots</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/11.svg" alt=""></div><span class="categories__name">Speech</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/11.svg" alt=""></span><span class="categories__name">Speech</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/12.svg" alt=""></div><span class="categories__name">Translation</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/12.svg" alt=""></span><span class="categories__name">Translation</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/13.svg" alt=""></div><span class="categories__name">Productivity</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/13.svg" alt=""></span><span class="categories__name">Productivity</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/14.svg" alt=""></div><span class="categories__name">HR</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/14.svg" alt=""></span><span class="categories__name">HR</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/15.svg" alt=""></div><span class="categories__name">Healthcare</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/15.svg" alt=""></span><span class="categories__name">Healthcare</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/16.svg" alt=""></div><span class="categories__name">Security</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/16.svg" alt=""></span><span class="categories__name">Security</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/17.svg" alt=""></div><span class="categories__name">Robotics</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/17.svg" alt=""></span><span class="categories__name">Robotics</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/18.svg" alt=""></div><span class="categories__name">Energy</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/18.svg" alt=""></span><span class="categories__name">Energy</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/19.svg" alt=""></div><span class="categories__name">Education</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/19.svg" alt=""></span><span class="categories__name">Education</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/20.svg" alt=""></div><span class="categories__name">Marketing</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/20.svg" alt=""></span><span class="categories__name">Marketing</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/21.svg" alt=""></div><span class="categories__name">Travel</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/21.svg" alt=""></span><span class="categories__name">Travel</span></span>
           </label>
-          <label class="categories__label" role="listitem">
-            <input class="visually-hidden categories__checkbox" type="checkbox">
-            <div class="categories__item"> 
-              <div class="categories__icon"> <img src="assets/images/categories/22.svg" alt=""></div><span class="categories__name">Retail</span>
-            </div>
+          <label class="categories__label">
+            <input class="visually-hidden categories__checkbox" type="checkbox"><span class="categories__item"> <span class="categories__icon"> <img src="assets/images/categories/22.svg" alt=""></span><span class="categories__name">Retail</span></span>
           </label>
         </div>
       </fieldset>
@@ -350,7 +232,7 @@
           <div class="custom-select__content custom-select__content--primary" id="grid-filter-1" aria-hidden="true"> 
             <div class="custom-select__heading hidden-desktop"> 
               <h3 class="custom-select__title">Choose plan</h3>
-              <button class="custom-select__close js-close-select" type="butom">
+              <button class="custom-select__close js-close-select" type="button">
                 <svg width="20" height="20">
                   <use xlink:href="sprite.svg#close_sprite"> </use>
                 </svg>
@@ -441,7 +323,7 @@
       </div>
     </div>
     <div class="cards__wrapper">
-      <div class="cards__grid"> <a class="card-item card-item--promoted" href="#">
+      <div class="cards__grid"><a class="card-item card-item--promoted" href="#">
           <div class="card-item__image-wrapper">
             <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture><span class="cards__promo-label">Promoted</span>
           </div>
@@ -454,20 +336,20 @@
             <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
           </div></a><a class="card-item card-item--promoted" href="#">
           <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture><span class="cards__promo-label">Promoted</span>
+            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture><span class="cards__promo-label">Promoted</span>
           </div>
           <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
+            <h2 class="card-item__name">Fetch.ai
               <svg width="15" height="10">
                 <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
               </svg>
             </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a></div>
+            <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
+          </div></a>
+      </div>
     </div>
     <div class="cards__wrapper">
-      <div class="cards__promo"><img src="assets/images/promo.jpg" alt=""></div>
-      <div class="cards__grid"> <a class="card-item" href="#">
+      <div class="cards__grid"><a class="card-item" href="#">
           <div class="card-item__image-wrapper">
             <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
           </div>
@@ -477,29 +359,7 @@
                 <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
               </svg>
             </h2>
-            <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
           </div></a><a class="card-item" href="#">
           <div class="card-item__image-wrapper">
             <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
@@ -510,65 +370,7 @@
                 <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
               </svg>
             </h2>
-            <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a></div>
-    </div>
-    <div class="cards__wrapper"> 
-      <div class="cards__grid"> <a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">Fetch.ai
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
           </div></a><a class="card-item" href="#">
           <div class="card-item__image-wrapper">
             <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
@@ -579,66 +381,7 @@
                 <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
               </svg>
             </h2>
-            <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a></div>
-    </div>
-    <div class="cards__wrapper">
-      <div class="cards__promo"><img src="assets/images/promo.jpg" alt=""></div>
-      <div class="cards__grid"> <a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">Fetch.ai
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a><a class="card-item" href="#">
-          <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
-          </div>
-          <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
-              <svg width="15" height="10">
-                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
-              </svg>
-            </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
           </div></a><a class="card-item" href="#">
           <div class="card-item__image-wrapper">
             <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
@@ -649,30 +392,64 @@
                 <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
               </svg>
             </h2>
-            <div class="card-item__desc">Platform for building DAOs using AI algorithms</div>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
           </div></a><a class="card-item" href="#">
           <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
+            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
           </div>
           <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
+            <h2 class="card-item__name">Fetch.ai
               <svg width="15" height="10">
                 <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
               </svg>
             </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
           </div></a><a class="card-item" href="#">
           <div class="card-item__image-wrapper">
-            <picture class="card-item__image"><img src="assets/images/tools/2.jpg" alt=""></picture>
+            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
           </div>
           <div class="card-item__info"> 
-            <h2 class="card-item__name">SingularityNET
+            <h2 class="card-item__name">Fetch.ai
               <svg width="15" height="10">
                 <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
               </svg>
             </h2>
-            <div class="card-item__desc">Decentralized AI marketplace for developers</div>
-          </div></a></div>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
+          </div></a><a class="card-item" href="#">
+          <div class="card-item__image-wrapper">
+            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
+          </div>
+          <div class="card-item__info"> 
+            <h2 class="card-item__name">Fetch.ai
+              <svg width="15" height="10">
+                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
+              </svg>
+            </h2>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
+          </div></a><a class="card-item" href="#">
+          <div class="card-item__image-wrapper">
+            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
+          </div>
+          <div class="card-item__info"> 
+            <h2 class="card-item__name">Fetch.ai
+              <svg width="15" height="10">
+                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
+              </svg>
+            </h2>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
+          </div></a><a class="card-item" href="#">
+          <div class="card-item__image-wrapper">
+            <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
+          </div>
+          <div class="card-item__info"> 
+            <h2 class="card-item__name">Fetch.ai
+              <svg width="15" height="10">
+                <use xlink:href="sprite.svg#arrow-right_sprite"> </use>
+              </svg>
+            </h2>
+            <p class="card-item__desc">Platform for building DAOs using AI algorithms</p>
+          </div></a>
+      </div>
     </div>
     <button class="cards__load-more btn btn--secondary" type="button"> Load more</button>
   </div>
