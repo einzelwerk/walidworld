@@ -1,0 +1,13 @@
+extends ../layouts/main
+
+block content
+  section.container 
+    .hero
+      .hero__text.hero__text--back
+        .hero__heading
+          a.hero__back(href="") 
+            svg(width='8' height='8')
+              use(href='sprite.svg#arrow-left_sprite')
+          h1.hero__title Explore 20+ Design AI Tools
+        p.hero__desc Revolutionize your design process with our selection of AI-powered tools. From image recognition to generative design, explore the possibilities.
+  include ../components/cards-grid

@@ -4,18 +4,19 @@
 .header {
   &__inner {
     @include media(md) {
+      display: flex;
       flex-direction: column;
+
       padding-top: 16px;
       padding-bottom: 16px;
+
       border-bottom: 1px solid var(--border-divider);
     }
 
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
     align-items: center;
-
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px var(--gap);
   }
 
   &__left {
@@ -57,6 +58,17 @@
   }
 
   &__lang {
-    margin-left: 16px;
+    @include media(md) {
+      margin-right: 8px;
+      margin-left: auto;
+    }
+
+    margin-left: 12px;
+  }
+
+  &__nav {
+    @include media(md) {
+      display: none;
+    }
   }
 }

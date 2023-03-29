@@ -54,7 +54,7 @@
   }
 
   &__text {
-    flex:1;
+    flex: 1;
   }
 
   &__title {
@@ -87,13 +87,19 @@
       margin-top: 24px;
     }
 
+    display: inline-flex;
+    align-items: center;
+
     margin-top: 32px;
     padding: 13px 24px;
+
+    font-size: rem(16px);
+    line-height: 150%;
   }
 
   &__image {
     overflow: hidden;
-    flex:1;
+    flex: 1;
 
     width: 100%;
     max-width: 560px;
@@ -121,7 +127,7 @@
   display: flex;
   margin-bottom: 8px;
 
-  &:last-child {
+  &:last-of-type {
     margin: 0;
   }
 
@@ -147,6 +153,8 @@
   &__item {
     --item-background: var(--tags-color);
 
+    user-select: none;
+
     padding: 4px 10px;
 
     font-size: rem(14px);
@@ -154,5 +162,15 @@
 
     background: var(--item-background);
     border-radius: 8px;
+
+    transition: all 0.5s;
+
+    &[href] {
+      &:hover {
+        --item-background: var(--black);
+
+        color: var(--white);
+      }
+    }
   }
 }

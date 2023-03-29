@@ -88,14 +88,12 @@
     &--primary {
       @include media(md) {
         position: fixed;
-        z-index: 10;
+        z-index: 1010;
         top: 0;
         left: 0;
         transform: translateX(0%);
 
         overflow: auto;
-        overflow: auto;
-        display: block;
 
         width: 280px;
         height: 100%;
@@ -112,12 +110,6 @@
         &[aria-hidden='true'] {
           transform: translateX(-100%);
         }
-      }
-
-      display: block;
-
-      &[aria-hidden='true'] {
-        display: none;
       }
     }
   }

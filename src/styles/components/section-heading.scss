@@ -1,8 +1,27 @@
 @use '../utils/mixins' as *;
 
 .section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 40px;
-  font-size: rem(24px);
-  font-weight: 600;
-  letter-spacing: -0.01em;
+
+  &__title {
+    margin-bottom: 16px;
+
+    font-size: rem(24px);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__desc {
+    line-height: 150%;
+    color: var(--text);
+    text-align: center;
+  }
 }

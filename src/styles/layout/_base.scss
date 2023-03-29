@@ -34,13 +34,13 @@ body {
 }
 
 .hidden-desktop {
-  @include media(lg, min-width) {
+  @include media(md, min-width) {
     display: none !important;
   }
 }
 
 .hidden-mobile {
-  @include media(lg) {
+  @include media(md) {
     display: none !important;
   }
 }
@@ -76,6 +76,18 @@ img {
 }
 
 .section {
+  overflow-x: hidden;
+  padding-top: var(--gap-y);
+  padding-bottom: var(--gap-y);
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &--no-top {
+    padding-top: 0;
+  }
+
   &--top {
     @include media(md) {
       padding-top: 48px;

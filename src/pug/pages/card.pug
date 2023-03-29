@@ -2,10 +2,7 @@
 extends ../layouts/main
 
 block content
-  section.section
-    .container.promo-section 
-      .promo-section__item
-      .promo-section__item
+  section.section.section--no-top
     .card-content
       .card-content__inner.container
         .card-content__text 
@@ -47,61 +44,38 @@ block content
             h3.coming-soon__title We’re preparing something.
             p.coming-soon__desc More information for tools coming soon
             button.coming-soon__btn.btn.btn--secondary Subscribe to newsletter
-  section.section.section--top.container
-    h2.section-heading Explore Similar AI Tools:
+  section.section.section--no-top.container
+    .section-heading 
+      h2.section-heading__title Explore Similar AI Tools:
     .cards 
-      .cards__grid 
-        a.card-item(href="#")
-          .card-item__image-wrapper
-            picture.card-item__image
-              img(src=require('@/images/tools/1.jpg'), alt="")
-          .card-item__info 
-            h2.card-item__name Fetch.ai
-              svg(width="15" height="10")
-                use(xlink:href="sprite.svg#arrow-right_sprite") 
-            .card-item__desc Platform for building DAOs using AI algorithms
-        a.card-item(href="#")
-          .card-item__image-wrapper
-            picture.card-item__image
-              img(src=require('@/images/tools/2.jpg'), alt="")
-          .card-item__info 
-            h2.card-item__name SingularityNET
-              svg(width="15" height="10")
-                use(xlink:href="sprite.svg#arrow-right_sprite") 
-            .card-item__desc Decentralized AI marketplace for developers
-        a.card-item(href="#")
-          .card-item__image-wrapper
-            picture.card-item__image
-              img(src=require('@/images/tools/2.jpg'), alt="")
-          .card-item__info 
-            h2.card-item__name SingularityNET
-              svg(width="15" height="10")
-                use(xlink:href="sprite.svg#arrow-right_sprite") 
-            .card-item__desc Decentralized AI marketplace for developers
-        a.card-item(href="#")
-          .card-item__image-wrapper
-            picture.card-item__image
-              img(src=require('@/images/tools/2.jpg'), alt="")
-          .card-item__info 
-            h2.card-item__name SingularityNET
-              svg(width="15" height="10")
-                use(xlink:href="sprite.svg#arrow-right_sprite") 
-            .card-item__desc Decentralized AI marketplace for developers
-        a.card-item(href="#")
-          .card-item__image-wrapper
-            picture.card-item__image
-              img(src=require('@/images/tools/2.jpg'), alt="")
-          .card-item__info 
-            h2.card-item__name SingularityNET
-              svg(width="15" height="10")
-                use(xlink:href="sprite.svg#arrow-right_sprite") 
-            .card-item__desc Decentralized AI marketplace for developers
-        a.card-item(href="#")
-          .card-item__image-wrapper
-            picture.card-item__image
-              img(src=require('@/images/tools/2.jpg'), alt="")
-          .card-item__info 
-            h2.card-item__name SingularityNET
-              svg(width="15" height="10")
-                use(xlink:href="sprite.svg#arrow-right_sprite") 
-            .card-item__desc Decentralized AI marketplace for developers
+      .cards__grid
+        each val in [1,1,1,1,1,1]
+          article.card-item(href="#")
+            a.card-item__link(href="") 
+              .card-item__image-gradient
+                .card-item__image-wrapper
+                  picture.card-item__image
+                    img(src=require('@/images/tools/1.jpg'), alt="")
+                  .card-item__views 
+                    span 6250
+                    svg(width='16' height='16')
+                      use(href='sprite.svg#views_sprite')
+                  .card-payment 
+                    span.card-payment__item Paid
+                    span.card-payment__item(style="--background:#F5E769") This tool offers a free trial!
+              .card-item__info 
+                h2.card-item__name Fetch.ai
+                .card-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
+            .card-item__bottom 
+              .card-tags
+                ul.card-tags__list
+                  li.card-tags__list-item
+                    a.card-tags__item(href="")  Code
+                  li.card-tags__list-item
+                    a.card-tags__item(href="")  Speech
+                  li.card-tags__list-item
+                    a.card-tags__item(href="")  Seo
+              a.card-item__external-link(href="" target="_blank" rel="noopener nofollow") 
+                span Visit 
+                svg(width='20' height='20')
+                  use(href='sprite.svg#external_sprite')

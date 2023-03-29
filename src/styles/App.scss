@@ -6,7 +6,6 @@
 // utils
 @use 'utils/vars';
 @use 'utils/mixins';
-@use 'utils/fonts';
 
 // modules
 @use 'modules/buttons';
@@ -40,3 +39,11 @@
 @use 'components/single-page';
 @use 'components/editor-content';
 @use 'components/coming-soon';
+@use 'components/nav';
+@use 'components/about-hero';
+@use 'components/team-grid';
+@use 'components/gallery-slider';
+@use 'components/page-desc';
+@use 'components/changelog';
+@use 'components/socials-list';
+@use 'components/button-group';

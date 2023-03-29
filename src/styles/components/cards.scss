@@ -1,13 +1,5 @@
 @use '../utils/mixins' as *;
 
-.cards-section {
-  @include media(md) {
-    margin-top: 0;
-  }
-
-  margin-top: 60px;
-}
-
 .cards {
   $this: &;
 
@@ -50,6 +42,10 @@
   }
 
   &__grid {
+    @include media(md) {
+      gap: 24px;
+    }
+
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 44px 24px;

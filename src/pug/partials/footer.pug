@@ -1,12 +1,45 @@
 footer.footer 
-  .footer__inner.container 
+  .footer__top.container 
+    .footer__col 
+      .footer__logo.logo 
+        a.logo__link(href="") 
+          img.logo__src(src=require('@/images/logo.svg'), alt="")
+      p.footer__desc Carefully curated catalog of the best AI-tools for your needs
+      .footer__socials.socials-list
+        each val in [1,2,3,4,5]
+          a.socials-list__item(href="") 
+            img.socials-list__icon(src=require(`@/images/socials/${val}.svg`) alt="")
+    .footer__col 
+      h4.footer__heading Menu
+      nav.footer-navigation
+        ul.footer-navigation__list 
+          li.footer-navigation__item 
+            a.footer-navigation__link(href="") Tools
+          li.footer-navigation__item 
+            a.footer-navigation__link(href="") Jobs
+          li.footer-navigation__item 
+            a.footer-navigation__link(href="") Blog
+          li.footer-navigation__item 
+            a.footer-navigation__link(href="") About us
+          li.footer-navigation__item 
+            a.footer-navigation__link(href="") Contacts
+    .footer__col
+      .footer__contacts.footer-contacts
+        .footer-contacts__item
+          h4.footer__heading For collaboration
+          a.footer-contacts__link(href="") hi@waildworld.com
+        .footer-contacts__item
+          h4.footer__heading Submit tool / job
+          a.footer-contacts__link(href="") submit@waildworld.com
+
+  .footer__bottom.container 
     span.footer__copyright 2023. © All rights reserved.
-    nav.footer-nav
-      ul.footer-nav__list 
-        li.footer-nav__item 
-          a.footer-nav__link(href="") Terms of Service
-        li.footer-nav__item 
-          a.footer-nav__link(href="") Privacy Policy
+    nav.footer-privacy
+      ul.footer-privacy__list 
+        li.footer-privacy__item 
+          a.footer-privacy__link(href="") Terms of Service
+        li.footer-privacy__item 
+          a.footer-privacy__link(href="") Privacy Policy
     .footer__made-in Project by
       a(href="")  Einzelwerk
 .modal-wrapper(data-modal-el="submit-tool" aria-hidden="true")

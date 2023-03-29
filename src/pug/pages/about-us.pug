@@ -1,0 +1,123 @@
+extends ../layouts/main
+
+block content
+  section.section.section--no-top.container 
+    .about-hero.hero 
+      .about-hero__text 
+        h1.about-hero__title If you can't beat them, join them
+        p.about-hero__desc  - that's what we thought when we came up with our project Waild World! Our goal is to inform our dear community about the lightning-fast developing market of AI tools that have already turned the world upside down.
+      picture.about-hero__image 
+        img(src=require('@/images/about.jpg') alt="")
+      p.about-hero__desc.about-hero__desc--top Right now, our project is in the public testing phase, which means that every day you might find something super useful or something that's not quite working yet. But don't worry, we're working hard to add new features as fast as we can, so it's worth checking back often!
+  section.section.container 
+    .section-heading 
+      h2.section-heading__title Our team
+    .team-grid
+      each val in [1,1,1,1,1,1,1,1]
+        .team-grid__item 
+          picture.team-grid__image 
+            img(src=require('@/images/team/1.jpg') alt="")
+          .team-grid__info 
+            h4.team-grid__name Anastasia
+            span.team-grid__position CEO
+  section.section
+    .container.section-heading 
+      h2.section-heading__title Our background
+      p.section-heading__desc yet another digital agency
+    .gallery-slider.swiper.js-gallery-slider
+      .swiper-wrapper 
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/1.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/2.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/3.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/1.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/2.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/3.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/1.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/2.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/3.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/1.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/2.jpg') alt="")
+        .swiper-slide
+          picture.gallery-slider__item 
+            img(src=require('@/images/gallery/3.jpg') alt="")
+    .container.page-desc 
+      p Our tight-knit team is the backbone of the digital studio Einzelwerk, based in the beautiful city of Hamburg, Germany. We provide comprehensive online marketing services for businesses of all shapes and sizes - because let's face it, who can survive without a good online presence these days?
+      p Our cosmopolitan team brings together the best of different cultures and mentalities, and we work hard every day to make the world a better place with our stunning products and services.
+      p If you want to learn more about our studio, don't be shy - hit us up on Telegram or shoot us an email! We're always excited to meet new people and discuss new projects. Who knows, maybe we'll end up creating something amazing together!
+  section.section.container
+    .section-heading 
+      h2.section-heading__title What already happened
+    .changelog 
+      .changelog__item
+        .changelog__heading
+          .changelog-types 
+            span.changelog-types__item(style="--background:#F5E769;--color:#101010") Current version
+            span.changelog-types__item(style="--background:#933FFF;--color:#fff") Update
+          .changelog__date
+            svg(width='20' height='20')
+              use(href='sprite.svg#time_sprite')
+            span 1 week ago
+        .changelog__content 
+          h4.changelog__title Update v1.2
+          ul.changelog__list.changelog-list 
+            li.changelog-list__item About us page created
+            li.changelog-list__item Contacts page created
+            li.changelog-list__item Jobs added
+            li.changelog-list__item 700+ tools online
+            li.changelog-list__item Updated structure of the single tool
+      .changelog__item
+        .changelog__heading
+          .changelog-types 
+            span.changelog-types__item(style="--background:#F5E769;--color:#101010") Current version
+            span.changelog-types__item(style="--background:#933FFF;--color:#fff") Update
+          .changelog__date
+            svg(width='20' height='20')
+              use(href='sprite.svg#time_sprite')
+            span 1 week ago
+        .changelog__content 
+          h4.changelog__title Update v1.2
+          ul.changelog__list.changelog-list 
+            li.changelog-list__item About us page created
+            li.changelog-list__item Contacts page created
+            li.changelog-list__item Jobs added
+            li.changelog-list__item 700+ tools online
+            li.changelog-list__item Updated structure of the single tool
+      .changelog__item
+        .changelog__heading
+          .changelog-types 
+            span.changelog-types__item(style="--background:#E6FE51;--color:#101010") Launch
+
+          .changelog__date
+            svg(width='20' height='20')
+              use(href='sprite.svg#time_sprite')
+            span 3 week ago
+        .changelog__content 
+          h4.changelog__title Initial launch of project
+          ul.changelog__list.changelog-list 
+            li.changelog-list__item About us page created
+            li.changelog-list__item Contacts page created
+            li.changelog-list__item Jobs added
+            li.changelog-list__item 700+ tools online
+            li.changelog-list__item Updated structure of the single tool

@@ -5,10 +5,14 @@
     'Security', 'Robotics', 'Energy', 'Education', 'Marketing', 'Travel', 'Retail' 
   ]
 
-section.section.container 
+section.container 
   .hero
     .hero__text
-      h1.hero__title Curated AI-tools catalog
+      .hero__heading
+        h1.hero__title Curated AI-tools catalog
+      .hero__coming-soon.hero-coming-soon 
+        .hero-coming-soon__text + Community
+        .hero-coming-soon__btn Coming Soon
       p.hero__desc Discover the best AI-tools for your needs with our carefully curated catalog of the latest and most powerful artificial intelligence software.
     form.hero__search.search(action="") 
       input(type="text" class="search__input" placeholder="Search, try ‘Design’ / ‘Video’ / ‘SEO’ etc.")
@@ -22,20 +26,20 @@ section.section.container
             button.categories-mobile__close.js-close-select(aria-label="close categories list" type="button")
               svg(width="20" height="20")
                 use(xlink:href="sprite.svg#close_sprite") 
-          .categories__list(role="list")
+          .categories__list
             each val, index in cats 
-              label.categories__label(role="listitem")
+              label.categories__label
                 input(type="checkbox" class="visually-hidden categories__checkbox")
-                .categories__item 
-                  .categories__icon 
+                span.categories__item 
+                  span.categories__icon 
                     img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
                   span.categories__name= val
-        .categories__list.hidden-mobile(role="list")
+        .categories__list.hidden-mobile
           each val, index in cats 
-            label.categories__label(role="listitem")
+            label.categories__label
               input(type="checkbox" class="visually-hidden categories__checkbox")
-              .categories__item 
-                .categories__icon 
+              span.categories__item 
+                span.categories__icon 
                   img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
                 span.categories__name= val
 
