@@ -28,6 +28,11 @@
           </nav>
         </button>
       </div>
+      <div class="mobile-nav-btn hidden-desktop js-open-mobile-menu">
+        <svg width="24" height="24">
+          <use href="sprite.svg#mobile-nav_sprite"></use>
+        </svg>
+      </div>
     </div>
     <nav class="header__nav nav">
       <ul class="nav__list"> 
@@ -45,6 +50,50 @@
     </div>
   </div>
 </header>
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav__header header">
+    <div class="header__left container">
+      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+      <div class="header__lang custom-select-wrapper">
+        <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
+            <svg class="custom-select__arrow" width="8" height="8">
+              <use xlink:href="sprite.svg#arrow-down_sprite"></use>
+            </svg></span>
+          <nav class="custom-select__content custom-select__content--secondary" id="lang-switcher" aria-hidden="true">
+            <ul class="lang-switcher"> 
+              <li class="lang-switcher__item">En </li>
+              <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">Ru</a></li>
+              <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">De</a></li>
+            </ul>
+          </nav>
+        </button>
+      </div>
+      <div class="mobile-nav-btn hidden-desktop js-close-nav">
+        <svg width="24" height="24">
+          <use href="sprite.svg#mobile-nav-close_sprite"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav__main container"> 
+    <nav class="mobile-nav__nav"> 
+      <ul class="mobile-nav__nav-list"> 
+        <li class="mobile-nav__nav-item"> <a class="mobile-nav__nav-link" href="">Tools</a></li>
+        <li class="mobile-nav__nav-item"> <a class="mobile-nav__nav-link" href="">About</a></li>
+        <li class="mobile-nav__nav-item"> <a class="mobile-nav__nav-link" href="">Jobs</a></li>
+        <li class="mobile-nav__nav-item"> <a class="mobile-nav__nav-link" href="">Blog</a></li>
+        <li class="mobile-nav__nav-item"> <a class="mobile-nav__nav-link" href="">Contacts</a></li>
+        <li class="mobile-nav__nav-item"> <a class="mobile-nav__nav-link" href="">Community</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__socials socials-list"><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/1.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/2.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/3.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/4.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/5.svg" alt=""></a>
+    </div>
+    <div class="mobile-nav__button-group button-group">
+      <button class="button-group__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
+      <button class="button-group__btn btn btn--primary" type="button" data-modal="subscribe">Subscribe to newsletter</button>
+    </div>
+  </div>
+</div>
 <div class="background-blur"></div>
     <main class="main">
       <section class="section container">
@@ -75,11 +124,41 @@
       </section>
     </main>
 <footer class="footer"> 
-  <div class="footer__inner container"> <span class="footer__copyright">2023. © All rights reserved.</span>
-    <nav class="footer-nav">
-      <ul class="footer-nav__list"> 
-        <li class="footer-nav__item"> <a class="footer-nav__link" href="">Terms of Service</a></li>
-        <li class="footer-nav__item"> <a class="footer-nav__link" href="">Privacy Policy</a></li>
+  <div class="footer__top container"> 
+    <div class="footer__col"> 
+      <div class="footer__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+      <p class="footer__desc">Carefully curated catalog of the best AI-tools for your needs</p>
+      <div class="footer__socials socials-list"><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/1.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/2.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/3.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/4.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/5.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="footer__col"> 
+      <h4 class="footer__heading">Menu</h4>
+      <nav class="footer-navigation">
+        <ul class="footer-navigation__list"> 
+          <li class="footer-navigation__item"> <a class="footer-navigation__link" href="">Tools</a></li>
+          <li class="footer-navigation__item"> <a class="footer-navigation__link" href="">Jobs</a></li>
+          <li class="footer-navigation__item"> <a class="footer-navigation__link" href="">Blog</a></li>
+          <li class="footer-navigation__item"> <a class="footer-navigation__link" href="">About us</a></li>
+          <li class="footer-navigation__item"> <a class="footer-navigation__link" href="">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__col">
+      <div class="footer__contacts footer-contacts">
+        <div class="footer-contacts__item">
+          <h4 class="footer__heading">For collaboration</h4><a class="footer-contacts__link" href="">hi@waildworld.com</a>
+        </div>
+        <div class="footer-contacts__item">
+          <h4 class="footer__heading">Submit tool / job</h4><a class="footer-contacts__link" href="">submit@waildworld.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom container"> <span class="footer__copyright">2023. © All rights reserved.</span>
+    <nav class="footer-privacy">
+      <ul class="footer-privacy__list"> 
+        <li class="footer-privacy__item"> <a class="footer-privacy__link" href="">Terms of Service</a></li>
+        <li class="footer-privacy__item"> <a class="footer-privacy__link" href="">Privacy Policy</a></li>
       </ul>
     </nav>
     <div class="footer__made-in">Project by<a href=""> Einzelwerk</a></div>
