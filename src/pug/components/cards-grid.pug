@@ -1,4 +1,5 @@
 section.section.container.cards-section
+
   .cards 
     .cards__heading 
       h3.cards__count Showing 120 of 923 Tools
@@ -41,6 +42,12 @@ section.section.container.cards-section
                     input.checkbox-list__input.checkbox-list__input--radio(type="radio" name="sort-radio" value=`${index} Sort by name (A-Z)`)
                     span.checkbox-list__fake-radio
                     span.checkbox-list__text=index + ' Sort by name (A-Z)'
+
+    .no-result.container
+      .no-result__lottie 
+        lottie-player.result-lottie( autoplay  loop mode="normal" src=require('@/lottie/rocket2.json'))
+      span.no-result__title Hey, Houston
+      p.no-result__desc We didn’t find results according your search.Try again with new filters. 
     .cards__wrapper
       .cards__grid
         each val in [1,1]
