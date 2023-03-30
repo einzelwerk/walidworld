@@ -45,6 +45,10 @@ body {
   }
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -76,7 +80,6 @@ img {
 }
 
 .section {
-  overflow-x: hidden;
   padding-top: var(--gap-y);
   padding-bottom: var(--gap-y);
 

@@ -11,7 +11,10 @@
 
   display: block;
 
+  width: 220px;
   padding: 12px 16px;
+
+  font-weight: 400;
 
   border: 1px solid var(--border-divider);
   border-radius: 12px;
@@ -21,8 +24,6 @@
       transform: rotate(-90deg);
       margin-left: 1rem;
     }
-
-    margin-left: 77px;
   }
 
   &--secondary {
@@ -49,6 +50,10 @@
   }
 
   &__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     font-size: rem(14px);
     line-height: 143%;
   }
@@ -183,6 +188,7 @@
     position: relative;
 
     display: block;
+    flex: none;
 
     width: 20px;
     height: 20px;
