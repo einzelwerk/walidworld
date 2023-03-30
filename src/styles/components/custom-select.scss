@@ -77,12 +77,12 @@
     border: 1px solid var(--border-divider);
     border-radius: 12px;
 
+    &[aria-hidden='true'] {
+      display: none;
+    }
+
     &--secondary {
       border-radius: 4px;
-
-      &[aria-hidden='true'] {
-        display: none;
-      }
     }
 
     &--primary {
