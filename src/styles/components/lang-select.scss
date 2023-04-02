@@ -13,7 +13,6 @@
 
 .lang-switcher {
   &__item {
-    padding: 4px 8px;
     color: var(--placeholder);
     border-bottom: 1px solid var(--border-divider);
 
@@ -27,6 +26,9 @@
   }
 
   &__link {
+    display: block;
+    width: 100%;
+    padding: 4px 8px;
     color: var(--black);
   }
 }
