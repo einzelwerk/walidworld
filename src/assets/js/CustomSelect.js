@@ -19,7 +19,9 @@ class CustomSelect {
     document.addEventListener('input', (e) => {
       if (e.target.closest('input[type="radio"]')) {
         this.closeSelect(e);
-        e.target.closest('.custom-select-wrapper').querySelector('.custom-select__placeholder span').innerHTML = e.target.value;
+        e.target.closest('.custom-select-wrapper').querySelector('.custom-select__placeholder span').innerHTML = e.target
+          .closest('.checkbox-list__label')
+          .querySelector('.checkbox-list__text').innerHTML;
       }
     });
   }

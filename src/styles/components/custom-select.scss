@@ -25,6 +25,10 @@
     }
   }
 
+  &--primary {
+    min-width: 220px;
+  }
+
   &--secondary {
     padding: 4px 10px;
     line-height: 150%;
@@ -115,8 +119,6 @@
           transform: translateX(-100%);
         }
       }
-
-      width: 220px;
     }
   }
 }
