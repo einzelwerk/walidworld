@@ -29,7 +29,7 @@ module.exports = {
     open: true,
     compress: true,
     hot: false,
-    port: 8080,
+    port: 8090,
   },
   entry: {
     main: path.resolve(__dirname, './src/index.js'),

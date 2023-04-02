@@ -11,7 +11,6 @@ class Sliders {
       modules: [Mousewheel],
       init: false,
       loop: true,
-
       slidesPerView: 1.2,
       spaceBetween: 20,
       centeredSlides: true,
@@ -20,9 +19,11 @@ class Sliders {
         sensitivity: 0.3,
       },
 
+      initialSlide: 3,
+
       breakpoints: {
         768: {
-          slidesPerView: 3.4,
+          slidesPerView: 4,
         },
       },
     });

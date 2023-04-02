@@ -1,5 +1,7 @@
 .gallery-slider {
   &__item {
+    user-select: none;
+
     position: relative;
 
     overflow: hidden;
