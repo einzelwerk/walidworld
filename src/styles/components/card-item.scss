@@ -168,6 +168,7 @@
 
 .card-payment {
   position: absolute;
+  z-index: 10;
   bottom: calc(var(--card-offset, 0px) + 8px);
   left: calc(var(--card-offset, 0px) + 8px);
 

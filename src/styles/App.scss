@@ -1,5 +1,6 @@
 // vendor
 @use 'vendor/reset';
+@use 'vendor/poper';
 
 // @use 'vendor/normalize';
 
@@ -48,3 +49,4 @@
 @use 'components/socials-list';
 @use 'components/button-group';
 @use 'components/no-result';
+@use 'components/tool-content';

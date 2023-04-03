@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.7.1",
+    "@popperjs/core": "^2.11.7",
     "swiper": "^9.1.1"
   }
 }

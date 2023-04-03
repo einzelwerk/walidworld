@@ -1,54 +1,54 @@
 @use '../utils/mixins' as *;
 
-.tooltip {
-  $this: &;
+// .tooltip {
+//   $this: &;
 
-  position: relative;
+//   position: relative;
 
-  &:hover {
-    #{$this}__content {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
+//   &:hover {
+//     #{$this}__content {
+//       visibility: visible;
+//       opacity: 1;
+//     }
+//   }
 
-  &__content {
-    @include media(sm) {
-      transform: translateX(-48%);
-      max-width: 312px;
-    }
+//   &__content {
+//     @include media(sm) {
+//       transform: translateX(-48%);
+//       max-width: 312px;
+//     }
 
-    position: absolute;
-    top: 100%;
-    transform: translateX(-36%);
+//     position: absolute;
+//     top: 100%;
+//     transform: translateX(-36%);
 
-    width: 460px;
-    padding: 15px 12px;
+//     width: 460px;
+//     padding: 15px 12px;
 
-    visibility: hidden;
-    opacity: 0;
-    background: var(--white);
-    border: 1px solid var(--border-divider);
+//     visibility: hidden;
+//     opacity: 0;
+//     background: var(--white);
+//     border: 1px solid var(--border-divider);
 
-    transition: 0.5s;
-  }
+//     transition: 0.5s;
+//   }
 
-  &__title {
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
+//   &__title {
+//     margin-bottom: 8px;
+//     font-weight: 600;
+//   }
 
-  &__desc {
-    font-size: rem(14px);
-    line-height: 143%;
-    color: var(--text);
+//   &__desc {
+//     font-size: rem(14px);
+//     line-height: 143%;
+//     color: var(--text);
 
-    p {
-      margin-bottom: 1rem;
+//     p {
+//       margin-bottom: 1rem;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
+//       &:last-child {
+//         margin-bottom: 0;
+//       }
+//     }
+//   }
+// }

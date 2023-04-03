@@ -1,0 +1,156 @@
+@use '../utils/mixins' as *;
+
+.tool-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.tool-nav {
+  position: sticky;
+  top: 0;
+  right: 0;
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: rem(24px);
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__link {
+    &--current {
+      color: var(--accent-purple);
+    }
+  }
+}
+
+.tool-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  max-width: 700px;
+
+  line-height: 150%;
+
+  h2 {
+    margin-bottom: 24px;
+    font-size: rem(24px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 20px;
+    font-size: rem(16px);
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+    border: 1px solid var(--border-divider);
+    border-radius: 12px;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    color: var(--text);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 16px 0;
+
+    color: var(--text);
+  }
+
+  a {
+    text-decoration: dotted;
+  }
+
+  li {
+    display: flex;
+
+    &::before {
+      content: '';
+
+      flex: none;
+
+      width: 6px;
+      height: 6px;
+      margin-top: 9px;
+      margin-right: 8px;
+
+      background: var(--black);
+      border-radius: 1px;
+    }
+  }
+}
+
+.tool-features {
+  .tool-features__item {
+    &::before {
+      content: '';
+
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      margin-right: 8px;
+
+      background: url('@/images/features.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.useful-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px 24px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    padding: 4px 10px;
+
+    font-size: rem(14px);
+
+    background: var(--tags-color);
+    border-radius: 8px;
+
+    transition: 0.25s;
+
+    &:hover {
+      color: var(--white);
+      background: var(--black);
+    }
+  }
+}

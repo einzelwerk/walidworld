@@ -7,8 +7,9 @@ footer.footer
       p.footer__desc Carefully curated catalog of the best AI-tools for your needs
       .footer__socials.socials-list
         each val in [1,2,3,4,5]
-          a.socials-list__item(href="") 
-            img.socials-list__icon(src=require(`@/images/socials/${val}.svg`) alt="")
+          a.socials-list__item(href="" aria-label="WaildWorld on Twitter" title="WaildWorld on Twitter" target="_blank" rel="noopener nofollow")
+            svg(width='20' height='20')
+              use(href='sprite.svg#twitter_sprite')
     .footer__col 
       h4.footer__heading Menu
       nav.footer-navigation
