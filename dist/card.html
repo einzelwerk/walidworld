@@ -94,14 +94,51 @@
     <main class="main">
       <section class="section section--no-top">
         <div class="card-content">
+          <div class="card-content__header container">
+            <div class="card-content__heading"><a class="card-content__back" href=""> 
+                <svg width="8" height="8">
+                  <use xlink:href="sprite.svg#arrow-left_sprite"> </use>
+                </svg></a>
+              <h1 class="card-content__title">Descript AI Tool</h1>
+            </div>
+            <div class="card-content__info"> 
+              <time class="card-content__date card-content__info-item" datetime="2023-03-01">
+                <svg width="16" height="16">
+                  <use href="sprite.svg#date_sprite"></use>
+                </svg><span> March 1</span>
+              </time>
+              <div class="card-content__views card-content__info-item">
+                <svg width="16" height="16">
+                  <use href="sprite.svg#views_sprite"></use>
+                </svg><span>6250</span>
+              </div>
+              <button class="card-content__share card-content__info-item share" aria-describedby="share-tooltip" id="share-button" data-tooltip-trigger="share-tooltip">
+                <svg width="16" height="16">
+                  <use href="sprite.svg#share_sprite"></use>
+                </svg>
+                <div class="tooltip tooltip-socials" id="share-tooltip" role="tooltip" tabindex="-1" data-tooltip="share-tooltip">
+                  <div class="tooltip-socials__inner"> 
+                    <div class="tooltip-socials__item" tabindex="2"> <a class="tooltip-socials__link" href="https://google.com"> 
+                        <svg width="16" height="16">
+                          <use href="sprite.svg#twitter_sprite"></use>
+                        </svg></a></div>
+                    <div class="tooltip-socials__item" tabindex="2"> <a class="tooltip-socials__link" href="https://google.com"> 
+                        <svg width="16" height="16">
+                          <use href="sprite.svg#inst_sprite"></use>
+                        </svg></a></div>
+                    <div class="tooltip-socials__item" tabindex="2"> <a class="tooltip-socials__link" href="https://google.com"> 
+                        <svg width="16" height="16">
+                          <use href="sprite.svg#fb_sprite"></use>
+                        </svg></a></div>
+                  </div>
+                  <div id="arrow" data-popper-arrow></div>
+                </div>
+                <div class="share__button">Share</div>
+              </button>
+            </div>
+          </div>
           <div class="card-content__inner container">
             <div class="card-content__text"> 
-              <div class="card-content__heading"> <a class="card-content__back" href=""> 
-                  <svg width="8" height="8">
-                    <use xlink:href="sprite.svg#arrow-left_sprite"> </use>
-                  </svg></a>
-                <h1 class="card-content__title">Descript AI Tool</h1>
-              </div>
               <div class="card-content__description"> 
                 <h2 class="card-content__description-title">Description</h2>
                 <div class="card-content__description-content"> 
@@ -122,10 +159,22 @@
                     <li class="card-tags__item">Marketing</li>
                     <li class="card-tags__item">Code</li>
                   </ul>
-                </div><a class="card-content__link btn btn--primary" href="" target="_blank">Explore the tool
-                  <svg class="btn__arrow" width="14" height="10">
-                    <use xlink:href="sprite.svg#arrow-link_sprite"> </use>
-                  </svg></a>
+                </div>
+                <div class="tool-links"><a class="card-content__link btn btn--primary" href="" target="_blank">Visit
+                    <svg class="btn__arrow" width="20" height="20">
+                      <use xlink:href="sprite.svg#external_sprite"> </use>
+                    </svg></a>
+                  <div class="tool-socials socials-list"> <a class="socials-list__item" href="" aria-label="#TOOL_NAME# on Twitter" title="#TOOL_NAME# on Twitter" target="_blank" rel="noopener nofollow">
+                      <svg width="20" height="20">
+                        <use href="sprite.svg#twitter_sprite"></use>
+                      </svg></a><a class="socials-list__item" href="" aria-label="#TOOL_NAME# on Twitter" title="#TOOL_NAME# on Twitter" target="_blank" rel="noopener nofollow">
+                      <svg width="20" height="20">
+                        <use href="sprite.svg#fb_sprite"></use>
+                      </svg></a><a class="socials-list__item" href="" aria-label="#TOOL_NAME# on Twitter" title="#TOOL_NAME# on Twitter" target="_blank" rel="noopener nofollow">
+                      <svg width="20" height="20">
+                        <use href="sprite.svg#inst_sprite"></use>
+                      </svg></a></div>
+                </div>
               </div>
             </div>
             <picture class="card-content__image"><img src="assets/images/card-i.jpg" alt=""></picture>
@@ -332,7 +381,22 @@
     <div class="footer__col"> 
       <div class="footer__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
       <p class="footer__desc">Carefully curated catalog of the best AI-tools for your needs</p>
-      <div class="footer__socials socials-list"><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/1.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/2.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/3.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/4.svg" alt=""></a><a class="socials-list__item" href=""> <img class="socials-list__icon" src="assets/images/socials/5.svg" alt=""></a>
+      <div class="footer__socials socials-list"><a class="socials-list__item" href="" aria-label="WaildWorld on Twitter" title="WaildWorld on Twitter" target="_blank" rel="noopener nofollow">
+          <svg width="20" height="20">
+            <use href="sprite.svg#twitter_sprite"></use>
+          </svg></a><a class="socials-list__item" href="" aria-label="WaildWorld on Twitter" title="WaildWorld on Twitter" target="_blank" rel="noopener nofollow">
+          <svg width="20" height="20">
+            <use href="sprite.svg#twitter_sprite"></use>
+          </svg></a><a class="socials-list__item" href="" aria-label="WaildWorld on Twitter" title="WaildWorld on Twitter" target="_blank" rel="noopener nofollow">
+          <svg width="20" height="20">
+            <use href="sprite.svg#twitter_sprite"></use>
+          </svg></a><a class="socials-list__item" href="" aria-label="WaildWorld on Twitter" title="WaildWorld on Twitter" target="_blank" rel="noopener nofollow">
+          <svg width="20" height="20">
+            <use href="sprite.svg#twitter_sprite"></use>
+          </svg></a><a class="socials-list__item" href="" aria-label="WaildWorld on Twitter" title="WaildWorld on Twitter" target="_blank" rel="noopener nofollow">
+          <svg width="20" height="20">
+            <use href="sprite.svg#twitter_sprite"></use>
+          </svg></a>
       </div>
     </div>
     <div class="footer__col"> 
