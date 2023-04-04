@@ -13,11 +13,12 @@ html(lang="de")
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap' rel='stylesheet')
   body(class= page=='home' ? 'home' : '')
-    include ../partials/header
+    .root
+      include ../partials/header
 
-    main.main
-      block content
+      main.main
+        block content
 
-    include ../partials/footer
+      include ../partials/footer
 
 

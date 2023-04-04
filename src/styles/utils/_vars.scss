@@ -3,7 +3,7 @@
 :root {
   --container: 1264px;
   --gap: 32px;
-  --gap-y: 50px;
+  --gap-y: 80px;
 
   @each $breakpoint, $val in $breakpoints {
     @if $val > 1200px {
@@ -15,7 +15,7 @@
   }
   @include media(md) {
     --gap: 20px;
-    --gap-y: 25px;
+    --gap-y: 48px;
   }
 }
 

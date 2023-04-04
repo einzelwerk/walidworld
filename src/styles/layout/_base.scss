@@ -29,6 +29,10 @@ body {
   background: var(--white);
 }
 
+.root {
+  overflow: clip;
+}
+
 .oh {
   overflow: hidden;
 }
@@ -78,6 +82,14 @@ img {
 .section {
   padding-top: var(--gap-y);
   padding-bottom: var(--gap-y);
+
+  &--border {
+    border-bottom: 1px solid var(--border-divider);
+  }
+
+  &--m {
+    --gap-y: 50px;
+  }
 
   &:last-child {
     padding-bottom: 0;

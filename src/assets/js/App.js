@@ -5,3 +5,4 @@ import './Nav';
 import './Lottie';
 import './Poper';
 import './ArchonNav';
+import './GLightbox';

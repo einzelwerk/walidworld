@@ -5,7 +5,7 @@ tooltipTrigger.forEach((trigger) => {
   const tooltip = document.querySelector(`[data-tooltip="${trigger.dataset.tooltipTrigger}"]`);
 
   const popperInstance = createPopper(trigger, tooltip, {
-    placement: 'bottom',
+    placement: 'right',
     modifiers: [
       {
         name: 'offset',
@@ -22,11 +22,13 @@ tooltipTrigger.forEach((trigger) => {
   }
 
   function hide() {
-    tooltip.addEventListener('mouseleave', () => {
-      setTimeout(() => {
+    setTimeout(() => {
+      const isTooltipHovered = tooltip.matches(':hover');
+      const isTriggerHovered = trigger.matches(':hover');
+      if (!isTooltipHovered && !isTriggerHovered) {
         tooltip.removeAttribute('data-show');
-      }, 100);
-    });
+      }
+    }, 100);
   }
 
   const showEvents = ['mouseenter', 'focus'];
@@ -38,5 +40,13 @@ tooltipTrigger.forEach((trigger) => {
 
   hideEvents.forEach((event) => {
     trigger.addEventListener(event, hide);
+  });
+
+  tooltip.addEventListener('mouseenter', () => {
+    tooltip.removeAttribute('data-show');
+  });
+
+  tooltip.addEventListener('mouseleave', () => {
+    hide();
   });
 });

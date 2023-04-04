@@ -1,15 +1,6 @@
 @use '../utils/mixins' as *;
 
 .card-content {
-  @include media(md) {
-    padding-top: 16px;
-    padding-bottom: 48px;
-  }
-
-  padding-top: 80px;
-  padding-bottom: 80px;
-  border-bottom: 1px solid var(--border-divider);
-
   &__inner {
     @include media(md) {
       flex-direction: column-reverse;
@@ -18,16 +9,21 @@
 
     display: flex;
     gap: 60px;
+    align-items: flex-start;
   }
 
   &__header {
     @include media(md) {
+      flex-direction: column;
+      align-items: flex-start;
       margin-bottom: 24px;
     }
 
     display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
+
     margin-bottom: 32px;
   }
 
@@ -101,7 +97,7 @@
   }
 
   &__link {
-    @include media(md) {
+    @include media(sm) {
       display: flex;
       justify-content: center;
       width: 100%;
@@ -208,5 +204,9 @@
 }
 
 .tool-socials {
+  @include media(sm) {
+    margin: auto;
+  }
+
   color: var(--placeholder);
 }

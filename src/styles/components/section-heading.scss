@@ -6,6 +6,10 @@
   align-items: center;
   margin-bottom: 40px;
 
+  &--left {
+    align-items: flex-start;
+  }
+
   &__title {
     margin-bottom: 16px;
 

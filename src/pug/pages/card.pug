@@ -2,7 +2,7 @@
 extends ../layouts/main
 
 block content
-  section.section.section--no-top
+  section.section.section--border
     .card-content
       .card-content__header.container
         .card-content__heading
@@ -19,7 +19,7 @@ block content
             svg(width='16' height='16')
               use(href='sprite.svg#views_sprite')
             span 6250
-          button.card-content__share.card-content__info-item.share(aria-describedby="share-tooltip" id="share-button" data-tooltip-trigger="share-tooltip")
+          button.card-content__share.card-content__info-item.share.tooltip-wrapper(aria-describedby="share-tooltip" id="share-button" data-tooltip-trigger="share-tooltip")
             svg(width='16' height='16')
               use(href='sprite.svg#share_sprite')
             #share-tooltip.tooltip(role="tooltip" class="tooltip-socials" tabindex="-1" data-tooltip="share-tooltip")
@@ -72,118 +72,144 @@ block content
                     use(href='sprite.svg#inst_sprite')
         picture.card-content__image
           img(src=require('@/images/card-i.jpg'), alt="")
-
-      .coming-soon.container
-        .coming-soon__inner
-          picture.coming-soon__background 
-            img(src=require('@/images/coming-soon.svg'), alt="")
-          .coming-soon__content
-            .coming-soon__loader 
-              span 
-              span 
-              span 
-            h3.coming-soon__title We’re preparing something.
-            p.coming-soon__desc More information for tools coming soon
-            button.coming-soon__btn.btn.btn--secondary Subscribe to newsletter
-  section.section.container 
-    .tool-content-wrapper 
-      .tool-content
-        section#features.tool-content__section 
-          h2 GPT-3 Playground Features
-          p Upword simplifies content creation by offering a centralized location for the entire workflow, from idea to publishing. Its all-in-one solution streamlines the process, reducing errors and delays. With a user-friendly interface and comprehensive features, Upword maximizes productivity and efficiency. Optimize your content workflow today with Upword.
-          ul.tool-features 
-            li.tool-features__item Add comments, both your own and those created by AI;
-            li.tool-features__item Attach links and media files;
-            li.tool-features__item Highlight what's important - Artificial Intelligence can help with this, too;
-            li.tool-features__item Simplify complex and translate foreign texts;
-            li.tool-features__item Listen to finished excerpts using the built-in audio tools.
-        section#how-to.tool-content__section 
-          h2 How to use GPT-3 Playground
-          p The process of working with Upword is simple and intuitive. The platform has a web version, but it is more convenient to use the extension for Google Chrome.
-          p It can be found in the official Google Store. In order to start using the tool, all you have to do is open the article you want to cut and run the extension.
-          h3 Buy the product
-          p It can be found in the official Google Store. In order to start using the tool, all you have to do is open the article you want to cut and run the extension.
-          picture 
-            img(src=require('@/images/content.jpg'), alt="")
-          h3 Start using
-          p The process of working with Upword is simple and intuitive. The platform has a web version, but it is more convenient to use the extension for Google Chrome.
-          picture 
-            img(src=require('@/images/content.jpg'), alt="")
-          h3 Be happy
-          p The process of working with Upword is simple and intuitive. The platform has a web version, but it is more convenient to use the extension for Google Chrome.
-          picture 
-            img(src=require('@/images/content.jpg'), alt="")
-        section#target.tool-content__section
-          h2 Who is best fit for GPT-3 Playground
-          p  The tool will be useful to everyone who works with texts - not necessarily at a professional level. AI saves time - it makes it easier to follow the news, shorten articles from any source, and listen to finished material on the go.
-          h3 Upword themselves identify the following categories of users who will benefit from their AI:
-          ul
-            li Students. Summarize a book, a research paper, a report - few students can say they don't have enough reading;
-            li Entrepreneurs. AI will help businessmen not to lose time in searching for important information for them. Squeeze out current news, reports, business research-anything to keep up with changes in the workplace;
-            li Marketers, advertisers, content managers. Write a blog post, make a progress report, or cut a lengthy online research, AI will be useful to anyone who works in media;
-            li Executives, leads, managers. Often in a management job, you have to write a resume for management - with AI, this will be a quick and easy task. Upword features allow you to share finished reports and texts with the entire team.
-        section#pricing.tool-content__section
-          h2 GPT-3 Playground Pricing
-          p The platform has a free trial period of 7 days and several paid subscription options:
-          ul 
-            li Monthly - this will cost $15;
-            li Annual - the $150 price includes two free months.
-          p Upword has a student discount of 66%. To get it, you have to prove that you are actually studying.
-        section#links.tool-content__section 
-          h2 GPT-3 Playground Useful Links
-          .useful-links(role="list")
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") White paper
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") User manual
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Blog
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Tutorials & guides
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Video tutorials
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Case studies
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") System status
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-            .useful-links__wrapper
-              .useful-links__item(role="listitem")
-                a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Seed rounds
-                  svg(width='20' height='20')
-                    use(href='sprite.svg#external_sprite')
-      .tool-nav
-        h4.tool-nav__title Summary
-        nav.tool-nav__list
-          a.tool-nav__link(href="#features" data-id="features") GPT-3 Playground Features
-          a.tool-nav__link(href="#how-to" data-id="how-to") How to use GPT-3 Playground
-          a.tool-nav__link(href="#target" data-id="target") Who is best fit for GPT-3 Playground
-          a.tool-nav__link(href="#pricing" data-id="pricing") GPT-3 Playground Pricing
-          a.tool-nav__link(href="#links" data-id="links") GPT-3 Playground Useful Links
-          //- a.tool-nav__link(href="#features" data-id="features") Video about GPT-3 Playground
-          //- a.tool-nav__link(href="#features" data-id="features") GPT-3 Playground Images
-  section.section.section--no-top.container
-    .section-heading 
+  section.section.section--border
+    .container
+      .tool-content-wrapper 
+        .tool-content
+          section#features.tool-content__section 
+            h2 GPT-3 Playground Features
+            p Upword simplifies content creation by offering a centralized location for the entire workflow, from idea to publishing. Its all-in-one solution streamlines the process, reducing errors and delays. With a user-friendly interface and comprehensive features, Upword maximizes productivity and efficiency. Optimize your content workflow today with Upword.
+            ul.tool-features 
+              li.tool-features__item Add comments, both your own and those created by AI;
+              li.tool-features__item Attach links and media files;
+              li.tool-features__item Highlight what's important - Artificial Intelligence can help with this, too;
+              li.tool-features__item Simplify complex and translate foreign texts;
+              li.tool-features__item Listen to finished excerpts using the built-in audio tools.
+          section#how-to.tool-content__section 
+            h2 How to use GPT-3 Playground
+            p The process of working with Upword is simple and intuitive. The platform has a web version, but it is more convenient to use the extension for Google Chrome.
+            p It can be found in the official Google Store. In order to start using the tool, all you have to do is open the article you want to cut and run the extension.
+            h3 Buy the product
+            p It can be found in the official Google Store. In order to start using the tool, all you have to do is open the article you want to cut and run the extension.
+            picture 
+              img(src=require('@/images/content.jpg'), alt="")
+            h3 Start using
+            p The process of working with Upword is simple and intuitive. The platform has a web version, but it is more convenient to use the extension for Google Chrome.
+            picture 
+              img(src=require('@/images/content.jpg'), alt="")
+            h3 Be happy
+            p The process of working with Upword is simple and intuitive. The platform has a web version, but it is more convenient to use the extension for Google Chrome.
+            picture 
+              img(src=require('@/images/content.jpg'), alt="")
+          section#target.tool-content__section
+            h2 Who is best fit for GPT-3 Playground
+            p  The tool will be useful to everyone who works with texts - not necessarily at a professional level. AI saves time - it makes it easier to follow the news, shorten articles from any source, and listen to finished material on the go.
+            h3 Upword themselves identify the following categories of users who will benefit from their AI:
+            ul
+              li Students. Summarize a book, a research paper, a report - few students can say they don't have enough reading;
+              li Entrepreneurs. AI will help businessmen not to lose time in searching for important information for them. Squeeze out current news, reports, business research-anything to keep up with changes in the workplace;
+              li Marketers, advertisers, content managers. Write a blog post, make a progress report, or cut a lengthy online research, AI will be useful to anyone who works in media;
+              li Executives, leads, managers. Often in a management job, you have to write a resume for management - with AI, this will be a quick and easy task. Upword features allow you to share finished reports and texts with the entire team.
+          section#pricing.tool-content__section
+            h2 GPT-3 Playground Pricing
+            p The platform has a free trial period of 7 days and several paid subscription options:
+            ul 
+              li Monthly - this will cost $15;
+              li Annual - the $150 price includes two free months.
+            p Upword has a student discount of 66%. To get it, you have to prove that you are actually studying.
+          section#links.tool-content__section 
+            h2 GPT-3 Playground Useful Links
+            .useful-links(role="list")
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") White paper
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") User manual
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Blog
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Tutorials & guides
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Video tutorials
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Case studies
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") System status
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+              .useful-links__wrapper
+                .useful-links__item(role="listitem")
+                  a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Seed rounds
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+        .tool-nav
+          h4.tool-nav__title Summary
+          nav.tool-nav__list
+            a.tool-nav__link(href="#features" data-id="features") GPT-3 Playground Features
+            a.tool-nav__link(href="#how-to" data-id="how-to") How to use GPT-3 Playground
+            a.tool-nav__link(href="#target" data-id="target") Who is best fit for GPT-3 Playground
+            a.tool-nav__link(href="#pricing" data-id="pricing") GPT-3 Playground Pricing
+            a.tool-nav__link(href="#links" data-id="links") GPT-3 Playground Useful Links
+            a.tool-nav__link(href="#video" data-id="video") Video about GPT-3 Playground
+            a.tool-nav__link(href="#images" data-id="images") GPT-3 Playground Images
+  section.section.section--border 
+    .tool-gallery.container 
+      section.tool-gallery__section#video
+        .section-heading.section-heading--left
+          h2.section-heading__title Video about GPT-3 Playground
+        .tool-gallery-slider.swiper.js-tool-gallery
+          .swiper-wrapper
+            each val in [1,1,1,1,1,1,1,1,1]
+              .tool-gallery-slider__item.swiper-slide 
+                a.tool-gallery-slider__link(href="https://www.youtube.com/watch?v=OjNpRbNdR7E&list=RDOjNpRbNdR7E&start_radio=1&ab_channel=MeheandusRevolution" data-glightbox="type:video")
+                  svg(width='24' height='24')
+                    use(href='sprite.svg#play_sprite')
+                  picture.tool-gallery-slider__preview
+                    img(src=require('@/images/preview.jpg'), alt="") 
+      section.tool-gallery__section#images
+        .section-heading.section-heading--left
+          h2.section-heading__title GPT-3 Playground Images
+        .tool-gallery-slider.swiper.js-tool-gallery
+          .swiper-wrapper
+            each val in [1,1,1,1,1,1,1,1,1]
+              .tool-gallery-slider__item.swiper-slide 
+                a.tool-gallery-slider__link(href=require('@/images/tools/1.jpg') data-glightbox="type:image")
+                  svg(width='24' height='24')
+                    use(href='sprite.svg#zoom_sprite')
+                  picture.tool-gallery-slider__preview
+                    img(src=require('@/images/preview.jpg'), alt="") 
+        .coming-soon
+          .coming-soon__inner
+            picture.coming-soon__background 
+              img(src=require('@/images/coming-soon.svg'), alt="")
+            .coming-soon__content
+              .coming-soon__loader 
+                span 
+                span 
+                span 
+              h3.coming-soon__title We’re preparing something.
+              p.coming-soon__desc More information for tools coming soon
+              button.coming-soon__btn.btn.btn--secondary Subscribe to newsletter
+  section.section.container
+    .section-heading.section-heading--left
       h2.section-heading__title Explore Similar AI Tools:
     .cards 
       .cards__grid
