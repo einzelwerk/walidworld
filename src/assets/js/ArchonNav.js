@@ -1,4 +1,4 @@
-const servicesCards = document.querySelectorAll('.post-section');
+const servicesCards = document.querySelectorAll('.post-section, tool-content__section');
 
 window.addEventListener('scroll', () => {
   servicesCards.forEach((elem) => {
