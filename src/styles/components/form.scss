@@ -1,6 +1,7 @@
 @use '../utils/mixins' as *;
 
 .subscribe-form {
+  $this: &;
   @include media(md) {
     flex-direction: column;
     gap: 16px;
@@ -8,6 +9,16 @@
 
   display: flex;
   gap: 12px;
+
+  &--cta {
+    #{$this}__input {
+      background: var(--white);
+    }
+
+    ~ #{$this}__acceptance {
+      max-width: 100%;
+    }
+  }
 
   &__item {
     flex: 1;

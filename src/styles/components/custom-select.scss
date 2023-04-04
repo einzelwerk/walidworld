@@ -26,7 +26,9 @@
   }
 
   &--primary {
-    min-width: 220px;
+    @include media(md, min-width) {
+      min-width: 220px;
+    }
   }
 
   &--secondary {

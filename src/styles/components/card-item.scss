@@ -13,6 +13,10 @@
   grid-column: span 4;
   flex-direction: column;
 
+  &--editor {
+    margin-top: 32px;
+  }
+
   &--promoted {
     --card-offset: 6px;
     @include media(sm) {
@@ -32,6 +36,14 @@
   }
 
   &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &--row {
+      flex-direction: row;
+    }
+
     &:hover {
       #{$this}__image img {
         transform: scale(1.1);
@@ -39,8 +51,12 @@
     }
   }
 
+  &__image-gradient {
+    flex: 1;
+  }
+
   &__info {
-    margin-top: 20px;
+    flex: 1;
   }
 
   &__name {
