@@ -87,6 +87,10 @@ img {
     border-bottom: 1px solid var(--border-divider);
   }
 
+  &--s {
+    --gap-y: 30px;
+  }
+
   &--m {
     --gap-y: 50px;
   }

@@ -1,12 +1,12 @@
-const servicesCards = document.querySelectorAll('.tool-content__section ');
+const servicesCards = document.querySelectorAll('.post-section');
 
 window.addEventListener('scroll', () => {
   servicesCards.forEach((elem) => {
     if (elem.getBoundingClientRect().top < 100) {
-      document.querySelectorAll('.tool-nav__link').forEach((el) => {
-        el.classList.remove('tool-nav__link--current');
+      document.querySelectorAll('.post-nav__link').forEach((el) => {
+        el.classList.remove('post-nav__link--current');
       });
-      document.querySelector(`.tool-nav__link[data-id="${elem.id}"]`).classList.add('tool-nav__link--current');
+      document.querySelector(`.post-nav__link[data-id="${elem.id}"]`).classList.add('post-nav__link--current');
     }
   });
 });

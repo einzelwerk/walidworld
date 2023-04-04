@@ -1,0 +1,69 @@
+extends ../layouts/main
+
+block content
+  section.section.section--s.container 
+    - locals.breadcrumbs = ['Home' , 'Blog' , 'Midjourney: Deep Dive']
+    include ../components/breadcrumbs
+    .blog-single 
+      header.blog-single__header
+        h1.blog-single__title Midjourney: Deep Dive
+        .blog-single__info 
+          time.blog-single__date.blog-single__info-item(datetime="2023-03-01")
+            svg(width='16' height='16')
+              use(href='sprite.svg#date_sprite')
+            span  March 1
+          .blog-single__views.blog-single__info-item
+            svg(width='16' height='16')
+              use(href='sprite.svg#views_sprite')
+            span 6250
+          button.blog-single__share.blog-single__info-item.share.tooltip-wrapper(aria-describedby="share-tooltip" id="share-button" data-tooltip-trigger="share-tooltip")
+            svg(width='16' height='16')
+              use(href='sprite.svg#share_sprite')
+            #share-tooltip.tooltip(role="tooltip" class="tooltip-socials" tabindex="-1" data-tooltip="share-tooltip")
+              .tooltip-socials__inner 
+                .tooltip-socials__item(tabindex="2") 
+                  a.tooltip-socials__link(href="https://google.com") 
+                    svg(width='16' height='16')
+                      use(href='sprite.svg#twitter_sprite')
+                .tooltip-socials__item(tabindex="2") 
+                  a.tooltip-socials__link(href="https://google.com") 
+                    svg(width='16' height='16')
+                      use(href='sprite.svg#inst_sprite')
+                .tooltip-socials__item(tabindex="2") 
+                  a.tooltip-socials__link(href="https://google.com") 
+                    svg(width='16' height='16')
+                      use(href='sprite.svg#fb_sprite')
+              #arrow(data-popper-arrow)
+            .share__button Share
+      figure.blog-single__preview 
+        picture.blog-single__image 
+          img(src=require('@/images/blog.jpg'), alt="")
+      .blog-single__content-wrapper
+        article.blog-single__content 
+          section.post-section.blog-single__section.editor-content 
+            h2 Introduction
+            p  Welcome to "Midjourney: Deep Dive," where we take a closer look at one of the most exciting customer experience tools on the market. Midjourney is an innovative AI-powered platform that helps businesses optimize their customer journey, boost sales, and build lasting relationships with their customers.
+            p With cutting-edge technology that includes AI-powered recommendations, real-time analytics, and sentiment analysis, Midjourney provides businesses with the insights they need to make data-driven decisions and stay ahead of the competition. In this blog post, we'll explore the key features of Midjourney, share success stories from satisfied customers, and discuss the platform's future developments. Whether you're a business owner, marketer, or customer experience professional, Midjourney has something to offer to help you improve your customer experience strategy. Let's dive in!
+            include ../components/card-item
+        aside.blog-single__sidebar
+          .post-author.blog-single__post-author
+            picture.post-author__image 
+              img(src=require('@/images/author.jpg'), alt="")
+            .post-author__info
+              h3.post-author__name(aria-label="post author") Anastasia Kabuki
+              p.post-author__description  Love to work with AI-tools
+          nav.blog-single__nav.post-nav
+            h4.post-nav__title Related Posts
+            ul.post-nav__list 
+              li.post-nav__item 
+                a.post-nav__link(href="" data-id) Introduction
+              li.post-nav__item 
+                a.post-nav__link(href="" data-id) Diving into Midjourney Features
+              li.post-nav__item 
+                a.post-nav__link(href="" data-id) Midjourney Work Showcases
+              li.post-nav__item 
+                a.post-nav__link(href="" data-id) Midjourney vs Competitors
+              li.post-nav__item 
+                a.post-nav__link(href="" data-id) Implementation and Onboarding
+              li.post-nav__item 
+                a.post-nav__link(href="" data-id) Midjourney Pricing

@@ -1,0 +1,33 @@
+extends ../layouts/main
+
+block content
+  section.section.section--m.section--no-top.container 
+    .hero
+      .hero__text
+        .hero__heading
+          h1.hero__title Blog
+        p.hero__desc Your hub for the latest AI news, legal insights, and developments. Stay informed and join the conversation with our unique perspectives and valuable knowledge.
+    .blog-grid
+      each val in [1,1,1,1,1,1]
+        article.blog-grid__item.blog-item
+          a.blog-item__link(href="") 
+            .blog-item__preview
+              .blog-item__info 
+                .blog-item__info-item.blog-item__views 
+                  span 25162
+                  svg(width="16" height="16")
+                    use(xlink:href="sprite.svg#views_sprite") 
+                time.blog-item__info-item.blog-item__date(datetime="2023-03-01")
+                  svg(width='16' height='16')
+                    use(href='sprite.svg#date_sprite')
+                  span 1 March 2023
+              picture.blog-item__image
+                img(src=require('@/images/blog/1.jpg'), alt="")
+            .blog-item__text
+              h2.blog-item__title Instagram Analysis Platform Analisa.io is Officially Launched
+              p.blog-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
+            .blog-item__tags
+              span.blog-item__tag AI
+              span.blog-item__tag Marketing
+
+    button.cards__load-more.btn.btn--secondary(type="button")  Load more

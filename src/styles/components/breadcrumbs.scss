@@ -1,0 +1,40 @@
+@use '../utils/mixins' as *;
+
+.breadcrumbs {
+  margin-bottom: 30px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    font-size: rem(14px);
+    color: var(--text);
+
+    &::after {
+      content: '';
+
+      display: block;
+      flex: none;
+
+      width: 6px;
+      height: 6px;
+
+      background: var(--placeholder);
+    }
+
+    &:last-child {
+      color: var(--black);
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

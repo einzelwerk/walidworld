@@ -1,0 +1,34 @@
+.post-author {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    overflow: hidden;
+    flex: none;
+
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+
+    border-radius: 50%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    margin-bottom: 2px;
+    font-size: rem(14px);
+    font-weight: 600;
+    line-height: 143%;
+  }
+
+  &__description {
+    font-size: rem(14px);
+    color: var(--text);
+  }
+}

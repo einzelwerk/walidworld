@@ -1,38 +1,82 @@
 @use '../utils/mixins' as *;
 
 .editor-content {
-  max-width: 720px;
+  @include media(md) {
+    gap: 24px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  line-height: 150%;
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+
     font-size: rem(24px);
     font-weight: 600;
+    line-height: 133%;
+    letter-spacing: -0.01em;
   }
 
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 20px;
-    font-size: rem(20px);
-    font-weight: 600;
-  }
-
-  h4 {
-    margin-bottom: 10px;
     font-size: rem(16px);
     font-weight: 600;
+    line-height: 150%;
   }
 
-  h5 {
-    margin-bottom: 10px;
-    font-weight: 600;
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+    border: 1px solid var(--border-divider);
+    border-radius: 12px;
   }
 
   p {
     margin-bottom: 1.5rem;
-    line-height: 150%;
     color: var(--text);
 
     &:last-child {
-      margin-bottom: 0;
+      margin: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 16px 0;
+
+    color: var(--text);
+  }
+
+  a {
+    text-decoration: dotted;
+  }
+
+  li {
+    display: flex;
+
+    &::before {
+      content: '';
+
+      flex: none;
+
+      width: 6px;
+      height: 6px;
+      margin-top: 9px;
+      margin-right: 8px;
+
+      background: var(--black);
+      border-radius: 1px;
     }
   }
 }

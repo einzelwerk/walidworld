@@ -1,0 +1,28 @@
+article.card-item(href="#")
+  a.card-item__link(href="") 
+    .card-item__image-gradient
+      .card-item__image-wrapper
+        picture.card-item__image
+          img(src=require('@/images/tools/1.jpg'), alt="")
+        .card-item__views 
+          span 1337
+          svg(width='16' height='16')
+            use(href='sprite.svg#views_sprite')
+        .card-payment 
+          span.card-payment__item Free
+    .card-item__info 
+      h2.card-item__name Fetch.ai
+      .card-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
+  .card-item__bottom 
+    .card-tags
+      ul.card-tags__list
+        li.card-tags__list-item
+          a.card-tags__item(href="")  Code
+        li.card-tags__list-item
+          a.card-tags__item(href="")  Design
+        li.card-tags__list-item
+          span.card-tags__item +3
+    a.card-item__external-link(href="" target="_blank" rel="noopener nofollow") 
+      span Visit 
+      svg(width='20' height='20')
+        use(href='sprite.svg#external_sprite')

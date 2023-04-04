@@ -5,7 +5,7 @@ tooltipTrigger.forEach((trigger) => {
   const tooltip = document.querySelector(`[data-tooltip="${trigger.dataset.tooltipTrigger}"]`);
 
   const popperInstance = createPopper(trigger, tooltip, {
-    placement: 'right',
+    placement: 'bottom',
     modifiers: [
       {
         name: 'offset',
@@ -22,13 +22,11 @@ tooltipTrigger.forEach((trigger) => {
   }
 
   function hide() {
-    setTimeout(() => {
-      const isTooltipHovered = tooltip.matches(':hover');
-      const isTriggerHovered = trigger.matches(':hover');
-      if (!isTooltipHovered && !isTriggerHovered) {
-        tooltip.removeAttribute('data-show');
-      }
-    }, 100);
+    const isTooltipHovered = tooltip.matches(':hover');
+    const isTriggerHovered = trigger.matches(':hover');
+    if (!isTooltipHovered && !isTriggerHovered) {
+      tooltip.removeAttribute('data-show');
+    }
   }
 
   const showEvents = ['mouseenter', 'focus'];
