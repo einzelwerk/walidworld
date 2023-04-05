@@ -1,0 +1,34 @@
+.highlight-block {
+  padding: 24px 20px;
+  background: rgb(147 63 255 / 8%);
+  border: 1px solid rgb(147 63 255 / 32%);
+  border-radius: 12px;
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: rem(20px);
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+  }
+
+  &__desc {
+    margin-bottom: 1rem;
+    line-height: 150%;
+    color: var(--text);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--accent-purple);
+    text-decoration: underline;
+
+    &:hover {
+      color: #7e32e0;
+    }
+  }
+}

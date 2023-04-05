@@ -48,9 +48,13 @@
 @use 'components/changelog';
 @use 'components/socials-list';
 @use 'components/button-group';
+@use 'components/share';
 @use 'components/no-result';
 @use 'components/tool-content';
 @use 'components/blog';
 @use 'components/breadcrumbs';
 @use 'components/post-author';
 @use 'components/post-nav';
+@use 'components/highlight-block';
+@use 'components/thank-you';
+@use 'components/table-normalize';

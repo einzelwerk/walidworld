@@ -1,7 +1,7 @@
 extends ../layouts/main
 
 block content
-  section.section.section--border 
+  section.section.section--top-small.section--border 
     .container 
       - locals.breadcrumbs = ['Home' , 'Blog' , 'Midjourney: Deep Dive']
       include ../components/breadcrumbs
@@ -119,6 +119,44 @@ block content
               .editor-content
                 h2 Midjourney vs Competitors
                 p While there are a variety of customer experience tools on the market, Midjourney stands out as a powerful and innovative solution that delivers real value to businesses. Here are some of the key advantages that Midjourney has over its competitors:
+              table.table-compare.content-block 
+                thead.table-compare__head 
+                  tr.table-compare__tr 
+                    th.table-compare__th(scope="col") AI-Tool
+                    th.table-compare__th(scope="col") Customer Experience
+                    th.table-compare__th(scope="col") Image Generation
+                    th.table-compare__th(scope="col") Industry Focus
+                    th.table-compare__th(scope="col") User Interface
+                    th.table-compare__th(scope="col") Availability
+                tbody.table-compare__body 
+                  tr.table-compare__tr
+                    th.table-compare__th(scope="row") Midjourney
+                    td.table-compare__td(data-title="Customer Experience" aria-label="Customer Experience") 
+                      img.table-compare__icon(src=require('@/images/check.svg'), alt="")
+                    td.table-compare__td(data-title="Image Generation" aria-label="Image Generation")  
+                      img.table-compare__icon(src=require('@/images/check.svg'), alt="")
+                    td.table-compare__td(data-title="Customer Experience" aria-label="Customer Experience")  Wide range
+                    td.table-compare__td(data-title="User-friendly" aria-label="Customer Experience")  User-friendly
+                    td.table-compare__td(data-title="Comercially available" aria-label="Customer Experience")  Comercially available
+                  tr.table-compare__tr
+                    th.table-compare__th(scope="row") DALL-E
+                    td.table-compare__td(data-title="Customer Experience" aria-label="Customer Experience") 
+                      img.table-compare__icon(src=require('@/images/error.svg'), alt="")
+                    td.table-compare__td(data-title="Image Generation" aria-label="Image Generation")  
+                      img.table-compare__icon(src=require('@/images/check.svg'), alt="")
+                    td.table-compare__td(data-title="Customer Experience" aria-label="Customer Experience")  Art and design
+                    td.table-compare__td(data-title="User-friendly" aria-label="Customer Experience")  Custom-built
+                    td.table-compare__td(data-title="Comercially available" aria-label="Customer Experience")  Limited beta access
+                  tr.table-compare__tr
+                    th.table-compare__th(scope="row") Stable Diffusion
+                    td.table-compare__td(data-title="Customer Experience" aria-label="Customer Experience") 
+                      img.table-compare__icon(src=require('@/images/error.svg'), alt="")
+                    td.table-compare__td(data-title="Image Generation" aria-label="Image Generation")  
+                      img.table-compare__icon(src=require('@/images/check.svg'), alt="")
+                    td.table-compare__td(data-title="Customer Experience" aria-label="Customer Experience")  Wide range
+                    td.table-compare__td(data-title="User-friendly" aria-label="Customer Experience")  User-friendly
+                    td.table-compare__td(data-title="Comercially available" aria-label="Customer Experience")  Research-focused
+
                 p While Midjourney does offer image generation capabilities, it's important to note that they are primarily geared towards supporting the customer experience. Midjourney's AI-powered image generation technology can help businesses create more personalized and engaging customer experiences by generating images that are tailored to individual customer preferences and behavior.
               .highlight-block.content-block 
                 h3.highlight-block__title Highlighted text
@@ -170,16 +208,31 @@ block content
                   svg(width='16' height='16')
                     use(href='sprite.svg#views_sprite')
                   span 320
-                button.post-info__item.post-info__share
+                button.post-info__item.share.tooltip-wrapper(aria-describedby="share-tooltip-2" id="share-button-2" data-tooltip-trigger="share-tooltip-2")
                   svg(width='16' height='16')
                     use(href='sprite.svg#share_sprite')
-                  span Share
+                  #share-tooltip-2.tooltip(role="tooltip" class="tooltip-socials" tabindex="-1" data-tooltip="share-tooltip-2")
+                    .tooltip-socials__inner 
+                      .tooltip-socials__item(tabindex="2") 
+                        a.tooltip-socials__link(href="https://google.com") 
+                          svg(width='16' height='16')
+                            use(href='sprite.svg#twitter_sprite')
+                      .tooltip-socials__item(tabindex="2") 
+                        a.tooltip-socials__link(href="https://google.com") 
+                          svg(width='16' height='16')
+                            use(href='sprite.svg#inst_sprite')
+                      .tooltip-socials__item(tabindex="2") 
+                        a.tooltip-socials__link(href="https://google.com") 
+                          svg(width='16' height='16')
+                            use(href='sprite.svg#fb_sprite')
+                    #arrow(data-popper-arrow)
+                  .share__button Share
               ul.post-info__tags 
                 li.post-info__tag 
                   a.post-info__tag-link(href="") Legal
                 li.post-info__tag 
                   a.post-info__tag-link(href="") Finances
-          aside.blog-single__sidebar
+          aside.post-sidebar
             .post-author.blog-single__post-author
               picture.post-author__image 
                 img(src=require('@/images/author.jpg'), alt="")

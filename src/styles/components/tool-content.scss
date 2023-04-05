@@ -118,15 +118,9 @@
 }
 
 .useful-links {
-  @include media(md) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 
   &__wrapper {
     display: flex;

@@ -1,0 +1,12 @@
+extends ../layouts/main
+
+block content
+  section.section.container 
+
+    .thank-you 
+      .thank-you__icon
+        lottie-player.thank-you__lottie( autoplay mode="normal" src=require('@/lottie/check2.json')  )
+      .thank-you__text
+        h1.thank-you__title Thank you for <br> reaching us with your job
+        p.thank-you__desc Our project manager will be in touch soon to discuss your job posting. Join our community of leading AI companies and find top talent today!
+      a.thank-you__btn.btn.btn--secondary(href="") Back to home

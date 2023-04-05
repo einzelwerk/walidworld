@@ -29,6 +29,11 @@
       background: var(--placeholder);
     }
 
+    &:hover {
+      color: var(--black);
+      text-decoration: underline;
+    }
+
     &:last-child {
       color: var(--black);
 

@@ -265,3 +265,140 @@
     }
   }
 }
+
+.table-compare {
+  $this: &;
+  @include media(md) {
+    border-radius: 12px;
+  }
+
+  overflow: hidden;
+
+  width: 100%;
+
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: 143%;
+
+  border-style: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 0 0 1px var(--border-divider);
+
+  &__body,
+  &__tr,
+  &__th,
+  &__td {
+    display: block;
+
+    padding: 0;
+
+    font-weight: inherit;
+    text-align: left;
+    white-space: normal;
+  }
+
+  &__tr {
+    @include media(lg, min-width) {
+      display: table-row;
+    }
+
+    @include media(lg) {
+      border-bottom: 1px solid var(--border-divider);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:first-child {
+        background: rgb(147 63 255 / 8%);
+        #{$this}__th {
+          color: var(--white);
+          background: var(--accent-purple);
+        }
+      }
+    }
+
+    position: relative;
+  }
+
+  &__th,
+  &__td {
+    @include media(lg, min-width) {
+      display: table-cell;
+      padding: 12px;
+      border: 1px solid var(--border-divider);
+    }
+
+    padding: 6px 12px;
+  }
+
+  &__th[scope='row'] {
+    @include media(lg) {
+      padding: 10px 12px;
+      background: var(--gray);
+    }
+
+    font-weight: 500;
+  }
+
+  &__td[data-title] {
+    @include media(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+    }
+
+    &::before {
+      @include media(lg, min-width) {
+        content: none;
+      }
+
+      content: attr(data-title);
+      float: left;
+      font-weight: 400;
+    }
+  }
+
+  &__head {
+    @include media(lg, min-width) {
+      position: relative;
+
+      overflow: auto;
+
+      width: auto;
+      height: auto;
+
+      clip: auto;
+    }
+
+    position: absolute;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    padding: 0;
+
+    font-weight: 500;
+
+    clip: rect(1px 1px 1px 1px);
+    border: 0;
+
+    #{$this}__tr {
+      background: var(--gray);
+    }
+  }
+
+  &__body {
+    @include media(lg, min-width) {
+      display: table-row-group;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

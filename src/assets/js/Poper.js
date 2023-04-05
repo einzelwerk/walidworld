@@ -5,7 +5,7 @@ tooltipTrigger.forEach((trigger) => {
   const tooltip = document.querySelector(`[data-tooltip="${trigger.dataset.tooltipTrigger}"]`);
 
   const popperInstance = createPopper(trigger, tooltip, {
-    placement: 'bottom',
+    placement: 'right',
     modifiers: [
       {
         name: 'offset',
@@ -16,35 +16,19 @@ tooltipTrigger.forEach((trigger) => {
     ],
   });
 
-  function show() {
-    tooltip.setAttribute('data-show', '');
-    popperInstance.update();
-  }
-
-  function hide() {
-    const isTooltipHovered = tooltip.matches(':hover');
-    const isTriggerHovered = trigger.matches(':hover');
-    if (!isTooltipHovered && !isTriggerHovered) {
+  function toggle() {
+    if (tooltip.dataset.show === '') {
       tooltip.removeAttribute('data-show');
+    } else {
+      tooltip.setAttribute('data-show', '');
+      popperInstance.update();
     }
   }
 
-  const showEvents = ['mouseenter', 'focus'];
-  const hideEvents = ['mouseleave', 'blur'];
-
-  showEvents.forEach((event) => {
-    trigger.addEventListener(event, show);
-  });
-
-  hideEvents.forEach((event) => {
-    trigger.addEventListener(event, hide);
-  });
-
-  tooltip.addEventListener('mouseenter', () => {
-    tooltip.removeAttribute('data-show');
-  });
-
-  tooltip.addEventListener('mouseleave', () => {
-    hide();
+  trigger.addEventListener('click', toggle);
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.share')) {
+      toggle();
+    }
   });
 });

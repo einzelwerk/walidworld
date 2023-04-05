@@ -2,13 +2,13 @@
 extends ../layouts/main
 
 block content
-  section.section.section--s.section--border
+  section.section.section--top-small.section--border
+    .container 
+      - locals.breadcrumbs = ['Home' , 'Tools' , 'Chatbots' , 'GPT-3 Playground']
+      include ../components/breadcrumbs
     .card-content
       .card-content__header.container
         .card-content__heading
-          a.card-content__back(href="") 
-            svg(width="8" height="8")
-              use(xlink:href="sprite.svg#arrow-left_sprite") 
           h1.card-content__title Descript AI Tool
         .card-content__info 
           time.card-content__date.card-content__info-item(datetime="2023-03-01")
@@ -160,9 +160,9 @@ block content
                   a.useful-links__link(href="" target="_blank" rel="noopener nofollow") Seed rounds
                     svg(width='20' height='20')
                       use(href='sprite.svg#external_sprite')
-        .post-nav
+        aside.post-sidebar
           h4.post-nav__title Summary
-          nav.post-nav__list
+          nav.post-nav
             ul.post-nav__list 
               li.post-nav__item 
                 a.post-nav__link(href="#features" data-id="features") GPT-3 Playground Features
