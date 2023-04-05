@@ -1,142 +1,228 @@
 extends ../layouts/main
 
 block content
-  section.section.section--s.container 
-    - locals.breadcrumbs = ['Home' , 'Blog' , 'Midjourney: Deep Dive']
-    include ../components/breadcrumbs
-    .blog-single 
-      header.blog-single__header
-        h1.blog-single__title Midjourney: Deep Dive
-        .blog-single__info 
-          time.blog-single__date.blog-single__info-item(datetime="2023-03-01")
-            svg(width='16' height='16')
-              use(href='sprite.svg#date_sprite')
-            span  March 1
-          .blog-single__views.blog-single__info-item
-            svg(width='16' height='16')
-              use(href='sprite.svg#views_sprite')
-            span 6250
-          button.blog-single__share.blog-single__info-item.share.tooltip-wrapper(aria-describedby="share-tooltip" id="share-button" data-tooltip-trigger="share-tooltip")
-            svg(width='16' height='16')
-              use(href='sprite.svg#share_sprite')
-            #share-tooltip.tooltip(role="tooltip" class="tooltip-socials" tabindex="-1" data-tooltip="share-tooltip")
-              .tooltip-socials__inner 
-                .tooltip-socials__item(tabindex="2") 
-                  a.tooltip-socials__link(href="https://google.com") 
-                    svg(width='16' height='16')
-                      use(href='sprite.svg#twitter_sprite')
-                .tooltip-socials__item(tabindex="2") 
-                  a.tooltip-socials__link(href="https://google.com") 
-                    svg(width='16' height='16')
-                      use(href='sprite.svg#inst_sprite')
-                .tooltip-socials__item(tabindex="2") 
-                  a.tooltip-socials__link(href="https://google.com") 
-                    svg(width='16' height='16')
-                      use(href='sprite.svg#fb_sprite')
-              #arrow(data-popper-arrow)
-            .share__button Share
-      figure.blog-single__preview 
-        picture.blog-single__image 
-          img(src=require('@/images/blog.jpg'), alt="")
-      .blog-single__content-wrapper
-        article.blog-single__content 
-          section.post-section.blog-single__section
-            .editor-content 
-              h2 Introduction
-              p  Welcome to "Midjourney: Deep Dive," where we take a closer look at one of the most exciting customer experience tools on the market. Midjourney is an innovative AI-powered platform that helps businesses optimize their customer journey, boost sales, and build lasting relationships with their customers.
-              p With cutting-edge technology that includes AI-powered recommendations, real-time analytics, and sentiment analysis, Midjourney provides businesses with the insights they need to make data-driven decisions and stay ahead of the competition. In this blog post, we'll explore the key features of Midjourney, share success stories from satisfied customers, and discuss the platform's future developments. Whether you're a business owner, marketer, or customer experience professional, Midjourney has something to offer to help you improve your customer experience strategy. Let's dive in!
-            aside.card-item.card-item--editor(href="#")
-              a.card-item__link.card-item__link--row(href="" class=locals.cls ? locals.cls : '') 
-                .card-item__image-gradient
-                  .card-item__image-wrapper
-                    picture.card-item__image
-                      img(src=require('@/images/tools/1.jpg'), alt="")
-                    .card-item__views 
-                      span 1337
+  section.section.section--border 
+    .container 
+      - locals.breadcrumbs = ['Home' , 'Blog' , 'Midjourney: Deep Dive']
+      include ../components/breadcrumbs
+      .blog-single 
+        header.blog-single__header
+          h1.blog-single__title Midjourney: Deep Dive
+          .blog-single__info 
+            time.blog-single__date.blog-single__info-item(datetime="2023-03-01")
+              svg(width='16' height='16')
+                use(href='sprite.svg#date_sprite')
+              span  March 1
+            .blog-single__views.blog-single__info-item
+              svg(width='16' height='16')
+                use(href='sprite.svg#views_sprite')
+              span 6250
+            button.blog-single__share.blog-single__info-item.share.tooltip-wrapper(aria-describedby="share-tooltip" id="share-button" data-tooltip-trigger="share-tooltip")
+              svg(width='16' height='16')
+                use(href='sprite.svg#share_sprite')
+              #share-tooltip.tooltip(role="tooltip" class="tooltip-socials" tabindex="-1" data-tooltip="share-tooltip")
+                .tooltip-socials__inner 
+                  .tooltip-socials__item(tabindex="2") 
+                    a.tooltip-socials__link(href="https://google.com") 
                       svg(width='16' height='16')
-                        use(href='sprite.svg#views_sprite')
-                    .card-payment 
-                      span.card-payment__item Free
-                .card-item__info 
-                  h2.card-item__name Fetch.ai
-                  .card-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
-                  .card-item__bottom 
-                    .card-tags
-                      ul.card-tags__list
-                        li.card-tags__list-item
-                          .card-tags__item  Code
-                        li.card-tags__list-item
-                          .card-tags__item  Design
-                        li.card-tags__list-item
-                          span.card-tags__item +3     
-          section.post-section.blog-single__section
-            .editor-content 
-              h2 Diving into Midjourney  Features
-              p Midjourney is an innovative AI-tool that empowers businesses to optimize their customer journey and drive sales. In this section, we'll take a closer look at five key features that set Midjourney apart from other customer experience tools.
-              h3 Tool Flexibility
-            .features-editor 
-              .features-editor__item 
-                h4.features-editor__title AI-Powered Recommendations
-                p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
-              .features-editor__item 
-                h4.features-editor__title AI-Powered Recommendations
-                p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
-              .features-editor__item 
-                h4.features-editor__title AI-Powered Recommendations
-                p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
-              .features-editor__item 
-                h4.features-editor__title AI-Powered Recommendations
-                p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
-              .features-editor__item 
-                h4.features-editor__title AI-Powered Recommendations
-                p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
-          section.post-section.blog-single__section
-            .editor-content
-              h2  Midjourney Work Showcases
-              p Upword simplifies content creation by offering a centralized location for the entire workflow, from idea to publishing. Its all-in-one solution streamlines the process, reducing errors and delays. With a user-friendly interface and comprehensive features.
-            .gallery-grid
-              each val in [1,2,3,4,5,6]
-                a.gallery-grid__item(href=require('@/images/blog.jpg') data-glightbox) 
-                  picture.gallery-grid__image 
-                    img(src=require('@/images/blog.jpg'), alt="")
-          section.post-section.blog-single__section 
-            .cta-subscribe 
-              h4.cta-subscribe__title Subscribe to our newsletter
-              p.cta-subscribe__desc We write once a week and only about business. We promise not to spam.
-              form.subscribe-form.subscribe-form--cta(action="") 
-                .subscribe-form__item 
-                  label.subscribe-form__label
-                    input.subscribe-form__input(type="text" placeholder="Enter your e-mail")
-                button.subscribe-form__submit.btn.btn--primary(type="submit") Subscribe
-                  svg.btn__arrow(width="14" height="10")
-                    use(xlink:href="sprite.svg#arrow-link_sprite") 
-              p.subscribe-form__acceptance By clicking on the 'Submit' button, you agree to our 
-                a(href="") Terms and Service
-                |  and 
-                a(href="") Privacy Policy
-          section.post-section.blog-single__section
-            .editor-content
-              h2 Midjourney vs Competitors
-              p While there are a variety of customer experience tools on the market, Midjourney stands out as a powerful and innovative solution that delivers real value to businesses. Here are some of the key advantages that Midjourney has over its competitors:
-        aside.blog-single__sidebar
-          .post-author.blog-single__post-author
-            picture.post-author__image 
-              img(src=require('@/images/author.jpg'), alt="")
-            .post-author__info
-              h3.post-author__name(aria-label="post author") Anastasia Kabuki
-              p.post-author__description  Love to work with AI-tools
-          nav.blog-single__nav.post-nav
-            h4.post-nav__title Summary
-            ul.post-nav__list 
-              li.post-nav__item 
-                a.post-nav__link(href="" data-id="") Introduction
-              li.post-nav__item 
-                a.post-nav__link(href="" data-id="") Diving into Midjourney Features
-              li.post-nav__item 
-                a.post-nav__link(href="" data-id="") Midjourney Work Showcases
-              li.post-nav__item 
-                a.post-nav__link(href="" data-id="") Midjourney vs Competitors
-              li.post-nav__item 
-                a.post-nav__link(href="" data-id="") Implementation and Onboarding
-              li.post-nav__item 
-                a.post-nav__link(href="" data-id="") Midjourney Pricing
+                        use(href='sprite.svg#twitter_sprite')
+                  .tooltip-socials__item(tabindex="2") 
+                    a.tooltip-socials__link(href="https://google.com") 
+                      svg(width='16' height='16')
+                        use(href='sprite.svg#inst_sprite')
+                  .tooltip-socials__item(tabindex="2") 
+                    a.tooltip-socials__link(href="https://google.com") 
+                      svg(width='16' height='16')
+                        use(href='sprite.svg#fb_sprite')
+                #arrow(data-popper-arrow)
+              .share__button Share
+        figure.blog-single__preview 
+          picture.blog-single__image 
+            img(src=require('@/images/blog.jpg'), alt="")
+        .blog-single__content-wrapper
+          article.blog-single__content 
+            section.post-section.blog-single__section
+              .editor-content 
+                h2 Introduction
+                p  Welcome to "Midjourney: Deep Dive," where we take a closer look at one of the most exciting customer experience tools on the market. Midjourney is an innovative AI-powered platform that helps businesses optimize their customer journey, boost sales, and build lasting relationships with their customers.
+                p With cutting-edge technology that includes AI-powered recommendations, real-time analytics, and sentiment analysis, Midjourney provides businesses with the insights they need to make data-driven decisions and stay ahead of the competition. In this blog post, we'll explore the key features of Midjourney, share success stories from satisfied customers, and discuss the platform's future developments. Whether you're a business owner, marketer, or customer experience professional, Midjourney has something to offer to help you improve your customer experience strategy. Let's dive in!
+              aside.card-item.card-item--editor(href="#")
+                a.card-item__link.card-item__link--row(href="" class=locals.cls ? locals.cls : '') 
+                  .card-item__image-gradient
+                    .card-item__image-wrapper
+                      picture.card-item__image
+                        img(src=require('@/images/tools/1.jpg'), alt="")
+                      .card-item__views 
+                        span 1337
+                        svg(width='16' height='16')
+                          use(href='sprite.svg#views_sprite')
+                      .card-payment 
+                        span.card-payment__item Free
+                  .card-item__info 
+                    h2.card-item__name Fetch.ai
+                    .card-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
+                    .card-item__bottom 
+                      .card-tags
+                        ul.card-tags__list
+                          li.card-tags__list-item
+                            .card-tags__item  Code
+                          li.card-tags__list-item
+                            .card-tags__item  Design
+                          li.card-tags__list-item
+                            span.card-tags__item +3     
+            section.post-section.blog-single__section
+              .editor-content 
+                h2 Diving into Midjourney  Features
+                p Midjourney is an innovative AI-tool that empowers businesses to optimize their customer journey and drive sales. In this section, we'll take a closer look at five key features that set Midjourney apart from other customer experience tools.
+                h3 Tool Flexibility
+              .features-editor 
+                .features-editor__item 
+                  h4.features-editor__title AI-Powered Recommendations
+                  p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
+                .features-editor__item 
+                  h4.features-editor__title AI-Powered Recommendations
+                  p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
+                .features-editor__item 
+                  h4.features-editor__title AI-Powered Recommendations
+                  p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
+                .features-editor__item 
+                  h4.features-editor__title AI-Powered Recommendations
+                  p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
+                .features-editor__item 
+                  h4.features-editor__title AI-Powered Recommendations
+                  p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
+            section.post-section.blog-single__section
+              .editor-content
+                h2  Midjourney Work Showcases
+                p Upword simplifies content creation by offering a centralized location for the entire workflow, from idea to publishing. Its all-in-one solution streamlines the process, reducing errors and delays. With a user-friendly interface and comprehensive features.
+              .gallery-grid.content-block
+                each val in [1,2,3,4,5,6]
+                  a.gallery-grid__item(href=require('@/images/blog.jpg') data-glightbox) 
+                    picture.gallery-grid__image 
+                      img(src=require('@/images/blog.jpg'), alt="")
+            section.post-section.blog-single__section 
+              .cta-subscribe 
+                h4.cta-subscribe__title Subscribe to our newsletter
+                p.cta-subscribe__desc We write once a week and only about business. We promise not to spam.
+                form.subscribe-form.subscribe-form--cta(action="") 
+                  .subscribe-form__item 
+                    label.subscribe-form__label
+                      input.subscribe-form__input(type="text" placeholder="Enter your e-mail")
+                  button.subscribe-form__submit.btn.btn--primary(type="submit") Subscribe
+                    svg.btn__arrow(width="14" height="10")
+                      use(xlink:href="sprite.svg#arrow-link_sprite") 
+                p.subscribe-form__acceptance By clicking on the 'Submit' button, you agree to our 
+                  a(href="") Terms and Service
+                  |  and 
+                  a(href="") Privacy Policy
+            section.post-section.blog-single__section
+              .editor-content
+                h2 Midjourney vs Competitors
+                p While there are a variety of customer experience tools on the market, Midjourney stands out as a powerful and innovative solution that delivers real value to businesses. Here are some of the key advantages that Midjourney has over its competitors:
+                p While Midjourney does offer image generation capabilities, it's important to note that they are primarily geared towards supporting the customer experience. Midjourney's AI-powered image generation technology can help businesses create more personalized and engaging customer experiences by generating images that are tailored to individual customer preferences and behavior.
+              .highlight-block.content-block 
+                h3.highlight-block__title Highlighted text
+                p.highlight-block__desc You can create a <a href="">custom avatar</a> of yourself or your team member to make you internal communication videos more personalized.
+                p.highlight-block__desc Easy as pie, right? Goodbye to boring texts and long emails. Now your employees get to receive training, directives, and announcements in a fancy and engaging way. Communication just got fun!
+              .editor-content
+                p In contrast, DALL-E and Stable Diffusion are <strong>primarily focused on creating</strong> and manipulating images for artistic and research purposes. While these tools can certainly be used for other applications, they may not be as well-suited to the specific needs of businesses and their customers.
+                p Overall, while all three tools offer powerful AI capabilities for image generation, Midjourney stands out as a customer experience tool that is designed to help businesses build better relationships with their customers.
+            section.post-section.blog-single__section
+              .editor-content 
+                h2 Implementation and Onboarding
+                p Implementing a new tool like Midjourney can be daunting, but the onboarding process is designed to be as smooth and straightforward as possible. Here's what you can expect when you implement Midjourney:
+              figure.figure-block.content-block
+                a.figure-block__link(href=require('@/images/figure.jpg') data-glightbox)
+                  .figure-block__hover 
+                    svg.figure-block__icon(width="24" height="24")
+                      use(xlink:href="sprite.svg#zoom_sprite")
+                  picture.figure-block__image 
+                    img(src=require('@/images/figure.jpg'), alt="")
+                figcaption.figure-block__caption 
+                  p Image Caption is going here (optional)
+              .editor-content
+                h2 Onboarding Benefits
+                ul 
+                  li Consultation: Before implementing Midjourney, you'll have a consultation with one of our customer success managers to discuss your specific needs and goals. This consultation will help ensure that Midjourney is the right tool for your business and that you're getting the most out of its features and capabilities.
+                  li Integration: Once you've decided to move forward with Midjourney, our team will work with you to integrate the tool into your existing systems and processes. This process typically takes a few weeks, depending on the complexity of your existing infrastructure.
+                  li Training: To ensure that your team is fully equipped to use Midjourney, we offer comprehensive training sessions that cover everything from basic functionality to advanced analytics and reporting. We also provide ongoing support and resources to help you get the most out of the tool.
+                  li Onboarding: Our onboarding process is designed to be as seamless as possible, with clear instructions and guidance every step of the way. We understand that every business is different, and our team will work with you to customize the onboarding process to meet your specific needs.
+              figure.figure-block.content-block
+                a.figure-block__link(href='https://www.youtube.com/watch?v=QNYT9wVwQ8A&ab_channel=KAMACHIPEACH' data-glightbox aria-label="Open the video")  
+                  .figure-block__hover 
+                    svg.figure-block__icon(width="24" height="24")
+                      use(xlink:href="sprite.svg#play_sprite")
+                  picture.figure-block__image 
+                    img(src=require('@/images/figure.jpg'), alt="")
+                figcaption.figure-block__caption 
+                  p Video Caption is going here (optional)
+            section.post-section.blog-single__section
+              .editor-content
+                h2 Midjourney Pricing
+                p Midjourney has a student discount of 35%. To get it, you have to prove that you are actually studying.
+            .post-info
+              .post-info__header 
+                time.post-info__item.post-info__date(datetime="2021-03-01") 
+                  svg(width='16' height='16')
+                    use(href='sprite.svg#date_sprite')
+                  span 01 March
+                .post-info__item.post-info__views
+                  svg(width='16' height='16')
+                    use(href='sprite.svg#views_sprite')
+                  span 320
+                button.post-info__item.post-info__share
+                  svg(width='16' height='16')
+                    use(href='sprite.svg#share_sprite')
+                  span Share
+              ul.post-info__tags 
+                li.post-info__tag 
+                  a.post-info__tag-link(href="") Legal
+                li.post-info__tag 
+                  a.post-info__tag-link(href="") Finances
+          aside.blog-single__sidebar
+            .post-author.blog-single__post-author
+              picture.post-author__image 
+                img(src=require('@/images/author.jpg'), alt="")
+              .post-author__info
+                h3.post-author__name(aria-label="post author") Anastasia Kabuki
+                p.post-author__description  Love to work with AI-tools
+            nav.blog-single__nav.post-nav
+              h4.post-nav__title Summary
+              ul.post-nav__list 
+                li.post-nav__item 
+                  a.post-nav__link(href="" data-id="") Introduction
+                li.post-nav__item 
+                  a.post-nav__link(href="" data-id="") Diving into Midjourney Features
+                li.post-nav__item 
+                  a.post-nav__link(href="" data-id="") Midjourney Work Showcases
+                li.post-nav__item 
+                  a.post-nav__link(href="" data-id="") Midjourney vs Competitors
+                li.post-nav__item 
+                  a.post-nav__link(href="" data-id="") Implementation and Onboarding
+                li.post-nav__item 
+                  a.post-nav__link(href="" data-id="") Midjourney Pricing
+  section.section.container 
+    .section-heading.section-heading--left 
+      h2.section-heading__title Latest posts
+    .blog-grid
+      each val in [1,1,1]
+        article.blog-grid__item.blog-item
+          a.blog-item__link(href="") 
+            .blog-item__preview
+              .blog-item__info 
+                .blog-item__info-item.blog-item__views 
+                  span 25162
+                  svg(width="16" height="16")
+                    use(xlink:href="sprite.svg#views_sprite") 
+                time.blog-item__info-item.blog-item__date(datetime="2023-03-01")
+                  svg(width='16' height='16')
+                    use(href='sprite.svg#date_sprite')
+                  span 1 March 2023
+              picture.blog-item__image
+                img(src=require('@/images/blog/1.jpg'), alt="")
+            .blog-item__text
+              h2.blog-item__title Instagram Analysis Platform Analisa.io is Officially Launched
+              p.blog-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
+            .blog-item__tags
+              span.blog-item__tag AI
+              span.blog-item__tag Marketing

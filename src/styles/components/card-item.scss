@@ -41,6 +41,10 @@
     gap: 20px;
 
     &--row {
+      @include media(md) {
+        flex-direction: column;
+      }
+
       flex-direction: row;
     }
 

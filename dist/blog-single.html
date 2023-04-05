@@ -93,7 +93,7 @@
 </div>
 <div class="background-blur"></div>
       <main class="main">
-        <section class="section section--border"> 
+        <section class="section section--top-small section--border"> 
           <div class="container"> 
 <nav class="breadcrumbs">
   <ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -254,8 +254,46 @@
                     <div class="editor-content">
                       <h2>Midjourney vs Competitors</h2>
                       <p>While there are a variety of customer experience tools on the market, Midjourney stands out as a powerful and innovative solution that delivers real value to businesses. Here are some of the key advantages that Midjourney has over its competitors:</p>
-                      <p>While Midjourney does offer image generation capabilities, it's important to note that they are primarily geared towards supporting the customer experience. Midjourney's AI-powered image generation technology can help businesses create more personalized and engaging customer experiences by generating images that are tailored to individual customer preferences and behavior.</p>
                     </div>
+                    <table class="table-compare content-block"> 
+                      <thead class="table-compare__head"> 
+                        <tr class="table-compare__tr"> 
+                          <th class="table-compare__th" scope="col">AI-Tool</th>
+                          <th class="table-compare__th" scope="col">Customer Experience</th>
+                          <th class="table-compare__th" scope="col">Image Generation</th>
+                          <th class="table-compare__th" scope="col">Industry Focus</th>
+                          <th class="table-compare__th" scope="col">User Interface</th>
+                          <th class="table-compare__th" scope="col">Availability</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-compare__body"> 
+                        <tr class="table-compare__tr">
+                          <th class="table-compare__th" scope="row">Midjourney</th>
+                          <td class="table-compare__td" data-title="Customer Experience" aria-label="Customer Experience"> <img class="table-compare__icon" src="assets/images/check.svg" alt=""></td>
+                          <td class="table-compare__td" data-title="Image Generation" aria-label="Image Generation"> <img class="table-compare__icon" src="assets/images/check.svg" alt=""></td>
+                          <td class="table-compare__td" data-title="Customer Experience" aria-label="Customer Experience"> Wide range</td>
+                          <td class="table-compare__td" data-title="User-friendly" aria-label="Customer Experience"> User-friendly</td>
+                          <td class="table-compare__td" data-title="Comercially available" aria-label="Customer Experience"> Comercially available</td>
+                        </tr>
+                        <tr class="table-compare__tr">
+                          <th class="table-compare__th" scope="row">DALL-E</th>
+                          <td class="table-compare__td" data-title="Customer Experience" aria-label="Customer Experience"> <img class="table-compare__icon" src="assets/images/error.svg" alt=""></td>
+                          <td class="table-compare__td" data-title="Image Generation" aria-label="Image Generation"> <img class="table-compare__icon" src="assets/images/check.svg" alt=""></td>
+                          <td class="table-compare__td" data-title="Customer Experience" aria-label="Customer Experience"> Art and design</td>
+                          <td class="table-compare__td" data-title="User-friendly" aria-label="Customer Experience"> Custom-built</td>
+                          <td class="table-compare__td" data-title="Comercially available" aria-label="Customer Experience"> Limited beta access</td>
+                        </tr>
+                        <tr class="table-compare__tr">
+                          <th class="table-compare__th" scope="row">Stable Diffusion</th>
+                          <td class="table-compare__td" data-title="Customer Experience" aria-label="Customer Experience"> <img class="table-compare__icon" src="assets/images/error.svg" alt=""></td>
+                          <td class="table-compare__td" data-title="Image Generation" aria-label="Image Generation"> <img class="table-compare__icon" src="assets/images/check.svg" alt=""></td>
+                          <td class="table-compare__td" data-title="Customer Experience" aria-label="Customer Experience"> Wide range</td>
+                          <td class="table-compare__td" data-title="User-friendly" aria-label="Customer Experience"> User-friendly</td>
+                          <td class="table-compare__td" data-title="Comercially available" aria-label="Customer Experience"> Research-focused</td>
+                        </tr>
+                      </tbody>
+                      <p>While Midjourney does offer image generation capabilities, it's important to note that they are primarily geared towards supporting the customer experience. Midjourney's AI-powered image generation technology can help businesses create more personalized and engaging customer experiences by generating images that are tailored to individual customer preferences and behavior.</p>
+                    </table>
                     <div class="highlight-block content-block"> 
                       <h3 class="highlight-block__title">Highlighted text</h3>
                       <p class="highlight-block__desc">You can create a <a href="">custom avatar</a> of yourself or your team member to make you internal communication videos more personalized.</p>
@@ -321,10 +359,28 @@
                           <use href="sprite.svg#views_sprite"></use>
                         </svg><span>320</span>
                       </div>
-                      <button class="post-info__item post-info__share">
+                      <button class="post-info__item share tooltip-wrapper" aria-describedby="share-tooltip-2" id="share-button-2" data-tooltip-trigger="share-tooltip-2">
                         <svg width="16" height="16">
                           <use href="sprite.svg#share_sprite"></use>
-                        </svg><span>Share</span>
+                        </svg>
+                        <div class="tooltip tooltip-socials" id="share-tooltip-2" role="tooltip" tabindex="-1" data-tooltip="share-tooltip-2">
+                          <div class="tooltip-socials__inner"> 
+                            <div class="tooltip-socials__item" tabindex="2"> <a class="tooltip-socials__link" href="https://google.com"> 
+                                <svg width="16" height="16">
+                                  <use href="sprite.svg#twitter_sprite"></use>
+                                </svg></a></div>
+                            <div class="tooltip-socials__item" tabindex="2"> <a class="tooltip-socials__link" href="https://google.com"> 
+                                <svg width="16" height="16">
+                                  <use href="sprite.svg#inst_sprite"></use>
+                                </svg></a></div>
+                            <div class="tooltip-socials__item" tabindex="2"> <a class="tooltip-socials__link" href="https://google.com"> 
+                                <svg width="16" height="16">
+                                  <use href="sprite.svg#fb_sprite"></use>
+                                </svg></a></div>
+                          </div>
+                          <div id="arrow" data-popper-arrow></div>
+                        </div>
+                        <div class="share__button">Share</div>
                       </button>
                     </div>
                     <ul class="post-info__tags"> 
@@ -333,7 +389,7 @@
                     </ul>
                   </div>
                 </article>
-                <aside class="blog-single__sidebar">
+                <aside class="post-sidebar">
                   <div class="post-author blog-single__post-author">
                     <picture class="post-author__image"> <img src="assets/images/author.jpg" alt=""></picture>
                     <div class="post-author__info">

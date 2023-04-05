@@ -34,14 +34,14 @@
 }
 
 .editor-content {
-  @include media(md) {
-    gap: 24px;
-  }
-
-  display: flex;
-  flex-direction: column;
   max-width: 700px;
   line-height: 150%;
+
+  b,
+  strong {
+    font-weight: 600;
+    color: var(--black);
+  }
 
   h2 {
     margin-bottom: 24px;
@@ -77,14 +77,25 @@
     line-height: 150%;
   }
 
-  img {
+  picture {
+    overflow: hidden;
+
     width: 100%;
-    height: auto;
     margin-top: 16px;
     margin-bottom: 24px;
 
     border: 1px solid var(--border-divider);
     border-radius: 12px;
+
+    &:first-child:last-child {
+      margin: 0;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   p {
@@ -107,7 +118,8 @@
   }
 
   a {
-    text-decoration: dotted;
+    color: var(--accent-purple);
+    text-decoration: underline;
   }
 
   li {
@@ -141,11 +153,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
-  margin: 24px 0;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &__item {
     @include media(sm) {
@@ -197,6 +204,107 @@
 
   &__desc {
     margin-bottom: 40px;
+    line-height: 150%;
+    color: var(--text);
+  }
+}
+
+.highlight-block {
+  padding: 24px 20px;
+  background: rgb(147 63 255 / 8%);
+  border: 1px solid rgb(147 63 255 / 32%);
+  border-radius: 12px;
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: rem(20px);
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+  }
+
+  &__desc {
+    margin-bottom: 1rem;
+    line-height: 150%;
+    color: var(--text);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: var(--accent-purple);
+    text-decoration: underline;
+  }
+}
+
+.content-block {
+  margin: 24px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.figure-block {
+  $this: &;
+
+  &__link {
+    position: relative;
+
+    overflow: hidden;
+    display: block;
+
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+
+    &:hover {
+      #{$this}__hover {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__hover {
+    user-select: none;
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    background: rgb(16 16 16 / 70%);
+
+    transition: 0.5s;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__caption {
+    font-size: rem(12px);
     line-height: 150%;
     color: var(--text);
   }
