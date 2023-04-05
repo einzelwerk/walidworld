@@ -285,6 +285,16 @@
   border-top-right-radius: 12px;
   box-shadow: 0 0 0 1px var(--border-divider);
 
+  &--no-highlight {
+    #{$this}__body {
+      #{$this}__tr {
+        &:first-child {
+          background: transparent;
+        }
+      }
+    }
+  }
+
   &__body,
   &__tr,
   &__th,
@@ -394,11 +404,29 @@
   &__body {
     @include media(lg, min-width) {
       display: table-row-group;
+      #{$this}__tr {
+        &:first-child {
+          background: rgb(147 63 255 / 8%);
+        }
+      }
     }
   }
 
   &__icon {
     width: 24px;
     height: 24px;
+  }
+}
+
+.price-col {
+  @include media(md) {
+    align-items: flex-end;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  &__gray {
+    color: var(--text);
   }
 }

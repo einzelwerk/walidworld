@@ -198,6 +198,38 @@ block content
               .editor-content
                 h2 Midjourney Pricing
                 p Midjourney has a student discount of 35%. To get it, you have to prove that you are actually studying.
+                table.table-compare.table-compare--no-highlight.content-block 
+                  thead.table-compare__head 
+                    tr.table-compare__tr 
+                      th.table-compare__th(scope="col") Plan
+                      th.table-compare__th(scope="col") Annual
+                      th.table-compare__th(scope="col") Monthly
+
+                  tbody.table-compare__body 
+                    tr.table-compare__tr
+                      th.table-compare__th(scope="row") Free
+                      td.table-compare__td(data-title="Annual" aria-label="Annual") Free
+                      td.table-compare__td(data-title="Monthly" aria-label="Monthly")  Free
+                    tr.table-compare__tr
+                      th.table-compare__th(scope="row") Plus
+                      td.table-compare__td(data-title="Annual" aria-label="Annual") 
+                        span.price-col 
+                          span  $8.00
+                          span.price-col__gray per user / month
+                      td.table-compare__td(data-title="Monthly" aria-label="Monthly") 
+                        span.price-col 
+                          span  $10.00
+                          span.price-col__gray per user / month
+                    tr.table-compare__tr
+                      th.table-compare__th(scope="row") Business
+                      td.table-compare__td(data-title="Annual" aria-label="Annual") 
+                        span.price-col 
+                          span  $15.00
+                          span.price-col__gray per user / month
+                      td.table-compare__td(data-title="Monthly" aria-label="Monthly")  
+                        span.price-col 
+                          span  $18.00
+                          span.price-col__gray per user / month
             .post-info
               .post-info__header 
                 time.post-info__item.post-info__date(datetime="2021-03-01") 

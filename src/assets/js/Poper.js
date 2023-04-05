@@ -16,6 +16,15 @@ tooltipTrigger.forEach((trigger) => {
     ],
   });
 
+  function hide() {
+    tooltip.removeAttribute('data-show');
+  }
+
+  // function show() {
+  //   tooltip.setAttribute('data-show', '');
+  //   popperInstance.update();
+  // }
+
   function toggle() {
     if (tooltip.dataset.show === '') {
       tooltip.removeAttribute('data-show');
@@ -28,7 +37,7 @@ tooltipTrigger.forEach((trigger) => {
   trigger.addEventListener('click', toggle);
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.share')) {
-      toggle();
+      hide();
     }
   });
 });
