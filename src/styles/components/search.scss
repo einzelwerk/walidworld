@@ -20,5 +20,9 @@
       line-height: 143%;
       color: var(--placeholder);
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
