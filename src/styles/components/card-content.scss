@@ -166,6 +166,12 @@
     align-items: center;
   }
 
+  &__list-item {
+    &::before {
+      content: none !important;
+    }
+  }
+
   &__item {
     --item-background: var(--tags-color);
 
@@ -182,10 +188,6 @@
     border-radius: 8px;
 
     transition: all 0.5s;
-
-    &::before {
-      content: none !important;
-    }
 
     &[href] {
       &:hover {
