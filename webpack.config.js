@@ -90,6 +90,8 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+
+
       {
         test: /\.(png|jpe?g|svg|gif|ico|mp4)$/,
         type: 'asset/resource',
