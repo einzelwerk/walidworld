@@ -74,8 +74,12 @@ block content
                 a.socials-list__item(href="" aria-label="#TOOL_NAME# on Twitter" title="#TOOL_NAME# on Twitter" target="_blank" rel="noopener nofollow")
                   svg(width='20' height='20')
                     use(href='sprite.svg#inst_sprite')
-        picture.card-content__image
-          img(src=require('@/images/card-i.jpg'), alt="")
+        .card-content__image-wrapper
+          a.card-content__image-overlay(href="" target="_blank") Visit 
+            svg(width='20' height='20')
+              use(href='sprite.svg#external_sprite')
+          picture.card-content__image
+            img(src=require('@/images/card-i.jpg'), alt="")
   section.section.section--border
     .container
       .tool-content-wrapper 
