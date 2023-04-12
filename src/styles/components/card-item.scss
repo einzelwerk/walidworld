@@ -66,8 +66,12 @@
   &__name {
     display: flex;
     align-items: center;
+
     margin-bottom: 8px !important;
+
+    font-size: rem(16px);
     font-weight: 600 !important;
+    line-height: 150%;
 
     svg {
       margin-left: 12px;

@@ -193,7 +193,7 @@
       &:hover {
         --item-background: var(--black);
 
-        color: var(--white);
+        color: var(--white) !important;
       }
     }
   }

@@ -9,6 +9,15 @@
     gap: 16px;
   }
 
+  &__link {
+    &[href] {
+      &:hover {
+        color: var(--black);
+        text-decoration: underline;
+      }
+    }
+  }
+
   &__item {
     display: flex;
     gap: 16px;
@@ -27,11 +36,6 @@
       height: 6px;
 
       background: var(--placeholder);
-    }
-
-    &:hover {
-      color: var(--black);
-      text-decoration: underline;
     }
 
     &:last-child {
