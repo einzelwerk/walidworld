@@ -216,6 +216,8 @@
   }
 
   &__list-item {
+    flex-direction: row !important;
+
     &::before {
       content: none !important;
     }
