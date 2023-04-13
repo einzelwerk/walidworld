@@ -83,6 +83,10 @@
   align-items: center;
   padding-top: 30px;
 
+  &--bottom {
+    padding-bottom: 30px;
+  }
+
   &__heading {
     display: flex;
     gap: 20px;
