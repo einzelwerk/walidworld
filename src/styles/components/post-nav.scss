@@ -1,5 +1,9 @@
 @use '../utils/mixins' as *;
 
+.post-sidebar {
+  max-width: 360px;
+}
+
 .post-nav {
   @include media(md, min-width) {
     position: sticky;
@@ -23,8 +27,6 @@
   &__link {
     display: flex;
     color: var(--text);
-    white-space: nowrap;
-    border-bottom: 1px dashed var(--text);
 
     &::before {
       content: '';

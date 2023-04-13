@@ -210,14 +210,12 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap !important;
     gap: 4px;
     align-items: center;
   }
 
   &__list-item {
-    flex-direction: row !important;
-
     &::before {
       content: none !important;
     }
