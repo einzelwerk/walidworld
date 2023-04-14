@@ -41,7 +41,7 @@ block content
             img(src=require('@/images/blog.jpg'), alt="")
         .blog-single__content-wrapper
           article.blog-single__content 
-            section.post-section.blog-single__section
+            section.post-section.blog-single__section(id="content-1")
               .editor-content 
                 h2 Introduction
                 p  Welcome to "Midjourney: Deep Dive," where we take a closer look at one of the most exciting customer experience tools on the market. Midjourney is an innovative AI-powered platform that helps businesses optimize their customer journey, boost sales, and build lasting relationships with their customers.
@@ -70,7 +70,7 @@ block content
                             .card-tags__item  Design
                           li.card-tags__list-item
                             span.card-tags__item +3     
-            section.post-section.blog-single__section
+            section.post-section.blog-single__section(id="content-2")
               .editor-content 
                 h2 Diving into Midjourney  Features
                 p Midjourney is an innovative AI-tool that empowers businesses to optimize their customer journey and drive sales. In this section, we'll take a closer look at five key features that set Midjourney apart from other customer experience tools.
@@ -91,7 +91,7 @@ block content
                 .features-editor__item 
                   h4.features-editor__title AI-Powered Recommendations
                   p.features-editor__desc Midjourney uses machine learning algorithms to provide personalized product recommendations to customers based on their browsing and purchase history.
-            section.post-section.blog-single__section
+            section.post-section.blog-single__section(id="content-3")
               .editor-content
                 h2  Midjourney Work Showcases
                 p Upword simplifies content creation by offering a centralized location for the entire workflow, from idea to publishing. Its all-in-one solution streamlines the process, reducing errors and delays. With a user-friendly interface and comprehensive features.
@@ -100,7 +100,7 @@ block content
                   a.gallery-grid__item(href=require('@/images/blog.jpg') data-glightbox) 
                     picture.gallery-grid__image 
                       img(src=require('@/images/blog.jpg'), alt="")
-            section.post-section.blog-single__section 
+            section.post-section.blog-single__section(id="content-4") 
               .cta-subscribe 
                 h4.cta-subscribe__title Subscribe to our newsletter
                 p.cta-subscribe__desc We write once a week and only about business. We promise not to spam.
@@ -115,7 +115,7 @@ block content
                   a(href="") Terms and Service
                   |  and 
                   a(href="") Privacy Policy
-            section.post-section.blog-single__section
+            section.post-section.blog-single__section(id="content-5")
               .editor-content
                 h2 Midjourney vs Competitors
                 p While there are a variety of customer experience tools on the market, Midjourney stands out as a powerful and innovative solution that delivers real value to businesses. Here are some of the key advantages that Midjourney has over its competitors:
@@ -165,7 +165,7 @@ block content
               .editor-content
                 p In contrast, DALL-E and Stable Diffusion are <strong>primarily focused on creating</strong> and manipulating images for artistic and research purposes. While these tools can certainly be used for other applications, they may not be as well-suited to the specific needs of businesses and their customers.
                 p Overall, while all three tools offer powerful AI capabilities for image generation, Midjourney stands out as a customer experience tool that is designed to help businesses build better relationships with their customers.
-            section.post-section.blog-single__section
+            section.post-section.blog-single__section(id="content-6")
               .editor-content 
                 h2 Implementation and Onboarding
                 p Implementing a new tool like Midjourney can be daunting, but the onboarding process is designed to be as smooth and straightforward as possible. Here's what you can expect when you implement Midjourney:
@@ -194,7 +194,7 @@ block content
                     img(src=require('@/images/figure.jpg'), alt="")
                 figcaption.figure-block__caption 
                   p Video Caption is going here (optional)
-            section.post-section.blog-single__section
+            section.post-section.blog-single__section(id="content-7")
               .editor-content
                 h2 Midjourney Pricing
                 p Midjourney has a student discount of 35%. To get it, you have to prove that you are actually studying.
@@ -275,17 +275,17 @@ block content
               h4.post-nav__title Summary
               ul.post-nav__list 
                 li.post-nav__item 
-                  a.post-nav__link(href="" data-id="") Introduction
+                  a.post-nav__link(href="#content-1" data-id="content-1") Introduction
                 li.post-nav__item 
-                  a.post-nav__link(href="" data-id="") Diving into Midjourney Features
+                  a.post-nav__link(href="#content-2" data-id="content-2") Diving into Midjourney Features
                 li.post-nav__item 
-                  a.post-nav__link(href="" data-id="") Midjourney Work Showcases
+                  a.post-nav__link(href="#content-3" data-id="content-3") Midjourney Work Showcases
                 li.post-nav__item 
-                  a.post-nav__link(href="" data-id="") Midjourney vs Competitors
+                  a.post-nav__link(href="#content-4" data-id="content-4") Midjourney vs Competitors
                 li.post-nav__item 
-                  a.post-nav__link(href="" data-id="") Implementation and Onboarding
+                  a.post-nav__link(href="#content-5" data-id="content-5") Implementation and Onboarding
                 li.post-nav__item 
-                  a.post-nav__link(href="" data-id="") Midjourney Pricing
+                  a.post-nav__link(href="#content-6" data-id="content-6") Midjourney Pricing
   section.section.container 
     .section-heading.section-heading--left 
       h2.section-heading__title Latest posts

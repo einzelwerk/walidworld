@@ -354,9 +354,11 @@
 
   &__td[data-title] {
     @include media(lg) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
       align-items: center;
       justify-content: space-between;
+
       font-weight: 500;
     }
 
