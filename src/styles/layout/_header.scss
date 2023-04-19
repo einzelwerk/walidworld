@@ -34,10 +34,8 @@
   }
 
   &__button-group {
-    @include media(sm) {
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 12px;
+    @include media(md) {
+      display: none;
     }
 
     display: flex;
