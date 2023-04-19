@@ -6,3 +6,4 @@ import './Lottie';
 import './Poper';
 import './ArchonNav';
 import './GLightbox';
+import './Cookies';

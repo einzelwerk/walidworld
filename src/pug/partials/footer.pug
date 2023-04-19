@@ -128,7 +128,17 @@ footer.footer
           a(href="") Terms and Service
           |  and 
           a(href="") Privacy Policy
-
+.cookies-banner
+  button.cookies-banner__close(type="button") 
+    svg(width="20" height="20")
+      use(xlink:href="sprite.svg#close_sprite")
+  .cookies-banner__content
+    picture.cookies-banner__image
+      img(src=require('@/images/cookies.svg'), alt="")
+    .cookies-banner__text
+      h2.cookies-banner__title We use cookies
+      p.cookies-banner__desc This website uses cookies to ensure you get the best experience on our website
+  button.cookies-banner__accept.btn.btn--secondary(type="button") OK
 
 
 
