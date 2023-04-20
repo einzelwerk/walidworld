@@ -47,6 +47,11 @@
       <button class="header__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
       <button class="header__btn btn btn--primary" type="button" data-modal="subscribe">Subscribe to newsletter</button>
     </div>
+    <button class="theme-switcher" aria-label="Switch theme"> 
+      <svg width="44" height="44">
+        <use href="sprite.svg#dark-theme_sprite"></use>
+      </svg>
+    </button>
   </div>
 </header>
 <div class="mobile-nav" id="mobile-nav">
@@ -147,7 +152,7 @@
                             <use href="sprite.svg#facebook_sprite"></use>
                           </svg></a></div>
                     </div>
-                    <div id="arrow" data-popper-arrow></div>
+                    <div class="arrow" data-popper-arrow></div>
                   </div>
                   <div class="share__button">Share</div>
                 </button>
@@ -164,7 +169,7 @@
                     <h3 class="card-tags__heading">Price Model:</h3>
                     <ul class="card-tags__list">
                       <li class="card-tags__item">Paid</li>
-                      <li class="card-tags__item" style="--item-background:#F5E769">This tool offers a free trial!          </li>
+                      <li class="card-tags__item" style="--item-background:#F5E769;color:var(--black-base)">This tool offers a free trial!          </li>
                     </ul>
                   </div>
                   <div class="card-tags"> 
@@ -435,7 +440,7 @@
               </div>
               <div class="coming-soon">
                 <div class="coming-soon__inner">
-                  <picture class="coming-soon__background"> <img src="assets/images/coming-soon.svg" alt=""></picture>
+                  <div class="coming-soon__background"> <img src="assets/images/coming-soon.svg" alt=""></div>
                   <div class="coming-soon__content">
                     <div class="coming-soon__loader"> <span> </span><span> </span><span> </span></div>
                     <h3 class="coming-soon__title">We’re preparing something.</h3>
@@ -453,180 +458,384 @@
           </div>
           <div class="cards"> 
             <div class="cards__grid">
-              <article class="card-item" href="#"><a class="card-item__link" href=""> 
-                  <div class="card-item__image-gradient">
-                    <div class="card-item__image-wrapper">
-                      <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-                      <div class="card-item__views"> <span>6250</span>
-                        <svg width="16" height="16">
-                          <use href="sprite.svg#views_sprite"></use>
-                        </svg>
-                      </div>
-                      <div class="card-payment"> <span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769">This tool offers a free trial!</span></div>
-                    </div>
-                  </div>
-                  <div class="card-item__info"> 
-                    <h2 class="card-item__name">Fetch.ai</h2>
-                    <div class="card-item__desc">Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...</div>
-                  </div></a>
-                <div class="card-item__bottom"> 
-                  <div class="card-tags">
-                    <ul class="card-tags__list">
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Code</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Speech</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Seo</a></li>
-                    </ul>
-                  </div><a class="card-item__external-link" href="" target="_blank" rel="noopener nofollow"> <span>Visit </span>
-                    <svg width="20" height="20">
-                      <use href="sprite.svg#external_sprite"></use>
-                    </svg></a>
-                </div>
-              </article>
-              <article class="card-item" href="#"><a class="card-item__link" href=""> 
-                  <div class="card-item__image-gradient">
-                    <div class="card-item__image-wrapper">
-                      <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-                      <div class="card-item__views"> <span>6250</span>
-                        <svg width="16" height="16">
-                          <use href="sprite.svg#views_sprite"></use>
-                        </svg>
-                      </div>
-                      <div class="card-payment"> <span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769">This tool offers a free trial!</span></div>
-                    </div>
-                  </div>
-                  <div class="card-item__info"> 
-                    <h2 class="card-item__name">Fetch.ai</h2>
-                    <div class="card-item__desc">Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...</div>
-                  </div></a>
-                <div class="card-item__bottom"> 
-                  <div class="card-tags">
-                    <ul class="card-tags__list">
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Code</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Speech</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Seo</a></li>
-                    </ul>
-                  </div><a class="card-item__external-link" href="" target="_blank" rel="noopener nofollow"> <span>Visit </span>
-                    <svg width="20" height="20">
-                      <use href="sprite.svg#external_sprite"></use>
-                    </svg></a>
-                </div>
-              </article>
-              <article class="card-item" href="#"><a class="card-item__link" href=""> 
-                  <div class="card-item__image-gradient">
-                    <div class="card-item__image-wrapper">
-                      <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-                      <div class="card-item__views"> <span>6250</span>
-                        <svg width="16" height="16">
-                          <use href="sprite.svg#views_sprite"></use>
-                        </svg>
-                      </div>
-                      <div class="card-payment"> <span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769">This tool offers a free trial!</span></div>
-                    </div>
-                  </div>
-                  <div class="card-item__info"> 
-                    <h2 class="card-item__name">Fetch.ai</h2>
-                    <div class="card-item__desc">Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...</div>
-                  </div></a>
-                <div class="card-item__bottom"> 
-                  <div class="card-tags">
-                    <ul class="card-tags__list">
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Code</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Speech</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Seo</a></li>
-                    </ul>
-                  </div><a class="card-item__external-link" href="" target="_blank" rel="noopener nofollow"> <span>Visit </span>
-                    <svg width="20" height="20">
-                      <use href="sprite.svg#external_sprite"></use>
-                    </svg></a>
-                </div>
-              </article>
-              <article class="card-item" href="#"><a class="card-item__link" href=""> 
-                  <div class="card-item__image-gradient">
-                    <div class="card-item__image-wrapper">
-                      <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-                      <div class="card-item__views"> <span>6250</span>
-                        <svg width="16" height="16">
-                          <use href="sprite.svg#views_sprite"></use>
-                        </svg>
-                      </div>
-                      <div class="card-payment"> <span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769">This tool offers a free trial!</span></div>
-                    </div>
-                  </div>
-                  <div class="card-item__info"> 
-                    <h2 class="card-item__name">Fetch.ai</h2>
-                    <div class="card-item__desc">Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...</div>
-                  </div></a>
-                <div class="card-item__bottom"> 
-                  <div class="card-tags">
-                    <ul class="card-tags__list">
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Code</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Speech</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Seo</a></li>
-                    </ul>
-                  </div><a class="card-item__external-link" href="" target="_blank" rel="noopener nofollow"> <span>Visit </span>
-                    <svg width="20" height="20">
-                      <use href="sprite.svg#external_sprite"></use>
-                    </svg></a>
-                </div>
-              </article>
-              <article class="card-item" href="#"><a class="card-item__link" href=""> 
-                  <div class="card-item__image-gradient">
-                    <div class="card-item__image-wrapper">
-                      <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-                      <div class="card-item__views"> <span>6250</span>
-                        <svg width="16" height="16">
-                          <use href="sprite.svg#views_sprite"></use>
-                        </svg>
-                      </div>
-                      <div class="card-payment"> <span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769">This tool offers a free trial!</span></div>
-                    </div>
-                  </div>
-                  <div class="card-item__info"> 
-                    <h2 class="card-item__name">Fetch.ai</h2>
-                    <div class="card-item__desc">Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...</div>
-                  </div></a>
-                <div class="card-item__bottom"> 
-                  <div class="card-tags">
-                    <ul class="card-tags__list">
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Code</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Speech</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Seo</a></li>
-                    </ul>
-                  </div><a class="card-item__external-link" href="" target="_blank" rel="noopener nofollow"> <span>Visit </span>
-                    <svg width="20" height="20">
-                      <use href="sprite.svg#external_sprite"></use>
-                    </svg></a>
-                </div>
-              </article>
-              <article class="card-item" href="#"><a class="card-item__link" href=""> 
-                  <div class="card-item__image-gradient">
-                    <div class="card-item__image-wrapper">
-                      <picture class="card-item__image"><img src="assets/images/tools/1.jpg" alt=""></picture>
-                      <div class="card-item__views"> <span>6250</span>
-                        <svg width="16" height="16">
-                          <use href="sprite.svg#views_sprite"></use>
-                        </svg>
-                      </div>
-                      <div class="card-payment"> <span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769">This tool offers a free trial!</span></div>
-                    </div>
-                  </div>
-                  <div class="card-item__info"> 
-                    <h2 class="card-item__name">Fetch.ai</h2>
-                    <div class="card-item__desc">Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...</div>
-                  </div></a>
-                <div class="card-item__bottom"> 
-                  <div class="card-tags">
-                    <ul class="card-tags__list">
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Code</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Speech</a></li>
-                      <li class="card-tags__list-item"><a class="card-tags__item" href=""> Seo</a></li>
-                    </ul>
-                  </div><a class="card-item__external-link" href="" target="_blank" rel="noopener nofollow"> <span>Visit </span>
-                    <svg width="20" height="20">
-                      <use href="sprite.svg#external_sprite"></use>
-                    </svg></a>
-                </div>
-              </article>
+<article class="m-card-item"> 
+  <div class="m-card-item__link m-card-item__top"><a class="m-card-item__picture-wrapper" href=""> 
+      <div class="m-card-item__views"><span> 1.2k</span>
+        <svg width="16" height="16">
+          <use href="sprite.svg#views_sprite"></use>
+        </svg>
+      </div>
+      <div class="card-payment"><span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+      <picture class="m-card-item__picture">
+        <source media="(min-width:576px)" srcset="assets/images/tools/1.jpg"><img src="assets/images/small-card.jpg" alt="">
+      </picture></a>
+    <div class="m-card-item__info">
+      <div class="m-card-item__heading"> <a href="">
+          <h3 class="m-card-item__title">Fetch.ai </h3></a>
+        <div class="m-card-item__dropdown m-card-dropdown share">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-432" data-tooltip-trigger="card-tooltip-432" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+            <svg width="32" height="32">
+              <use href="sprite.svg#interaction_sprite"></use>
+            </svg>
+          </button>
+          <div class="m-card-dropdown__content" id="card-tooltip-432" aria-hidden="true" data-tooltip="card-tooltip-432">
+            <ul class="m-card-dropdown__list">
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#external_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Share
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#share_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> View
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#views_sprite"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div>
+          </div>
+        </div>
+      </div><a href=""> 
+        <p class="m-card-item__desc">Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...</p></a>
+    </div>
+  </div>
+  <div class="m-card-item__bottom">
+    <div class="m-card-item__payment m-card-payment"> <span class="m-card-payment__item" style="--background:#EBEBEB"><img src="assets/images/payment-icon.svg" alt=""></span><span class="m-card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+    <div class="card-tags">
+      <ul class="card-tags__list">
+        <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
+        <li class="card-tags__list-item share">
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-196" data-tooltip-trigger="card-tags-tooltip-432" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-196" aria-hidden="true" data-tooltip="card-tags-tooltip-432"> 
+            <ul class="card-tags__tooltip-list card-tags__list"> 
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Eco</a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div></span>
+        </li>
+      </ul>
+    </div><a class="m-card-item__external-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Visit"><span>Visit</span>
+      <svg width="16" height="16">
+        <use href="sprite.svg#external_sprite"></use>
+      </svg></a>
+  </div>
+</article>
+<article class="m-card-item"> 
+  <div class="m-card-item__link m-card-item__top"><a class="m-card-item__picture-wrapper" href=""> 
+      <div class="m-card-item__views"><span> 1.2k</span>
+        <svg width="16" height="16">
+          <use href="sprite.svg#views_sprite"></use>
+        </svg>
+      </div>
+      <div class="card-payment"><span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+      <picture class="m-card-item__picture">
+        <source media="(min-width:576px)" srcset="assets/images/tools/1.jpg"><img src="assets/images/small-card.jpg" alt="">
+      </picture></a>
+    <div class="m-card-item__info">
+      <div class="m-card-item__heading"> <a href="">
+          <h3 class="m-card-item__title">Fetch.ai </h3></a>
+        <div class="m-card-item__dropdown m-card-dropdown share">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-269" data-tooltip-trigger="card-tooltip-269" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+            <svg width="32" height="32">
+              <use href="sprite.svg#interaction_sprite"></use>
+            </svg>
+          </button>
+          <div class="m-card-dropdown__content" id="card-tooltip-269" aria-hidden="true" data-tooltip="card-tooltip-269">
+            <ul class="m-card-dropdown__list">
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#external_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Share
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#share_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> View
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#views_sprite"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div>
+          </div>
+        </div>
+      </div><a href=""> 
+        <p class="m-card-item__desc">Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...</p></a>
+    </div>
+  </div>
+  <div class="m-card-item__bottom">
+    <div class="m-card-item__payment m-card-payment"> <span class="m-card-payment__item" style="--background:#EBEBEB"><img src="assets/images/payment-icon.svg" alt=""></span><span class="m-card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+    <div class="card-tags">
+      <ul class="card-tags__list">
+        <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
+        <li class="card-tags__list-item share">
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-733" data-tooltip-trigger="card-tags-tooltip-269" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-733" aria-hidden="true" data-tooltip="card-tags-tooltip-269"> 
+            <ul class="card-tags__tooltip-list card-tags__list"> 
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Eco</a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div></span>
+        </li>
+      </ul>
+    </div><a class="m-card-item__external-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Visit"><span>Visit</span>
+      <svg width="16" height="16">
+        <use href="sprite.svg#external_sprite"></use>
+      </svg></a>
+  </div>
+</article>
+<article class="m-card-item"> 
+  <div class="m-card-item__link m-card-item__top"><a class="m-card-item__picture-wrapper" href=""> 
+      <div class="m-card-item__views"><span> 1.2k</span>
+        <svg width="16" height="16">
+          <use href="sprite.svg#views_sprite"></use>
+        </svg>
+      </div>
+      <div class="card-payment"><span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+      <picture class="m-card-item__picture">
+        <source media="(min-width:576px)" srcset="assets/images/tools/1.jpg"><img src="assets/images/small-card.jpg" alt="">
+      </picture></a>
+    <div class="m-card-item__info">
+      <div class="m-card-item__heading"> <a href="">
+          <h3 class="m-card-item__title">Fetch.ai </h3></a>
+        <div class="m-card-item__dropdown m-card-dropdown share">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-884" data-tooltip-trigger="card-tooltip-884" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+            <svg width="32" height="32">
+              <use href="sprite.svg#interaction_sprite"></use>
+            </svg>
+          </button>
+          <div class="m-card-dropdown__content" id="card-tooltip-884" aria-hidden="true" data-tooltip="card-tooltip-884">
+            <ul class="m-card-dropdown__list">
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#external_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Share
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#share_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> View
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#views_sprite"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div>
+          </div>
+        </div>
+      </div><a href=""> 
+        <p class="m-card-item__desc">Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...</p></a>
+    </div>
+  </div>
+  <div class="m-card-item__bottom">
+    <div class="m-card-item__payment m-card-payment"> <span class="m-card-payment__item" style="--background:#EBEBEB"><img src="assets/images/payment-icon.svg" alt=""></span><span class="m-card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+    <div class="card-tags">
+      <ul class="card-tags__list">
+        <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
+        <li class="card-tags__list-item share">
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-936" data-tooltip-trigger="card-tags-tooltip-884" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-936" aria-hidden="true" data-tooltip="card-tags-tooltip-884"> 
+            <ul class="card-tags__tooltip-list card-tags__list"> 
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Eco</a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div></span>
+        </li>
+      </ul>
+    </div><a class="m-card-item__external-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Visit"><span>Visit</span>
+      <svg width="16" height="16">
+        <use href="sprite.svg#external_sprite"></use>
+      </svg></a>
+  </div>
+</article>
+<article class="m-card-item"> 
+  <div class="m-card-item__link m-card-item__top"><a class="m-card-item__picture-wrapper" href=""> 
+      <div class="m-card-item__views"><span> 1.2k</span>
+        <svg width="16" height="16">
+          <use href="sprite.svg#views_sprite"></use>
+        </svg>
+      </div>
+      <div class="card-payment"><span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+      <picture class="m-card-item__picture">
+        <source media="(min-width:576px)" srcset="assets/images/tools/1.jpg"><img src="assets/images/small-card.jpg" alt="">
+      </picture></a>
+    <div class="m-card-item__info">
+      <div class="m-card-item__heading"> <a href="">
+          <h3 class="m-card-item__title">Fetch.ai </h3></a>
+        <div class="m-card-item__dropdown m-card-dropdown share">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-345" data-tooltip-trigger="card-tooltip-345" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+            <svg width="32" height="32">
+              <use href="sprite.svg#interaction_sprite"></use>
+            </svg>
+          </button>
+          <div class="m-card-dropdown__content" id="card-tooltip-345" aria-hidden="true" data-tooltip="card-tooltip-345">
+            <ul class="m-card-dropdown__list">
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#external_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Share
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#share_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> View
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#views_sprite"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div>
+          </div>
+        </div>
+      </div><a href=""> 
+        <p class="m-card-item__desc">Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...</p></a>
+    </div>
+  </div>
+  <div class="m-card-item__bottom">
+    <div class="m-card-item__payment m-card-payment"> <span class="m-card-payment__item" style="--background:#EBEBEB"><img src="assets/images/payment-icon.svg" alt=""></span><span class="m-card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+    <div class="card-tags">
+      <ul class="card-tags__list">
+        <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
+        <li class="card-tags__list-item share">
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-936" data-tooltip-trigger="card-tags-tooltip-345" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-936" aria-hidden="true" data-tooltip="card-tags-tooltip-345"> 
+            <ul class="card-tags__tooltip-list card-tags__list"> 
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Eco</a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div></span>
+        </li>
+      </ul>
+    </div><a class="m-card-item__external-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Visit"><span>Visit</span>
+      <svg width="16" height="16">
+        <use href="sprite.svg#external_sprite"></use>
+      </svg></a>
+  </div>
+</article>
+<article class="m-card-item"> 
+  <div class="m-card-item__link m-card-item__top"><a class="m-card-item__picture-wrapper" href=""> 
+      <div class="m-card-item__views"><span> 1.2k</span>
+        <svg width="16" height="16">
+          <use href="sprite.svg#views_sprite"></use>
+        </svg>
+      </div>
+      <div class="card-payment"><span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+      <picture class="m-card-item__picture">
+        <source media="(min-width:576px)" srcset="assets/images/tools/1.jpg"><img src="assets/images/small-card.jpg" alt="">
+      </picture></a>
+    <div class="m-card-item__info">
+      <div class="m-card-item__heading"> <a href="">
+          <h3 class="m-card-item__title">Fetch.ai </h3></a>
+        <div class="m-card-item__dropdown m-card-dropdown share">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-606" data-tooltip-trigger="card-tooltip-606" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+            <svg width="32" height="32">
+              <use href="sprite.svg#interaction_sprite"></use>
+            </svg>
+          </button>
+          <div class="m-card-dropdown__content" id="card-tooltip-606" aria-hidden="true" data-tooltip="card-tooltip-606">
+            <ul class="m-card-dropdown__list">
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#external_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Share
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#share_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> View
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#views_sprite"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div>
+          </div>
+        </div>
+      </div><a href=""> 
+        <p class="m-card-item__desc">Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...</p></a>
+    </div>
+  </div>
+  <div class="m-card-item__bottom">
+    <div class="m-card-item__payment m-card-payment"> <span class="m-card-payment__item" style="--background:#EBEBEB"><img src="assets/images/payment-icon.svg" alt=""></span><span class="m-card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+    <div class="card-tags">
+      <ul class="card-tags__list">
+        <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
+        <li class="card-tags__list-item share">
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-250" data-tooltip-trigger="card-tags-tooltip-606" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-250" aria-hidden="true" data-tooltip="card-tags-tooltip-606"> 
+            <ul class="card-tags__tooltip-list card-tags__list"> 
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Eco</a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div></span>
+        </li>
+      </ul>
+    </div><a class="m-card-item__external-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Visit"><span>Visit</span>
+      <svg width="16" height="16">
+        <use href="sprite.svg#external_sprite"></use>
+      </svg></a>
+  </div>
+</article>
+<article class="m-card-item"> 
+  <div class="m-card-item__link m-card-item__top"><a class="m-card-item__picture-wrapper" href=""> 
+      <div class="m-card-item__views"><span> 1.2k</span>
+        <svg width="16" height="16">
+          <use href="sprite.svg#views_sprite"></use>
+        </svg>
+      </div>
+      <div class="card-payment"><span class="card-payment__item">Paid</span><span class="card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+      <picture class="m-card-item__picture">
+        <source media="(min-width:576px)" srcset="assets/images/tools/1.jpg"><img src="assets/images/small-card.jpg" alt="">
+      </picture></a>
+    <div class="m-card-item__info">
+      <div class="m-card-item__heading"> <a href="">
+          <h3 class="m-card-item__title">Fetch.ai </h3></a>
+        <div class="m-card-item__dropdown m-card-dropdown share">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-529" data-tooltip-trigger="card-tooltip-529" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+            <svg width="32" height="32">
+              <use href="sprite.svg#interaction_sprite"></use>
+            </svg>
+          </button>
+          <div class="m-card-dropdown__content" id="card-tooltip-529" aria-hidden="true" data-tooltip="card-tooltip-529">
+            <ul class="m-card-dropdown__list">
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#external_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Share
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#share_sprite"></use>
+                  </svg></a></li>
+              <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> View
+                  <svg width="16" height="16">
+                    <use href="sprite.svg#views_sprite"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div>
+          </div>
+        </div>
+      </div><a href=""> 
+        <p class="m-card-item__desc">Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...</p></a>
+    </div>
+  </div>
+  <div class="m-card-item__bottom">
+    <div class="m-card-item__payment m-card-payment"> <span class="m-card-payment__item" style="--background:#EBEBEB"><img src="assets/images/payment-icon.svg" alt=""></span><span class="m-card-payment__item" style="--background:#F5E769;color:var(--black-base)">Free Trial</span></div>
+    <div class="card-tags">
+      <ul class="card-tags__list">
+        <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
+        <li class="card-tags__list-item share">
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-161" data-tooltip-trigger="card-tags-tooltip-529" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-161" aria-hidden="true" data-tooltip="card-tags-tooltip-529"> 
+            <ul class="card-tags__tooltip-list card-tags__list"> 
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
+              <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Eco</a></li>
+            </ul>
+            <div class="arrow" data-popper-arrow></div></span>
+        </li>
+      </ul>
+    </div><a class="m-card-item__external-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Visit"><span>Visit</span>
+      <svg width="16" height="16">
+        <use href="sprite.svg#external_sprite"></use>
+      </svg></a>
+  </div>
+</article>
             </div>
           </div>
         </section>
