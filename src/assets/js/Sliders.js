@@ -59,6 +59,35 @@ class Sliders {
       sliderInstance.init();
     });
   }
+
+  static defaultSlider() {
+    const roots = document.querySelectorAll('.js-default-slider');
+    roots.forEach((root) => {
+      const sliderInstance = new Swiper(root, {
+        modules: [Mousewheel],
+        init: false,
+
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+
+        mousewheel: {
+          forceToAxis: true,
+          sensitivity: 0.3,
+        },
+
+        breakpoints: {
+          556: {
+            slidesPerView: 2.6,
+          },
+          768: {
+            slidesPerView: 3.6,
+          },
+        },
+      });
+
+      sliderInstance.init();
+    });
+  }
 }
 
 function slidersInit() {
