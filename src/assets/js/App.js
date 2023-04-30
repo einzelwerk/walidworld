@@ -7,3 +7,4 @@ import './Poper';
 import './ArchonNav';
 import './GLightbox';
 import './Cookies';
+import './Theme'

@@ -50,38 +50,6 @@ section.section.container.cards-section
       p.no-result__desc We didn’t find results according your search.Try again with new filters. 
     .cards__wrapper
       .cards__grid
-        each val in [1,1]
-          article.card-item.card-item--promoted(href="#")
-            a.card-item__link(href="") 
-              .card-item__image-gradient
-                .card-item__image-wrapper
-                  picture.card-item__image
-                    img(src=require('@/images/tools/1.jpg'), alt="")
-                  .card-item__views 
-                    span 6250
-                    svg(width='16' height='16')
-                      use(href='sprite.svg#views_sprite')
-                  .card-payment 
-                    span.card-payment__item Paid
-                    span.card-payment__item(style="--background:#F5E769") This tool offers a free trial!
-              .card-item__info 
-                h2.card-item__name Fetch.ai
-                .card-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
-            .card-item__bottom 
-              .card-tags
-                ul.card-tags__list
-                  li.card-tags__list-item
-                    a.card-tags__item(href="")  Code
-                  li.card-tags__list-item
-                    a.card-tags__item(href="")  Speech
-                  li.card-tags__list-item
-                    a.card-tags__item(href="")  Seo
-              a.card-item__external-link(href="" target="_blank" rel="noopener nofollow") 
-                span Visit 
-                svg(width='20' height='20')
-                  use(href='sprite.svg#external_sprite')
-    .cards__wrapper
-      .cards__grid
         each val in [1,1,1,1,1,1,1,1,1,]
           include ../components/card-item
     button.cards__load-more.btn.btn--secondary(type="button")  Load more

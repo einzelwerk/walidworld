@@ -169,6 +169,7 @@
     &:checked ~ {
       #{$this}__fake {
         background: url('@/images/checked.svg');
+        background-color: var(--white-base);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 9px 7px;
@@ -181,7 +182,7 @@
       }
     }
 
-    &:focus {
+    &:focus-visible {
       outline: none;
       & ~ #{$this}__fake {
         border-color: var(--black);

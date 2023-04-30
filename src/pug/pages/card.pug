@@ -36,7 +36,7 @@ block content
                   a.tooltip-socials__link(href="https://google.com" title="Share in ..." aria-label="Share in ...") 
                     svg(width='16' height='16')
                       use(href='sprite.svg#facebook_sprite')
-              #arrow(data-popper-arrow)
+              .arrow(data-popper-arrow)
             .share__button Share
       .card-content__inner.container
         .card-content__text 
@@ -48,7 +48,7 @@ block content
               h3.card-tags__heading Price Model:
               ul.card-tags__list
                 li.card-tags__item Paid
-                li.card-tags__item(style="--item-background:#F5E769") This tool offers a free trial!          
+                li.card-tags__item(style="--item-background:#F5E769;color:var(--black-base)") This tool offers a free trial!          
             .card-tags 
               h3.card-tags__heading Tags:
               ul.card-tags__list
@@ -215,7 +215,7 @@ block content
                     img(src=require('@/images/preview.jpg'), alt="") 
         .coming-soon
           .coming-soon__inner
-            picture.coming-soon__background 
+            .coming-soon__background 
               img(src=require('@/images/coming-soon.svg'), alt="")
             .coming-soon__content
               .coming-soon__loader 
@@ -231,32 +231,4 @@ block content
     .cards 
       .cards__grid
         each val in [1,1,1,1,1,1]
-          article.card-item(href="#")
-            a.card-item__link(href="") 
-              .card-item__image-gradient
-                .card-item__image-wrapper
-                  picture.card-item__image
-                    img(src=require('@/images/tools/1.jpg'), alt="")
-                  .card-item__views 
-                    span 6250
-                    svg(width='16' height='16')
-                      use(href='sprite.svg#views_sprite')
-                  .card-payment 
-                    span.card-payment__item Paid
-                    span.card-payment__item(style="--background:#F5E769") This tool offers a free trial!
-              .card-item__info 
-                h2.card-item__name Fetch.ai
-                .card-item__desc Create high-quality videos with SpiritMe's digital avatars that speak in your voice and emotional expressions. Choose from subscriptions, ...
-            .card-item__bottom 
-              .card-tags
-                ul.card-tags__list
-                  li.card-tags__list-item
-                    a.card-tags__item(href="")  Code
-                  li.card-tags__list-item
-                    a.card-tags__item(href="")  Speech
-                  li.card-tags__list-item
-                    a.card-tags__item(href="")  Seo
-              a.card-item__external-link(href="" target="_blank" rel="noopener nofollow") 
-                span Visit 
-                svg(width='20' height='20')
-                  use(href='sprite.svg#external_sprite')
+          include ../components/card-item

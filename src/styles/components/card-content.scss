@@ -147,7 +147,7 @@
     height: 100%;
 
     font-weight: 500;
-    color: var(--white);
+    color: var(--white-base);
 
     opacity: 0;
 
@@ -221,16 +221,32 @@
     }
   }
 
+  &__tooltip {
+    display: none;
+    background: var(--tags-color);
+    border-radius: 8px;
+
+    &[data-show] {
+      display: block;
+    }
+  }
+
+  &__tooltip-list {
+    position: relative;
+    z-index: 10;
+    padding: 6px 4px;
+  }
+
   &__item {
     --item-background: var(--tags-color);
 
+    cursor: pointer;
     user-select: none;
 
     padding: 4px 10px;
 
     font-size: rem(14px);
     font-weight: 500;
-    color: inherit !important;
     text-decoration: none !important;
 
     background: var(--item-background);
@@ -238,13 +254,15 @@
 
     transition: all 0.5s;
 
-    &[href] {
-      &:hover {
-        --item-background: var(--black);
+    &:hover {
+      --item-background: var(--black);
 
-        color: var(--white) !important;
-      }
+      color: var(--white) !important;
     }
+  }
+
+  &__tooltip-list-link {
+    --item-background: var(--white);
   }
 }
 

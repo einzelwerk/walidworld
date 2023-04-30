@@ -29,6 +29,10 @@ header.header
     .header__button-group 
       button.header__btn.btn.btn--secondary(type="button" data-modal="submit-tool") Submit a tool
       button.header__btn.btn.btn--primary(type="button" data-modal="subscribe") Subscribe to newsletter
+    button.theme-switcher(aria-label="Switch theme") 
+      svg(width='44' height='44')
+        use(href='sprite.svg#dark-theme_sprite')
+
 #mobile-nav.mobile-nav
   .mobile-nav__header.header
     .header__left.container

@@ -37,7 +37,7 @@
   &__checkbox {
     &:checked ~ {
       #{$this}__item {
-        background: rgb(110 22 225 / 10%);
+        background: var(--category-checked);
       }
     }
 

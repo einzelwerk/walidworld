@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
       document.querySelectorAll('.post-nav__link').forEach((el) => {
         el.classList.remove('post-nav__link--current');
       });
-      document.querySelector(`.post-nav__link[data-id="${elem.id}"]`).classList.add('post-nav__link--current');
+      document.querySelector(`.post-nav__link[data-id="${elem.id}"]`)?.classList.add('post-nav__link--current');
     }
   });
 });

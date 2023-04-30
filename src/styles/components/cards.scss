@@ -46,6 +46,10 @@
       gap: 24px;
     }
 
+    @include media(sm) {
+      gap: 0;
+    }
+
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 44px 24px;

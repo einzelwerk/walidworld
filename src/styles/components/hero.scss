@@ -34,7 +34,7 @@
     width: 100px;
     height: 100px;
 
-    background: linear-gradient(90deg, rgb(255 0 0 / 0%) 0%, rgb(255 255 255 / 60%) 50.76%, rgb(255 0 0 / 0%) 100.02%);
+    background: var(--coming-soon-gradient);
 
     animation: from-left 3s infinite;
   }
