@@ -48,10 +48,10 @@ tooltipTrigger.forEach((trigger) => {
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     mutation.addedNodes.forEach((node) => {
-      console.log(1)
-      if (node.nodeType === Node.ELEMENT_NODE && node.matches('[data-tooltip-trigger]')) {
-        initTooltip(node);
-      }
+
+
+      initTooltip(node);
+
     });
   });
 });
