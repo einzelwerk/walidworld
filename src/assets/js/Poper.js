@@ -1,19 +1,18 @@
 import { createPopper } from '@popperjs/core';
 
-const allTooltips = document.querySelectorAll('[data-tooltip]');
-const modifiers = [
-  {
-    name: 'offset',
-    options: {
-      offset: [0, 8],
-    },
-  },
-];
-
-function initializePopper(trigger, tooltip) {
+function initTooltip(trigger) {
+  const tooltip = document.querySelector(`[data-tooltip="${trigger.dataset.tooltipTrigger}"]`);
+  const allTooltips = document.querySelectorAll('[data-tooltip]');
   const popperInstance = createPopper(trigger, tooltip, {
     placement: trigger.dataset.tooltipPlacement || 'right',
-    modifiers,
+    modifiers: [
+      {
+        name: 'offset',
+        options: {
+          offset: [0, 8],
+        },
+      },
+    ],
   });
 
   function hide() {
@@ -32,28 +31,31 @@ function initializePopper(trigger, tooltip) {
     }
   }
 
-  return { popperInstance, toggle, hide };
+  trigger.addEventListener('click', toggle);
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.share')) {
+      hide();
+    }
+  });
 }
 
-const observer = new MutationObserver((mutationsList) => {
-  mutationsList.forEach((mutation) => {
-    if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-      mutation.addedNodes.forEach((node) => {
-        if (node.nodeType === Node.ELEMENT_NODE && node.matches('[data-tooltip-trigger]')) {
-          const tooltip = document.querySelector(`[data-tooltip="${node.dataset.tooltipTrigger}"]`);
-          const { toggle, hide } = initializePopper(node, tooltip);
-          node.addEventListener('click', toggle);
-          document.addEventListener('click', (e) => {
-            if (!e.target.closest('.share')) {
-              hide();
-            }
-          });
-        }
-      });
-    }
+const tooltipTrigger = document.querySelectorAll('[data-tooltip-trigger]');
+
+tooltipTrigger.forEach((trigger) => {
+  initTooltip(trigger);
+});
+
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    mutation.addedNodes.forEach((node) => {
+      if (node.nodeType === Node.ELEMENT_NODE && node.matches('[data-tooltip-trigger]')) {
+        initTooltip(node);
+      }
+    });
   });
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
+
 
 
