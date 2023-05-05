@@ -1,8 +1,6 @@
 import { createPopper } from '@popperjs/core';
 
-function initTooltip(trigger) {
-  const tooltip = document.querySelector(`[data-tooltip="${trigger.dataset.tooltipTrigger}"]`);
-  const allTooltips = document.querySelectorAll('[data-tooltip]');
+function initPopper(trigger, tooltip) {
   const popperInstance = createPopper(trigger, tooltip, {
     placement: trigger.dataset.tooltipPlacement || 'right',
     modifiers: [
@@ -23,6 +21,7 @@ function initTooltip(trigger) {
     if (tooltip.dataset.show === '') {
       tooltip.removeAttribute('data-show');
     } else {
+      const allTooltips = document.querySelectorAll('[data-tooltip]');
       allTooltips.forEach((t) => {
         t.removeAttribute('data-show');
       });
@@ -30,6 +29,7 @@ function initTooltip(trigger) {
       popperInstance.update();
     }
   }
+
 
   trigger.addEventListener('click', toggle);
   document.addEventListener('click', (e) => {
@@ -39,24 +39,27 @@ function initTooltip(trigger) {
   });
 }
 
-const tooltipTrigger = document.querySelectorAll('[data-tooltip-trigger]');
-
-tooltipTrigger.forEach((trigger) => {
-  initTooltip(trigger);
-});
 
 const observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
-    mutation.addedNodes.forEach((node) => {
-
-
-      initTooltip(node);
-
-    });
+    if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+      const newTooltips = document.querySelectorAll('[data-tooltip]');
+      newTooltips.forEach((tooltip) => {
+        if (!tooltip.getAttribute('data-tooltip-init')) {
+          tooltip.setAttribute('data-tooltip-init', true);
+          const trigger = document.querySelector(`[data-tooltip-trigger="${tooltip.dataset.tooltip}"]`);
+          initPopper(trigger, tooltip);
+        }
+      });
+    }
   });
 });
 
-observer.observe(document.body, { childList: true, subtree: true });
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
+
 
 
 
