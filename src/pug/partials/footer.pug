@@ -78,15 +78,36 @@ footer.footer
               label.main-form__label
                 textarea.main-form__input.main-form__textarea(type="text" placeholder="Tool description")
             .main-form__item 
-              select.main-form__input.main-form__input--select
-                option(value="1") Value
-                option(value="1") Value 2
-                option(value="1") Value 3
+              .custom-select-wrapper.main-form__select
+                button.custom-select.btn.btn--secondary(type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="grid-filter-1")
+                  span.custom-select__placeholder
+                    span Choose plan
+                    svg.custom-select__arrow(width="8" height="8")
+                      use(xlink:href="sprite.svg#arrow-down_sprite") 
+                .custom-select__content(id="grid-filter-1" aria-hidden="true") 
+                  ul.checkbox-list
+                    each val in [1,2,3,3,3,3] 
+                      li.checkbox-list__item
+                        label.checkbox-list__label
+                          input.checkbox-list__input(type="checkbox")
+                          span.checkbox-list__fake
+                          span.checkbox-list__text Free
             .main-form__item 
-              select.main-form__input.main-form__input--select
-                option(value="1") Value
-                option(value="1") Value 2
-                option(value="1") Value 3
+              .custom-select-wrapper.main-form__select
+                button.custom-select.btn.btn--secondary(type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="grid-filter-1")
+                  span.custom-select__placeholder
+                    span Choose plan
+                    svg.custom-select__arrow(width="8" height="8")
+                      use(xlink:href="sprite.svg#arrow-down_sprite") 
+                .custom-select__content(id="grid-filter-1" aria-hidden="true") 
+                  ul.checkbox-list
+                    each val in [1,2,3,3,3,3] 
+                      li.checkbox-list__item
+                        label.checkbox-list__label
+                          input.checkbox-list__input(type="checkbox")
+                          span.checkbox-list__fake
+                          span.checkbox-list__text Free
+
         fieldset.main-form__fieldset
           legend.main-form__legend Personal Information
           .main-form__grid 

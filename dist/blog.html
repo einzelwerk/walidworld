@@ -14,7 +14,7 @@
 <header class="header">
   <div class="header__inner">
     <div class="header__left">
-      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+      <div class="header__logo logo"> <a class="logo__link" href=""><img class="logo__src logo__src--dark" src="assets/images/logo-dark.svg" alt=""><img class="logo__src logo__src--light" src="assets/images/logo.svg" alt=""></a></div>
       <div class="header__lang custom-select-wrapper">
         <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
             <svg class="custom-select__arrow" width="8" height="8">
@@ -47,7 +47,7 @@
       <button class="header__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
       <button class="header__btn btn btn--primary" type="button" data-modal="subscribe">Subscribe to newsletter</button>
     </div>
-    <button class="theme-switcher" aria-label="Switch theme"> 
+    <button class="theme-switcher hidden-mobile" aria-label="Switch theme"> 
       <svg width="44" height="44">
         <use href="sprite.svg#dark-theme_sprite"></use>
       </svg>
@@ -57,7 +57,7 @@
 <div class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav__header header">
     <div class="header__left container">
-      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src logo__src--dark" src="assets/images/logo-dark.svg" alt=""><img class="logo__src logo__src--light" src="assets/images/logo.svg" alt=""></a></div>
       <div class="header__lang custom-select-wrapper">
         <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
             <svg class="custom-select__arrow" width="8" height="8">
@@ -88,7 +88,14 @@
         <li class="mobile-nav__nav-item"><a class="mobile-nav__nav-link" href="jobs.html">Jobs</a></li>
       </ul>
     </nav>
-    <div class="mobile-nav__socials socials-list"><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/1.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/2.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/3.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/4.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/5.svg" alt=""></a>
+    <div class="mobile-nav__footer">
+      <button class="theme-switcher theme-switcher--mobile" aria-label="Switch theme"> 
+        <svg width="44" height="44">
+          <use href="sprite.svg#dark-theme_sprite"></use>
+        </svg><span>Light</span>
+      </button>
+      <div class="mobile-nav__socials socials-list"><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/1.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/2.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/3.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/4.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/5.svg" alt=""></a>
+      </div>
     </div>
     <div class="mobile-nav__button-group button-group">
       <button class="button-group__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>

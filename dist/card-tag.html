@@ -14,7 +14,7 @@
 <header class="header">
   <div class="header__inner">
     <div class="header__left">
-      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+      <div class="header__logo logo"> <a class="logo__link" href=""><img class="logo__src logo__src--dark" src="assets/images/logo-dark.svg" alt=""><img class="logo__src logo__src--light" src="assets/images/logo.svg" alt=""></a></div>
       <div class="header__lang custom-select-wrapper">
         <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
             <svg class="custom-select__arrow" width="8" height="8">
@@ -47,7 +47,7 @@
       <button class="header__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
       <button class="header__btn btn btn--primary" type="button" data-modal="subscribe">Subscribe to newsletter</button>
     </div>
-    <button class="theme-switcher" aria-label="Switch theme"> 
+    <button class="theme-switcher hidden-mobile" aria-label="Switch theme"> 
       <svg width="44" height="44">
         <use href="sprite.svg#dark-theme_sprite"></use>
       </svg>
@@ -57,7 +57,7 @@
 <div class="mobile-nav" id="mobile-nav">
   <div class="mobile-nav__header header">
     <div class="header__left container">
-      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src" src="assets/images/logo.svg" alt=""></a></div>
+      <div class="header__logo logo"> <a class="logo__link" href=""> <img class="logo__src logo__src--dark" src="assets/images/logo-dark.svg" alt=""><img class="logo__src logo__src--light" src="assets/images/logo.svg" alt=""></a></div>
       <div class="header__lang custom-select-wrapper">
         <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
             <svg class="custom-select__arrow" width="8" height="8">
@@ -88,7 +88,14 @@
         <li class="mobile-nav__nav-item"><a class="mobile-nav__nav-link" href="jobs.html">Jobs</a></li>
       </ul>
     </nav>
-    <div class="mobile-nav__socials socials-list"><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/1.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/2.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/3.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/4.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/5.svg" alt=""></a>
+    <div class="mobile-nav__footer">
+      <button class="theme-switcher theme-switcher--mobile" aria-label="Switch theme"> 
+        <svg width="44" height="44">
+          <use href="sprite.svg#dark-theme_sprite"></use>
+        </svg><span>Light</span>
+      </button>
+      <div class="mobile-nav__socials socials-list"><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/1.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/2.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/3.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/4.svg" alt=""></a><a class="socials-list__item socials-list__item--big" href=""> <img class="socials-list__icon" src="assets/images/socials/5.svg" alt=""></a>
+      </div>
     </div>
     <div class="mobile-nav__button-group button-group">
       <button class="button-group__btn btn btn--secondary" type="button" data-modal="submit-tool">Submit a tool</button>
@@ -237,12 +244,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-781" data-tooltip-trigger="card-tooltip-781" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-185" data-tooltip-trigger="card-tooltip-185" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-781" aria-hidden="true" data-tooltip="card-tooltip-781">
+          <div class="m-card-dropdown__content" id="card-tooltip-185" aria-hidden="true" data-tooltip="card-tooltip-185">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -270,7 +277,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-139" data-tooltip-trigger="card-tags-tooltip-781" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-139" aria-hidden="true" data-tooltip="card-tags-tooltip-781"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-946" data-tooltip-trigger="card-tags-tooltip-185" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-946" aria-hidden="true" data-tooltip="card-tags-tooltip-185"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -300,12 +307,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-114" data-tooltip-trigger="card-tooltip-114" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-904" data-tooltip-trigger="card-tooltip-904" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-114" aria-hidden="true" data-tooltip="card-tooltip-114">
+          <div class="m-card-dropdown__content" id="card-tooltip-904" aria-hidden="true" data-tooltip="card-tooltip-904">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -333,7 +340,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-564" data-tooltip-trigger="card-tags-tooltip-114" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-564" aria-hidden="true" data-tooltip="card-tags-tooltip-114"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-545" data-tooltip-trigger="card-tags-tooltip-904" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-545" aria-hidden="true" data-tooltip="card-tags-tooltip-904"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -363,12 +370,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-969" data-tooltip-trigger="card-tooltip-969" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-328" data-tooltip-trigger="card-tooltip-328" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-969" aria-hidden="true" data-tooltip="card-tooltip-969">
+          <div class="m-card-dropdown__content" id="card-tooltip-328" aria-hidden="true" data-tooltip="card-tooltip-328">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -396,7 +403,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-985" data-tooltip-trigger="card-tags-tooltip-969" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-985" aria-hidden="true" data-tooltip="card-tags-tooltip-969"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-509" data-tooltip-trigger="card-tags-tooltip-328" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-509" aria-hidden="true" data-tooltip="card-tags-tooltip-328"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -426,12 +433,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-580" data-tooltip-trigger="card-tooltip-580" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-158" data-tooltip-trigger="card-tooltip-158" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-580" aria-hidden="true" data-tooltip="card-tooltip-580">
+          <div class="m-card-dropdown__content" id="card-tooltip-158" aria-hidden="true" data-tooltip="card-tooltip-158">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -459,7 +466,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-555" data-tooltip-trigger="card-tags-tooltip-580" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-555" aria-hidden="true" data-tooltip="card-tags-tooltip-580"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-923" data-tooltip-trigger="card-tags-tooltip-158" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-923" aria-hidden="true" data-tooltip="card-tags-tooltip-158"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -489,12 +496,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-977" data-tooltip-trigger="card-tooltip-977" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-676" data-tooltip-trigger="card-tooltip-676" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-977" aria-hidden="true" data-tooltip="card-tooltip-977">
+          <div class="m-card-dropdown__content" id="card-tooltip-676" aria-hidden="true" data-tooltip="card-tooltip-676">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -522,7 +529,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-363" data-tooltip-trigger="card-tags-tooltip-977" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-363" aria-hidden="true" data-tooltip="card-tags-tooltip-977"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-651" data-tooltip-trigger="card-tags-tooltip-676" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-651" aria-hidden="true" data-tooltip="card-tags-tooltip-676"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -552,12 +559,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-570" data-tooltip-trigger="card-tooltip-570" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-172" data-tooltip-trigger="card-tooltip-172" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-570" aria-hidden="true" data-tooltip="card-tooltip-570">
+          <div class="m-card-dropdown__content" id="card-tooltip-172" aria-hidden="true" data-tooltip="card-tooltip-172">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -585,7 +592,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-439" data-tooltip-trigger="card-tags-tooltip-570" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-439" aria-hidden="true" data-tooltip="card-tags-tooltip-570"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-459" data-tooltip-trigger="card-tags-tooltip-172" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-459" aria-hidden="true" data-tooltip="card-tags-tooltip-172"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -615,12 +622,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-985" data-tooltip-trigger="card-tooltip-985" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-65" data-tooltip-trigger="card-tooltip-65" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-985" aria-hidden="true" data-tooltip="card-tooltip-985">
+          <div class="m-card-dropdown__content" id="card-tooltip-65" aria-hidden="true" data-tooltip="card-tooltip-65">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -648,7 +655,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-281" data-tooltip-trigger="card-tags-tooltip-985" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-281" aria-hidden="true" data-tooltip="card-tags-tooltip-985"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-953" data-tooltip-trigger="card-tags-tooltip-65" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-953" aria-hidden="true" data-tooltip="card-tags-tooltip-65"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -678,12 +685,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-259" data-tooltip-trigger="card-tooltip-259" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-198" data-tooltip-trigger="card-tooltip-198" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-259" aria-hidden="true" data-tooltip="card-tooltip-259">
+          <div class="m-card-dropdown__content" id="card-tooltip-198" aria-hidden="true" data-tooltip="card-tooltip-198">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -711,7 +718,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-294" data-tooltip-trigger="card-tags-tooltip-259" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-294" aria-hidden="true" data-tooltip="card-tags-tooltip-259"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-132" data-tooltip-trigger="card-tags-tooltip-198" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-132" aria-hidden="true" data-tooltip="card-tags-tooltip-198"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -741,12 +748,12 @@
       <div class="m-card-item__heading"> <a href="">
           <h3 class="m-card-item__title">Fetch.ai </h3></a>
         <div class="m-card-item__dropdown m-card-dropdown share">
-          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-290" data-tooltip-trigger="card-tooltip-290" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
+          <button class="m-card-dropdown__button" aria-describedby="card-tooltip" id="card-button-377" data-tooltip-trigger="card-tooltip-377" data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip">
             <svg width="32" height="32">
               <use href="sprite.svg#interaction_sprite"></use>
             </svg>
           </button>
-          <div class="m-card-dropdown__content" id="card-tooltip-290" aria-hidden="true" data-tooltip="card-tooltip-290">
+          <div class="m-card-dropdown__content" id="card-tooltip-377" aria-hidden="true" data-tooltip="card-tooltip-377">
             <ul class="m-card-dropdown__list">
               <li class="m-card-dropdown__list-item"><a class="m-card-dropdown__link" href=""> Visit
                   <svg width="16" height="16">
@@ -774,7 +781,7 @@
       <ul class="card-tags__list">
         <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
         <li class="card-tags__list-item share">
-          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-636" data-tooltip-trigger="card-tags-tooltip-290" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-636" aria-hidden="true" data-tooltip="card-tags-tooltip-290"> 
+          <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-122" data-tooltip-trigger="card-tags-tooltip-377" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-122" aria-hidden="true" data-tooltip="card-tags-tooltip-377"> 
             <ul class="card-tags__tooltip-list card-tags__list"> 
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
               <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
