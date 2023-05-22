@@ -369,7 +369,8 @@
     justify-content: space-between;
   }
 
-  &__external-link {
+  &__external-link,
+  &__favorite {
     @include media(sm, min-width) {
       display: flex;
       gap: 6px;

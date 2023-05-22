@@ -25,6 +25,10 @@ article.m-card-item
             .m-card-dropdown__content(id=`card-tooltip-${rand}` aria-hidden="true" data-tooltip=`card-tooltip-${rand}`)
               ul.m-card-dropdown__list
                 li.m-card-dropdown__list-item
+                  button.m-card-dropdown__link(href="")  Favorite
+                    svg(width='16' height='16')
+                     use(href='sprite.svg#favorite_sprite')
+                li.m-card-dropdown__list-item
                   a.m-card-dropdown__link(href="")  Visit
                     svg(width='16' height='16')
                       use(href='sprite.svg#external_sprite')
@@ -59,7 +63,12 @@ article.m-card-item
               li.card-tags__tooltip-item.card-tags__list-item 
                 a.card-tags__tooltip-list-link.card-tags__item(href="")  Eco
             .arrow(data-popper-arrow)
-    a.m-card-item__external-link(href="" target="_blank" rel="noopener noreferrer" aria-label="Visit")
-      span Visit
-      svg(width='16' height='16')
-        use(href='sprite.svg#external_sprite')
+      .card-tags__buttons
+        button.m-card-item__favorite 
+          span Favorite
+          svg(width='16' height='16')
+            use(href='sprite.svg#favorite_sprite')
+        a.m-card-item__external-link(href="" target="_blank" rel="noopener noreferrer" aria-label="Visit")
+          span Visit
+          svg(width='16' height='16')
+            use(href='sprite.svg#external_sprite')
