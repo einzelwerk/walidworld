@@ -10,7 +10,11 @@ block content
       .card-content__header.container
         .card-content__heading
           h1.card-content__title Descript AI Tool
-        .card-content__info 
+        .card-content__info
+          button.m-card-item__favorite 
+            span Favorite
+            svg(width='16' height='16')
+               use(href='sprite.svg#favorite_sprite')
           time.card-content__date.card-content__info-item(datetime="2023-03-01")
             svg(width='16' height='16')
               use(href='sprite.svg#date_sprite')
