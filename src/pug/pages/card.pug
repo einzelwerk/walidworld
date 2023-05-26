@@ -6,13 +6,20 @@ block content
     .container 
       - locals.breadcrumbs = ['Home' , 'Tools' , 'Chatbots' , 'GPT-3 Playground']
       include ../components/breadcrumbs
+    .container
+      .closed-tool
+        picture.closed-tool__image
+          img(src=require('@/images/sad.svg'), alt="")
+        .closed-tool__content 
+          h4.closed-tool__title Attention! Tool not working anymore
+          p.closed-tool__desc The product could not withstand the competition
     .card-content
       .card-content__header.container
         .card-content__heading
           h1.card-content__title Descript AI Tool
         .card-content__info
           button.m-card-item__favorite 
-            span Favorite
+            span 250
             svg(width='16' height='16')
                use(href='sprite.svg#favorite_sprite')
           time.card-content__date.card-content__info-item(datetime="2023-03-01")
