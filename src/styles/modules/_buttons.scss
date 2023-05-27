@@ -31,6 +31,12 @@
     }
   }
 
+  &--sign-in {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
   &__arrow {
     margin-left: 12px;
   }

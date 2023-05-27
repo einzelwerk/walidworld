@@ -1,8 +1,0 @@
-export default {
-      id: "arrow-down_sprite-usage",
-      viewBox: "0 0 8 8",
-      url: __webpack_public_path__ + "C:\\projects\\walidworld\\src\\assets\\icons\\arrow-down_sprite.svg",
-      toString: function () {
-        return this.url;
-      }
-    }

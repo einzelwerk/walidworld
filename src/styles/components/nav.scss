@@ -105,14 +105,19 @@
     padding-bottom: 20px;
   }
 
-  &__socials {
-    margin-top: auto;
-    margin-bottom: 24px;
-  }
-
   &__socials-item {
     width: 24px;
     height: 24px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 24px;
   }
 
   &__nav {
