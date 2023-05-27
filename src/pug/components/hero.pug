@@ -8,11 +8,10 @@
 section.container 
   .hero
     .hero__text
+      p.hero-update 🔥 16 new AI tools added last week
       .hero__heading
-        h1.hero__title Curated AI-tools catalog
-      .hero__coming-soon.hero-coming-soon 
-        .hero-coming-soon__text + Community
-        .hero-coming-soon__btn Coming Soon
+        h1.hero__title The Ultimative Collection <br> of 1510+ AI-Tools
+      button.button-group__btn.btn.btn--primary(type="button" data-modal="subscribe") Subscribe to newsletter
       p.hero__desc Discover the best AI-tools for your needs with our carefully curated catalog of the latest and most powerful artificial intelligence software.
     form.hero__search.search(action="") 
       input(type="text" class="search__input" placeholder="Search, try ‘Design’ / ‘Video’ / ‘SEO’ etc.")
@@ -20,7 +19,7 @@ section.container
         button.categories__btn.hidden-desktop.btn.btn--primary(data-select="categories" type="button") Choose category
           svg(width="8px" height="8px")
             use(xlink:href="sprite.svg#arrow-right-cat_sprite") 
-        .categories__mobile.categories-mobile.hidden-desktop.modal(data-select-el="categories" aria-hidden="true")
+        .categories__mobile.categories-mobile.hidden-desktop.modal(data-select-el="categories" aria-hidden="true" x-data="{checkedCount: 0}")
           .categories-mobile__heading
             h2.categories-mobile__title Categories
             button.categories-mobile__close.js-close-select(aria-label="close categories list" type="button")
@@ -29,11 +28,15 @@ section.container
           .categories__list
             each val, index in cats 
               label.categories__label
-                input(type="checkbox" class="visually-hidden categories__checkbox")
+                input(type="checkbox" class="visually-hidden categories__checkbox" x-on:change="checkedCount = document.querySelectorAll('.categories__checkbox:checked').length")
                 span.categories__item 
                   span.categories__icon 
                     img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
                   span.categories__name= val
+          .categories__action(x-show="checkedCount > 0" x-transition) 
+            button.btn.btn--secondary(type="button" x-on:click="document.querySelectorAll('.categories__checkbox:checked').forEach((t) => t.checked = false); checkedCount = 0") Reset
+              span(x-text="'(' + checkedCount + ')'")
+            button.btn.btn--primary(type="button" class="js-close-select") Apply
         .categories__list.hidden-mobile
           each val, index in cats 
             label.categories__label

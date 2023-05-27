@@ -1,8 +1,0 @@
-export default {
-      id: "dark-theme_sprite-usage",
-      viewBox: "0 0 44 44",
-      url: __webpack_public_path__ + "C:\\Users\\user\\Desktop\\work\\waildworld\\src\\assets\\icons\\dark-theme_sprite.svg",
-      toString: function () {
-        return this.url;
-      }
-    }

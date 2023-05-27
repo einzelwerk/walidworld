@@ -62,7 +62,7 @@ class CustomSelect {
     trigger.forEach((elem) => {
       elem.setAttribute('aria-expanded', false);
     });
-    if (window.matchMedia('(max-width:768px)').matches || !e.target.closest('[data-modal]')) {
+    if (window.matchMedia('(max-width:768px)').matches || !e?.target?.closest('[data-modal]')) {
       document.querySelector('.background-blur').classList.remove('is-open');
     }
   }
@@ -87,4 +87,5 @@ modal.forEach((elem) => {
 
   // eslint-disable-next-line no-unused-vars
   const select = new CustomSelect(`[data-select="${val}"]`, `[data-select-el="${val}"]`);
+  document.querySelector('.js-close-select').addEventListener('click', select.closeSelect())
 });

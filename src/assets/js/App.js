@@ -1,3 +1,5 @@
+import './Theme';
+import './Alpine';
 import './Modal';
 import './CustomSelect';
 import './Sliders';
@@ -7,4 +9,4 @@ import './Poper';
 import './ArchonNav';
 import './GLightbox';
 import './Cookies';
-import './Theme'
+

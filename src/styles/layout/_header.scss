@@ -2,14 +2,52 @@
 @use '../utils/mixins' as *;
 
 .header {
+  position: relative;
+
+  &__search {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    padding: 0 var(--gap);
+
+    background: var(--white);
+    border-bottom: 1px solid var(--border-divider);
+
+    form {
+      flex: 1;
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+
+        &:focus {
+          outline: 1px var(--border-divider);
+        }
+      }
+    }
+  }
+
+  &__search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__inner {
     @include media(md) {
       display: flex;
-      flex-direction: column;
-
       padding-top: 16px;
       padding-bottom: 16px;
-
       border-bottom: 1px solid var(--border-divider);
     }
 
@@ -17,13 +55,18 @@
       gap: 20px;
     }
 
+    position: relative;
+    z-index: 1;
+
     display: grid;
-    grid-template-columns: 1fr max-content 1fr max-content;
+    grid-template-columns: 1fr max-content 1fr;
     align-items: center;
+
     padding: 20px var(--gap);
   }
 
-  &__left {
+  &__left,
+  &__right {
     @include media(md) {
       justify-content: space-between;
       width: 100%;
@@ -33,15 +76,32 @@
     align-items: center;
   }
 
+  &__left {
+    @include media(md) {
+      justify-content: flex-start;
+    }
+
+    gap: 12px;
+  }
+
+  &__right {
+    @include media(md) {
+      flex: 1;
+    }
+
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
   &__button-group {
     @include media(md) {
-      display: none;
+      flex: none;
+      white-space: nowrap;
     }
 
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-left: auto;
   }
 
   &__logo {

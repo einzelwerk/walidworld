@@ -5,7 +5,12 @@
 
   &__list {
     @include media(md) {
-      flex-direction: column;
+      overflow: auto;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+
+      width: 100%;
+      max-width: 100%;
     }
 
     display: flex;
@@ -13,7 +18,7 @@
     gap: 4px;
     justify-content: center;
 
-    max-width: 1005px;
+    max-width: 1200px;
     margin: auto;
   }
 
@@ -76,6 +81,18 @@
 
     border-radius: 12px;
   }
+
+  &__action {
+    display: flex;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-divider);
+
+    .btn {
+      flex: 1;
+      text-align: center;
+    }
+  }
 }
 
 .categories-mobile {
@@ -85,7 +102,8 @@
   left: 0;
   transform: translateX(-100%);
 
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
 
   width: 280px;
   max-height: 100vh;
