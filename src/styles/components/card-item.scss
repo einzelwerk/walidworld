@@ -387,6 +387,12 @@
 
       transition: all 0.5s;
 
+      &--active {
+        color: var(--white-base);
+        background: var(--accent-purple);
+        border-color: rgb(0 0 0 / 0%);
+      }
+
       &:hover {
         color: var(--white-base);
         background: var(--accent-purple);
