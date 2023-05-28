@@ -1,4 +1,0 @@
-@use './mixins' as *;
-
-@include font-face(NeueMontreal, '../assets/fonts/NeueMontreal-Regular', 400, normal, woff2 woff);
-@include font-face(NeueMontreal, '../assets/fonts/NeueMontreal-Italic', 400, italic, woff2 woff);
