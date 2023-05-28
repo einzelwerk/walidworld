@@ -1,8 +1,0 @@
-export default {
-      id: "light-theme_sprite-usage",
-      viewBox: "0 0 44 44",
-      url: __webpack_public_path__ + "C:\\projects\\walidworld\\src\\assets\\icons\\light-theme_sprite.svg",
-      toString: function () {
-        return this.url;
-      }
-    }
