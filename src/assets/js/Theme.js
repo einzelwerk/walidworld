@@ -54,7 +54,7 @@ class ThemeSwitcher {
       const btn = button.querySelector('span');
       button.setAttribute('aria-label', 'Activate light mode');
       const useElement = button.querySelector('svg use');
-      useElement.setAttribute('href', 'sprite.svg#dark-theme_sprite');
+      useElement.setAttribute('href', '/sprite.svg#dark-theme_sprite');
       if (btn) {
         btn.innerHTML = 'Light';
       }
@@ -70,7 +70,7 @@ class ThemeSwitcher {
 
       button.setAttribute('aria-label', 'Activate dark mode');
       const useElement = button.querySelector('svg use');
-      useElement.setAttribute('href', 'sprite.svg#light-theme_sprite');
+      useElement.setAttribute('href', '/sprite.svg#light-theme_sprite');
       if (btn) {
         btn.innerHTML = 'Dark'
       }
