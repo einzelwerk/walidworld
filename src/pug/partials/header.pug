@@ -1,7 +1,7 @@
 header.header(x-data="{showSearch : false}")
   .header__search(x-show="showSearch" x-on:click.outside="showSearch = false" z-on:keyup.escape="showSearch = false")
     svg(width='44' height='44')
-        use(href='sprite.svg#search_sprite')
+      use(href='sprite.svg#search_sprite')
     form(action="") 
       input(type="text" placeholder="Search")
     button.header__search-cancel( x-on:click="showSearch = false")
@@ -41,9 +41,16 @@ header.header(x-data="{showSearch : false}")
                 a.lang-switcher__link(href="/en" hreflang="en" lang="en") De
       .header__button-group 
         button.header__btn.btn.btn--secondary.hidden-mobile(type="button" data-modal="submit-tool") Submit a tool
-        button.button-group__btn.btn.btn--secondary.btn--sign-in(type="button" )
-          img(src=require('@/images/google.svg'), alt="")
-          span Sign in
+        .login-wrapper(x-data="{state: false}")
+          button.button-group__btn.btn.btn--secondary.btn--sign-in(type="button" x-on:click="state = !state")
+            img(src=require('@/images/google.svg'), alt="")
+            span Sign in
+          .login-dropdown(x-show="state" x-transition) 
+            ul.login-dropdown__list 
+              li.login-dropdown__item
+                a.login-dropdown__link(href="") Favourites
+              li.login-dropdown__item
+                a.login-dropdown__link(href="") Sign out
       button.theme-switcher.hidden-mobile(aria-label="Switch theme") 
         svg(width='44' height='44')
           use(href='sprite.svg#dark-theme_sprite')

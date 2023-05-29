@@ -62,7 +62,15 @@
       </div>
       <div class="header__button-group"> 
         <button class="header__btn btn btn--secondary hidden-mobile" type="button" data-modal="submit-tool">Submit a tool</button>
-        <button class="button-group__btn btn btn--secondary btn--sign-in" type="button"><img src="assets/images/google.svg" alt=""><span>Sign in</span></button>
+        <div class="login-wrapper" x-data="{state: false}">
+          <button class="button-group__btn btn btn--secondary btn--sign-in" type="button" x-on:click="state = !state"><img src="assets/images/google.svg" alt=""><span>Sign in</span></button>
+          <div class="login-dropdown" x-show="state" x-transition> 
+            <ul class="login-dropdown__list"> 
+              <li class="login-dropdown__item"><a class="login-dropdown__link" href="">Favourites</a></li>
+              <li class="login-dropdown__item"><a class="login-dropdown__link" href="">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <button class="theme-switcher hidden-mobile" aria-label="Switch theme"> 
         <svg width="44" height="44">
