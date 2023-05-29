@@ -214,6 +214,7 @@
 }
 
 .m-card-item {
+  $this: &;
   @include media(sm, min-width) {
     grid-column: span 6;
 
@@ -242,6 +243,10 @@
   padding: 16px var(--gap);
 
   border-top: 1px solid var(--border-divider);
+
+  &--features {
+    grid-column: span 6;
+  }
 
   &:last-of-type {
     @include media(md, min-width) {

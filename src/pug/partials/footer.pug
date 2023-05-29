@@ -3,7 +3,9 @@ footer.footer
     .footer__col 
       .footer__logo.logo 
         a.logo__link(href="") 
-          img.logo__src(src=require('@/images/logo.svg'), alt="")
+          source(media="(max-width:768px)", srcset=require('@/images/logo-small.svg'))
+          img.logo__src.logo__src--dark(src=require('@/images/logo-dark.svg'), alt="")
+          img.logo__src.logo__src--light(src=require('@/images/logo.svg'), alt="")
       p.footer__desc Carefully curated catalog of the best AI-tools for your needs
       .footer__socials.socials-list
         each val in [1,2,3,4,5]
