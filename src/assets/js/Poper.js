@@ -2,7 +2,7 @@ import { createPopper } from '@popperjs/core';
 
 function initPopper(trigger, tooltip) {
   const popperInstance = createPopper(trigger, tooltip, {
-    placement: trigger.dataset.tooltipPlacement || 'right',
+    placement: trigger.dataset.tooltipPlacement || 'bottom',
     modifiers: [
       {
         name: 'offset',

@@ -52,49 +52,52 @@ section.section.container.cards-section
       .cards__grid
         each val in [1,2]     
           article.m-card-item.m-card-item--features
-            .m-card-item__link.m-card-item__top
-              a.m-card-item__picture-wrapper(href="") 
-                .m-card-item__views
-                  span  1.2k
-                  svg(width='16' height='16')
-                    use(href='sprite.svg#views_sprite')
-                .card-payment
-                  span.card-payment__item Paid
-                  span.card-payment__item(style="--background:#F5E769;color:var(--black-base)") Free Trial
-                picture.m-card-item__picture
-                  source(media="(min-width:576px)", srcset=require('@/images/tools/1.jpg'))
-                  img(src=require('@/images/small-card.jpg'), alt="")
-              .m-card-item__info
-                .m-card-item__heading 
-                  a(href="")
-                    h3.m-card-item__title Fetch.ai 
-                  .m-card-item__dropdown.m-card-dropdown.share
-                    - var rand = Math.floor(Math.random() * 1000)
-                    - var rand2 = Math.floor(Math.random() * 1000)
-                      button.m-card-dropdown__button(aria-describedby="card-tooltip" id=`card-button-${rand}` data-tooltip-trigger=`card-tooltip-${rand}` data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip")
-                        svg(width='32' height='32')
-                          use(href='sprite.svg#interaction_sprite')
-                      .m-card-dropdown__content(id=`card-tooltip-${rand}` aria-hidden="true" data-tooltip=`card-tooltip-${rand}`)
-                        ul.m-card-dropdown__list
-                          li.m-card-dropdown__list-item
-                            button.m-card-dropdown__link(href="")  Favorite
-                              svg(width='16' height='16')
-                              use(href='sprite.svg#favorite_sprite')
-                          li.m-card-dropdown__list-item
-                            a.m-card-dropdown__link(href="")  Visit
-                              svg(width='16' height='16')
-                                use(href='sprite.svg#external_sprite')
-                          li.m-card-dropdown__list-item
-                            a.m-card-dropdown__link(href="")  Share
-                              svg(width='16' height='16')
-                                use(href='sprite.svg#share_sprite')
-                          li.m-card-dropdown__list-item
-                            a.m-card-dropdown__link(href="")  View
-                              svg(width='16' height='16')
-                                use(href='sprite.svg#views_sprite')
-                        .arrow(data-popper-arrow)
-                a(href="") 
-                  p.m-card-item__desc Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...
+            .m-card-item__header
+              .m-card-item__featured.m-card-item__featured--mobile Featured
+              .m-card-item__link.m-card-item__top
+                a.m-card-item__picture-wrapper(href="") 
+                  .m-card-item__views
+                    span  1.2k
+                    svg(width='16' height='16')
+                      use(href='sprite.svg#views_sprite')
+                  .m-card-item__featured Featured
+                  .card-payment
+                    span.card-payment__item Paid
+                    span.card-payment__item(style="--background:#F5E769;color:var(--black-base)") Free Trial
+                  picture.m-card-item__picture
+                    source(media="(min-width:576px)", srcset=require('@/images/tools/1.jpg'))
+                    img(src=require('@/images/small-card.jpg'), alt="")
+                .m-card-item__info
+                  .m-card-item__heading 
+                    a(href="")
+                      h3.m-card-item__title Fetch.ai 
+                    .m-card-item__dropdown.m-card-dropdown.share
+                      - var rand = Math.floor(Math.random() * 1000)
+                      - var rand2 = Math.floor(Math.random() * 1000)
+                        button.m-card-dropdown__button(aria-describedby="card-tooltip" id=`card-button-${rand}` data-tooltip-trigger=`card-tooltip-${rand}` data-tooltip-placement="bottom" aria-expanded="false" aria-controls="card-tooltip")
+                          svg(width='32' height='32')
+                            use(href='sprite.svg#interaction_sprite')
+                        .m-card-dropdown__content(id=`card-tooltip-${rand}` aria-hidden="true" data-tooltip=`card-tooltip-${rand}`)
+                          ul.m-card-dropdown__list
+                            li.m-card-dropdown__list-item
+                              button.m-card-dropdown__link(href="")  Favorite
+                                svg(width='16' height='16')
+                                use(href='sprite.svg#favorite_sprite')
+                            li.m-card-dropdown__list-item
+                              a.m-card-dropdown__link(href="")  Visit
+                                svg(width='16' height='16')
+                                  use(href='sprite.svg#external_sprite')
+                            li.m-card-dropdown__list-item
+                              a.m-card-dropdown__link(href="")  Share
+                                svg(width='16' height='16')
+                                  use(href='sprite.svg#share_sprite')
+                            li.m-card-dropdown__list-item
+                              a.m-card-dropdown__link(href="")  View
+                                svg(width='16' height='16')
+                                  use(href='sprite.svg#views_sprite')
+                          .arrow(data-popper-arrow)
+                  a(href="") 
+                    p.m-card-item__desc Generate SEO-friendly content quickly with the AI SEO Outline tool. Get an op...
             .m-card-item__bottom
               .m-card-item__payment.m-card-payment 
                 span.m-card-payment__item(style="--background:#EBEBEB")

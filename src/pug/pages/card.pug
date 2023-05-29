@@ -21,7 +21,7 @@ block content
           button.m-card-item__favorite 
             span 250
             svg(width='16' height='16')
-               use(href='sprite.svg#favorite_sprite')
+              use(href='sprite.svg#favorite_sprite')
           time.card-content__date.card-content__info-item(datetime="2023-03-01")
             svg(width='16' height='16')
               use(href='sprite.svg#date_sprite')
@@ -72,7 +72,7 @@ block content
                 li.card-tags__list-item
                   a.card-tags__item(href="")  Code
             .tool-links
-              a.card-content__link.btn.btn--primary(href="" target="_blank") Visit
+              a.card-content__link.btn.btn--disabled(href="" target="_blank") Visit
                 svg.btn__arrow(width="20" height="20")
                   use(xlink:href="sprite.svg#external_sprite") 
               .tool-socials.socials-list 
@@ -86,6 +86,12 @@ block content
                   svg(width='20' height='20')
                     use(href='sprite.svg#inst_sprite')
         .card-content__image-wrapper
+          .card-content__no-more-tool.no-more-tool-overlay
+            .no-more-tool-overlay__inner
+              svg(width='48' height='48')
+                use(href='sprite.svg#sad_sprite')
+              h3.no-more-tool-overlay__title Tool not working anymore
+              p.no-more-tool-overlay__desc  The product could not withstand the competition
           a.card-content__image-overlay(href="" target="_blank") Visit website
             svg(width='20' height='20')
               use(href='sprite.svg#external_sprite')

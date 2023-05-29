@@ -31,6 +31,12 @@
     }
   }
 
+  &--disabled {
+    cursor: not-allowed;
+    color: var(--placeholder);
+    background: var(--tags-color);
+  }
+
   &--sign-in {
     display: flex;
     gap: 8px;

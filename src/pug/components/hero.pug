@@ -13,7 +13,7 @@ section.container
         h1.hero__title The Ultimative Collection <br> of 1510+ AI-Tools
       button.button-group__btn.btn.btn--primary(type="button" data-modal="subscribe") Subscribe to newsletter
       p.hero__desc Discover the best AI-tools for your needs with our carefully curated catalog of the latest and most powerful artificial intelligence software.
-    form.hero__search.search(action="") 
+    form.hero__search.search(action="" x-data="{state: false}") 
       input(type="text" class="search__input" placeholder="Search, try ‘Design’ / ‘Video’ / ‘SEO’ etc.")
       fieldset.hero__categories.categories.custom-select-wrapper
         button.categories__btn.hidden-desktop.btn.btn--primary(data-select="categories" type="button") Choose category
@@ -37,10 +37,20 @@ section.container
             button.btn.btn--secondary(type="button" x-on:click="document.querySelectorAll('.categories__checkbox:checked').forEach((t) => t.checked = false); checkedCount = 0") Reset
               span(x-text="'(' + checkedCount + ')'")
             button.btn.btn--primary(type="button" class="js-close-select") Apply
+        .hero-toggle.hero__toggle
+          span.hero-toggle__text(x-bind:class="state ? '' : 'hero-toggle__text--active' ") Filters 
+          button.hero-toggle__button(type="button" x-on:click="state = !state" x-bind:class="state ? 'hero-toggle__button--active' : '' ")
+            span 
+          span.hero-toggle__text(x-bind:class="state ? 'hero-toggle__text--active' : '' ") Pages
         .categories__list.hidden-mobile
           each val, index in cats 
-            label.categories__label
+            label.categories__label(x-show="!state")
               input(type="checkbox" class="visually-hidden categories__checkbox")
+              span.categories__item 
+                span.categories__icon 
+                  img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
+                span.categories__name= val
+            a.categories__label(href="" x-show="state" x-cloak )
               span.categories__item 
                 span.categories__icon 
                   img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
