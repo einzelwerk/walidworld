@@ -62,7 +62,15 @@
       </div>
       <div class="header__button-group"> 
         <button class="header__btn btn btn--secondary hidden-mobile" type="button" data-modal="submit-tool">Submit a tool</button>
-        <button class="button-group__btn btn btn--secondary btn--sign-in" type="button"><img src="assets/images/google.svg" alt=""><span>Sign in</span></button>
+        <div class="login-wrapper" x-data="{state: false}">
+          <button class="button-group__btn btn btn--secondary btn--sign-in" type="button" x-on:click="state = !state"><img src="assets/images/google.svg" alt=""><span>Sign in</span></button>
+          <div class="login-dropdown" x-show="state" x-transition> 
+            <ul class="login-dropdown__list"> 
+              <li class="login-dropdown__item"><a class="login-dropdown__link" href="">Favourites</a></li>
+              <li class="login-dropdown__item"><a class="login-dropdown__link" href="">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <button class="theme-switcher hidden-mobile" aria-label="Switch theme"> 
         <svg width="44" height="44">
@@ -218,7 +226,7 @@
           <ul class="card-tags__list">
             <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
             <li class="card-tags__list-item share">
-              <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-802" data-tooltip-trigger="card-tags-tooltip-930" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-802" aria-hidden="true" data-tooltip="card-tags-tooltip-930"> 
+              <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-223" data-tooltip-trigger="card-tags-tooltip-109" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-223" aria-hidden="true" data-tooltip="card-tags-tooltip-109"> 
                 <ul class="card-tags__tooltip-list card-tags__list"> 
                   <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
                   <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
