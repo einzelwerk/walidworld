@@ -259,6 +259,11 @@
     align-items: flex-start;
   }
 
+  &__tags {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__featured {
     @include media(md, min-width) {
       position: absolute;

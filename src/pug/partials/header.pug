@@ -41,11 +41,11 @@ header.header(x-data="{showSearch : false}")
                 a.lang-switcher__link(href="/en" hreflang="en" lang="en") De
       .header__button-group 
         button.header__btn.btn.btn--secondary.hidden-mobile(type="button" data-modal="submit-tool") Submit a tool
-        .login-wrapper(x-data="{state: false}")
-          button.button-group__btn.btn.btn--secondary.btn--sign-in(type="button" x-on:click="state = !state")
+        .login-wrapper(x-data="{loginDropwdown: false}")
+          button.button-group__btn.btn.btn--secondary.btn--sign-in(type="button" x-on:click="loginDropwdown = !loginDropwdown" x-on:click.outside="loginDropwdown = !state")
             img(src=require('@/images/google.svg'), alt="")
             span Sign in
-          .login-dropdown(x-show="state" x-transition) 
+          .login-dropdown(x-show="loginDropwdown" x-transition) 
             ul.login-dropdown__list 
               li.login-dropdown__item
                 a.login-dropdown__link(href="") Favourites
