@@ -64,7 +64,7 @@
 }
 
 .mobile-nav {
-  @include media(md) {
+  @include media(lg) {
     display: block;
   }
 

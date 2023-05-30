@@ -42,13 +42,13 @@ body {
 }
 
 .hidden-desktop {
-  @include media(md, min-width) {
+  @include media(lg, min-width) {
     display: none !important;
   }
 }
 
 .hidden-mobile {
-  @include media(md) {
+  @include media(lg) {
     display: none !important;
   }
 }

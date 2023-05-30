@@ -12,7 +12,7 @@
   <body>
     <div class="root">
 <header class="header" x-data="{showSearch : false}">
-  <div class="header__search" x-show="showSearch" x-on:click.outside="showSearch = false" z-on:keyup.escape="showSearch = false">
+  <div class="header__search" x-show="showSearch" x-on:click.outside="showSearch = false" x-on:keyup.escape="showSearch = false">
     <svg width="44" height="44">
       <use href="sprite.svg#search_sprite"></use>
     </svg>
@@ -48,12 +48,12 @@
     </nav>
     <div class="header__right">
       <div class="header__lang custom-select-wrapper">
-        <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
+        <button class="custom-select custom-select--secondary lang-select" type="button" x-data="{lang:false}" x-on:click="lang = !lang"><span class="custom-select__placeholder">En
             <svg class="custom-select__arrow" width="8" height="8">
               <use xlink:href="sprite.svg#arrow-down_sprite"></use>
             </svg></span>
-          <nav class="custom-select__content custom-select__content--secondary" id="lang-switcher" aria-hidden="true">
-            <ul class="lang-switcher"> 
+          <nav class="lang-switcher" x-show="lang">
+            <ul class="lang-switcher__inner"> 
               <li class="lang-switcher__item">En </li>
               <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">Ru</a></li>
               <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">De</a></li>
@@ -94,11 +94,11 @@
             <source media="(max-width:768px)" srcset="assets/images/logo-small.svg"><img class="logo__src logo__src--dark" src="assets/images/logo-dark.svg" alt=""><img class="logo__src logo__src--light" src="assets/images/logo.svg" alt="">
           </picture></a></div>
       <div class="header__lang custom-select-wrapper">
-        <button class="custom-select custom-select--secondary lang-select" type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher"><span class="custom-select__placeholder">En
+        <button class="custom-select custom-select--secondary lang-select" type="button" x-data="{lang:false}" x-on:click="lang = !lang"><span class="custom-select__placeholder">En
             <svg class="custom-select__arrow" width="8" height="8">
               <use xlink:href="sprite.svg#arrow-down_sprite"></use>
             </svg></span>
-          <nav class="custom-select__content custom-select__content--secondary" id="lang-switcher" aria-hidden="true">
+          <nav class="custom-select__content custom-select__content--secondary" x-show="lang">
             <ul class="lang-switcher"> 
               <li class="lang-switcher__item">En </li>
               <li class="lang-switcher__item"><a class="lang-switcher__link" href="/en" hreflang="en" lang="en">Ru</a></li>
@@ -228,7 +228,7 @@
           <ul class="card-tags__list">
             <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
             <li class="card-tags__list-item share">
-              <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-998" data-tooltip-trigger="card-tags-tooltip-493" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-998" aria-hidden="true" data-tooltip="card-tags-tooltip-493"> 
+              <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-168" data-tooltip-trigger="card-tags-tooltip-965" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-168" aria-hidden="true" data-tooltip="card-tags-tooltip-965"> 
                 <ul class="card-tags__tooltip-list card-tags__list"> 
                   <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
                   <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>

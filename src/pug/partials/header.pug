@@ -1,5 +1,5 @@
 header.header(x-data="{showSearch : false}")
-  .header__search(x-show="showSearch" x-on:click.outside="showSearch = false" z-on:keyup.escape="showSearch = false")
+  .header__search(x-show="showSearch" x-on:click.outside="showSearch = false" x-on:keyup.escape="showSearch = false")
     svg(width='44' height='44')
       use(href='sprite.svg#search_sprite')
     form(action="") 
@@ -18,7 +18,6 @@ header.header(x-data="{showSearch : false}")
       button.header__search-btn.search-btn(type="button" aria-label="open search" x-on:click="showSearch = true")
         svg(width='44' height='44')
           use(href='sprite.svg#search_sprite')
-
     nav.header__nav.nav
       ul.nav__list 
         each val,index in menu
@@ -28,12 +27,12 @@ header.header(x-data="{showSearch : false}")
               span.nav__hover-text(aria-hidden="true")=val.name
     .header__right
       .header__lang.custom-select-wrapper
-        button.custom-select.custom-select--secondary.lang-select(type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher")
+        button.custom-select.custom-select--secondary.lang-select(type="button" x-data='{lang:false}' x-on:click="lang = !lang")
           span.custom-select__placeholder En
             svg.custom-select__arrow(width="8" height="8")
               use(xlink:href="sprite.svg#arrow-down_sprite")
-          nav.custom-select__content.custom-select__content--secondary(id="lang-switcher" aria-hidden="true")
-            ul.lang-switcher 
+          nav.lang-switcher(x-show="lang")
+            ul.lang-switcher__inner 
               li.lang-switcher__item En 
               li.lang-switcher__item
                 a.lang-switcher__link(href="/en" hreflang="en" lang="en") Ru
@@ -68,11 +67,11 @@ header.header(x-data="{showSearch : false}")
             img.logo__src.logo__src--dark(src=require('@/images/logo-dark.svg'), alt="")
             img.logo__src.logo__src--light(src=require('@/images/logo.svg'), alt="")
       .header__lang.custom-select-wrapper
-        button.custom-select.custom-select--secondary.lang-select(type="button" aria-expanded="false" aria-label="Choose plan" aria-controls="lang-switcher")
+        button.custom-select.custom-select--secondary.lang-select(type="button" x-data='{lang:false}' x-on:click="lang = !lang")
           span.custom-select__placeholder En
             svg.custom-select__arrow(width="8" height="8")
               use(xlink:href="sprite.svg#arrow-down_sprite")
-          nav.custom-select__content.custom-select__content--secondary(id="lang-switcher" aria-hidden="true")
+          nav.custom-select__content.custom-select__content--secondary(x-show="lang")
             ul.lang-switcher 
               li.lang-switcher__item En 
               li.lang-switcher__item

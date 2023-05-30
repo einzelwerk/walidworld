@@ -12,6 +12,18 @@
 }
 
 .lang-switcher {
+  position: absolute;
+  z-index: 12;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  margin-top: 3px;
+
+  background: var(--white);
+  border: 1px solid var(--border-divider);
+  border-radius: 4px;
+
   &__item {
     color: var(--placeholder);
     border-bottom: 1px solid var(--border-divider);

@@ -44,14 +44,14 @@
   }
 
   &__inner {
-    @include media(md) {
+    @include media(lg) {
       display: flex;
       padding-top: 16px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--border-divider);
     }
 
-    @include media(md, min-width) {
+    @include media(lg, min-width) {
       gap: 20px;
     }
 
@@ -67,7 +67,7 @@
 
   &__left,
   &__right {
-    @include media(md) {
+    @include media(lg) {
       justify-content: space-between;
       width: 100%;
     }
@@ -77,7 +77,7 @@
   }
 
   &__left {
-    @include media(md) {
+    @include media(lg) {
       justify-content: flex-start;
     }
 
@@ -85,7 +85,7 @@
   }
 
   &__right {
-    @include media(md) {
+    @include media(lg) {
       flex: 1;
     }
 
@@ -94,7 +94,7 @@
   }
 
   &__button-group {
-    @include media(md) {
+    @include media(lg) {
       flex: none;
       white-space: nowrap;
     }
@@ -121,7 +121,7 @@
   }
 
   &__lang {
-    @include media(md) {
+    @include media(lg) {
       margin-right: 8px;
       margin-left: auto;
     }
@@ -130,7 +130,7 @@
   }
 
   &__nav {
-    @include media(md) {
+    @include media(lg) {
       display: none;
     }
   }
