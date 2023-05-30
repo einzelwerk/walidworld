@@ -1,0 +1,26 @@
+extends ../layouts/main
+
+block content
+  -
+    var cats = [
+      'All', 'Design' , 'Code' , 'Video' , 'Music', 'Writing', 'Crypto', 'Finance',
+      'Gaming', 'Chatbots', 'Speech', 'Translation', 'Productivity', 'HR', 'Healthcare',
+      'Security', 'Robotics', 'Energy', 'Education', 'Marketing', 'Travel', 'Retail' 
+    ]
+  section.section.section--top-small
+    .container
+      .hero
+        - locals.breadcrumbs = ['Home' , 'Blog' , 'Midjourney: Deep Dive']
+        include ../components/breadcrumbs
+        .hero__text
+          .hero__heading
+            h1.hero__title AI Tools Categories
+          p.hero__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, accusantium 
+    .container
+      .category-grid 
+        each val, index in cats 
+          .category-grid__item 
+            a.category-grid__link(href="")
+              picture.category-grid__icon 
+                img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
+              h2.category-grid__title=val
