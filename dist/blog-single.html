@@ -63,7 +63,7 @@
       <div class="header__button-group"> 
         <button class="header__btn btn btn--secondary hidden-mobile" type="button" data-modal="submit-tool">Submit a tool</button>
         <div class="login-wrapper" x-data="{loginDropwdown: false}">
-          <button class="button-group__btn btn btn--secondary btn--sign-in" type="button" x-on:click="loginDropwdown = !loginDropwdown" x-on:click.outside="loginDropwdown = !state"><img src="assets/images/google.svg" alt=""><span>Sign in</span></button>
+          <button class="button-group__btn btn btn--secondary btn--sign-in" type="button" x-on:click="loginDropwdown = !loginDropwdown" x-on:click.outside="loginDropwdown = false"><img src="assets/images/google.svg" alt=""><span>Sign in</span></button>
           <div class="login-dropdown" x-show="loginDropwdown" x-transition> 
             <ul class="login-dropdown__list"> 
               <li class="login-dropdown__item"><a class="login-dropdown__link" href="">Favourites</a></li>
@@ -226,7 +226,7 @@
           <ul class="card-tags__list">
             <li class="card-tags__list-item"><a class="card-tags__item" href=""> Design</a></li>
             <li class="card-tags__list-item share">
-              <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-737" data-tooltip-trigger="card-tags-tooltip-495" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-737" aria-hidden="true" data-tooltip="card-tags-tooltip-495"> 
+              <button class="card-tags__item" aria-describedby="share-tooltip" id="card-tags-button-372" data-tooltip-trigger="card-tags-tooltip-313" data-tooltip-placement="top" aria-expanded="false" aria-controls="card-tags-tooltip">+3</button><span class="card-tags__tooltip" id="card-tags-tooltip-372" aria-hidden="true" data-tooltip="card-tags-tooltip-313"> 
                 <ul class="card-tags__tooltip-list card-tags__list"> 
                   <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Code</a></li>
                   <li class="card-tags__tooltip-item card-tags__list-item"> <a class="card-tags__tooltip-list-link card-tags__item" href=""> Design </a></li>
@@ -812,6 +812,25 @@
         </form>
         <p class="subscribe-form__acceptance">By clicking on the 'Submit' button, you agree to our <a href="">Terms and Service</a> and <a href="">Privacy Policy</a></p>
       </div>
+    </div>
+  </div>
+</div>
+<div class="modal-wrapper" data-modal-el="login-modal" aria-hidden="true">
+  <div class="modal modal-login">
+    <div class="modal-login__inner">
+      <button class="modal-subscribe__close js-modal-close">
+        <svg width="20" height="20">
+          <use xlink:href="sprite.svg#close_sprite"> </use>
+        </svg>
+      </button>
+      <div class="modal-login__icon"> 
+        <svg width="64" height="64">
+          <use href="sprite.svg#enter_sprite"></use>
+        </svg>
+      </div>
+      <h4 class="modal-login__title">Please, login first to add tool to your favourites</h4>
+      <p class="modal-login__desc">Recently we’ve released account features, try it with your favourite tools!</p>
+      <button class="button-group__btn btn btn--secondary btn--sign-in" type="button"><img src="assets/images/google.svg" alt=""><span>Sign In with Google</span></button>
     </div>
   </div>
 </div>

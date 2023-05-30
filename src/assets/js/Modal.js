@@ -40,6 +40,12 @@ class Modal {
 
 const modal = document.querySelectorAll('[data-modal]');
 
+const loginModal = new Modal('[data-modal]', '[data-modal-el="login-modal"]')
+
+
+loginModal.listener()
+
+
 modal.forEach((elem) => {
   const val = elem.dataset.modal;
 

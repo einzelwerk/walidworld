@@ -42,7 +42,7 @@ header.header(x-data="{showSearch : false}")
       .header__button-group 
         button.header__btn.btn.btn--secondary.hidden-mobile(type="button" data-modal="submit-tool") Submit a tool
         .login-wrapper(x-data="{loginDropwdown: false}")
-          button.button-group__btn.btn.btn--secondary.btn--sign-in(type="button" x-on:click="loginDropwdown = !loginDropwdown" x-on:click.outside="loginDropwdown = !state")
+          button.button-group__btn.btn.btn--secondary.btn--sign-in(type="button" x-on:click="loginDropwdown = !loginDropwdown" x-on:click.outside="loginDropwdown = false")
             img(src=require('@/images/google.svg'), alt="")
             span Sign in
           .login-dropdown(x-show="loginDropwdown" x-transition) 
