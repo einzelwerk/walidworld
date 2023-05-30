@@ -261,10 +261,6 @@
 
 .modal-login {
   @include media(md) {
-    top: 56px;
-    max-height: calc(100vh - 56px);
-  }
-  @include media(md) {
     padding-right: var(--gap);
     padding-left: var(--gap);
   }
@@ -294,6 +290,7 @@
 
   &__inner {
     @include media(md) {
+      gap: 20px;
       padding: 16px;
     }
 
@@ -310,7 +307,17 @@
     border-radius: 12px;
   }
 
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   &__title {
+    @include media(md) {
+      font-size: rem(20px);
+    }
+
     font-size: rem(24px);
     font-weight: 600;
     line-height: 133%;

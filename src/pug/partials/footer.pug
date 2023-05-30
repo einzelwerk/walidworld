@@ -160,8 +160,9 @@ footer.footer
       .modal-login__icon 
         svg(width='64' height='64')
           use(href='sprite.svg#enter_sprite')
-      h4.modal-login__title Please, login first to add tool to your favourites
-      p.modal-login__desc Recently we’ve released account features, try it with your favourite tools!
+      .modal-login__text
+        h4.modal-login__title Please, login first to add tool to your favourites
+        p.modal-login__desc Recently we’ve released account features, try it with your favourite tools!
       button.button-group__btn.btn.btn--secondary.btn--sign-in(type="button")
         img(src=require('@/images/google.svg'), alt="")
         span Sign In with Google

@@ -42,6 +42,7 @@ const modal = document.querySelectorAll('[data-modal]');
 
 const loginModal = new Modal('[data-modal]', '[data-modal-el="login-modal"]')
 
+loginModal.open()
 
 loginModal.listener()
 
