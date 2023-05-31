@@ -129,8 +129,8 @@
   &__views {
     position: absolute;
     z-index: 10;
-    top: 16px;
-    left: 16px;
+    top: 8px;
+    left: 8px;
 
     display: flex;
     gap: 4px;
@@ -317,8 +317,8 @@
     @include media(sm, min-width) {
       position: absolute;
       z-index: 10;
-      top: 16px;
-      left: 16px;
+      top: 8px;
+      left: 8px;
 
       display: flex;
       gap: 4px;
