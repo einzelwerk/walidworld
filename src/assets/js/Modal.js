@@ -46,6 +46,8 @@ const loginModal = new Modal('[data-modal]', '[data-modal-el="login-modal"]')
 
 loginModal.listener()
 
+window.loginModal = loginModal
+
 
 modal.forEach((elem) => {
   const val = elem.dataset.modal;

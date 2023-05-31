@@ -25,6 +25,13 @@ header.header(x-data="{showSearch : false}")
             a.nav__link(href=val.link)
               span.nav__link-text=val.name
               span.nav__hover-text(aria-hidden="true")=val.name
+            if val.subMenu 
+              .sub-menu 
+                .sub-menu__heading 
+                  h5.sub-menu__title AI Tools by Categories
+                  a.sub-menu__link(href="") View all categories
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
     .header__right
       .header__lang.custom-select-wrapper
         button.custom-select.custom-select--secondary.lang-select(type="button" x-data='{lang:false}' x-on:click="lang = !lang")

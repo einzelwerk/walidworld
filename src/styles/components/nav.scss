@@ -26,6 +26,7 @@
   }
 
   &__item {
+    position: relative;
     font-size: rem(14px);
     color: var(--text);
 
@@ -129,5 +130,31 @@
       gap: 24px;
       align-items: center;
     }
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 624px;
+  padding: 20px;
+
+  border: 1px solid var(--border-divider);
+  border-radius: 12px;
+
+  &__heading {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--accent-purple);
   }
 }
