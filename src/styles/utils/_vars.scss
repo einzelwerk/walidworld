@@ -39,6 +39,7 @@
   --prepare-color: #efedf2;
   --coming-soon: #f4f4f4;
   --hover-light: #eef0f3;
+  --sub-menu: var(--white);
 }
 
 .dark:root {
@@ -60,4 +61,5 @@
   --prepare-color: #202020;
   --coming-soon: #161616;
   --hover-light: #212224;
+  --sub-menu: #1a1a1a;
 }

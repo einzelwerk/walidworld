@@ -1,3 +1,13 @@
+-
+  var cats = [
+    'All', 'Design' , 'Code' , 'Video' , 'Music', 'Writing', 'Crypto', 'Finance',
+    'Gaming', 'Chatbots', 'Speech', 'Translation', 'Productivity', 'HR', 'Healthcare',
+    'Security', 'Robotics', 'Energy', 'Education', 'Marketing', 'Travel', 'Retail' 
+  ]
+
+
+
+
 header.header(x-data="{showSearch : false}")
   .header__search(x-show="showSearch" x-on:click.outside="showSearch = false" x-on:keyup.escape="showSearch = false")
     svg(width='44' height='44')
@@ -32,6 +42,15 @@ header.header(x-data="{showSearch : false}")
                   a.sub-menu__link(href="") View all categories
                     svg(width='20' height='20')
                       use(href='sprite.svg#external_sprite')
+                        .categories__list.hidden-mobile
+                ul.sub-menu__list
+                  each val, index in cats
+                    li.sub-menu__item
+                      a.categories__label(href="")
+                        span.categories__item 
+                          span.categories__icon 
+                            img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
+                          span.categories__name= val
     .header__right
       .header__lang.custom-select-wrapper
         button.custom-select.custom-select--secondary.lang-select(type="button" x-data='{lang:false}' x-on:click="lang = !lang")
@@ -93,17 +112,36 @@ header.header(x-data="{showSearch : false}")
       ul.mobile-nav__nav-list
         each val,index in menu
           li.mobile-nav__nav-item(class=index == 0 ? 'mobile-nav__nav-item--current' : '')
-            a.mobile-nav__nav-link(href=val.link)=val.name
-    .mobile-nav__footer
-      button.theme-switcher.theme-switcher--mobile(aria-label="Switch theme") 
-        svg(width='44' height='44')
-          use(href='sprite.svg#dark-theme_sprite')
-        span Light
-      .mobile-nav__socials.socials-list
-        each val in [1,2,3,4,5]
-          a.socials-list__item.socials-list__item--big(href="") 
-            img.socials-list__icon(src=require(`@/images/socials/${val}.svg`) alt="")
-    .mobile-nav__button-group.button-group
-      button.button-group__btn.btn.btn--secondary(type="button" data-modal="submit-tool") Submit a tool
-      button.button-group__btn.btn.btn--secondary(type="button" data-modal="subscribe") Subscribe to newsletter
+            if !val.subMenu
+              a.mobile-nav__nav-link(href=val.link)=val.name
+            if val.subMenu
+              details.mobile-sub-menu 
+                summary.mobile-sub-menu__summary All Categories
+                  svg(width='8' height='8')
+                    use(href='sprite.svg#arrow-down_sprite')
+                .mobile-sub-menu__heading 
+                  a.mobile-sub-menu__link.sub-menu__link(href="") View all categories
+                    svg(width='20' height='20')
+                      use(href='sprite.svg#external_sprite')
+                        .categories__list.hidden-mobile
+                ul.mobile-sub-menu__list
+                  each val, index in cats
+                    li.mobile-sub-menu__item
+                      a.categories__label(href="")
+                        span.categories__item 
+                          span.categories__icon 
+                            img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
+                          span.categories__name= val
+    .mobile-nav__fixed
+      .mobile-nav__footer
+        button.theme-switcher.theme-switcher--mobile(aria-label="Switch theme") 
+          svg(width='44' height='44')
+            use(href='sprite.svg#dark-theme_sprite')
+          span Light
+        .mobile-nav__socials.socials-list
+          each val in [1,2,3,4,5]
+            a.socials-list__item.socials-list__item--big(href="") 
+              img.socials-list__icon(src=require(`@/images/socials/${val}.svg`) alt="")
+      .mobile-nav__button-group.button-group
+        button.button-group__btn.btn.btn--secondary(type="button" data-modal="submit-tool") Submit a tool
 .background-blur
