@@ -174,12 +174,21 @@
   }
 
   &__search {
+    @include media(md) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     width: 100%;
     margin-top: 32px;
   }
 
   &__categories {
     @include media(md) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       margin-top: 8px;
     }
 

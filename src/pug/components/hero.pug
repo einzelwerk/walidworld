@@ -27,8 +27,13 @@ section.container
                 use(xlink:href="sprite.svg#close_sprite") 
           .categories__list
             each val, index in cats 
-              label.categories__label
+              label.categories__label(x-show="!state")
                 input(type="checkbox" class="visually-hidden categories__checkbox" x-on:change="checkedCount = document.querySelectorAll('.categories__checkbox:checked').length")
+                span.categories__item 
+                  span.categories__icon 
+                    img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
+                  span.categories__name= val
+              a.categories__label(href="" x-show="state" x-cloak)
                 span.categories__item 
                   span.categories__icon 
                     img(src=require(`@/images/categories/${index + 1}.svg`), alt="")
